@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "bootstrap-select": "^1.13.18",
+        "chart.js": "^3.5.0",
         "font-awesome": "^4.7.0"
     }
 }

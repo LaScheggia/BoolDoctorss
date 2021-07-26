@@ -51,7 +51,7 @@ class ProfileController extends Controller
     public function store(DoctorRequest $request)
     {
         // aggiunto gab
-        // $data = $request->all();
+        $data = $request->all();
         // $new_specialization = new User();
         // $new_specialization->fill($data);
         // $new_specialization->save();
@@ -60,6 +60,16 @@ class ProfileController extends Controller
         //     $new_specialization->specializaions()->attach($data['specializations']);
         // }
         // return redirect()->route('admin.posts.show', $new_specialization);
+
+        // aggiunto per foto
+        if(array_key_exists('cover',$data)){
+            // prendo in nome del file caricato e lo salvo dentro data come elemento fillabile
+            $data['cover_original_name'] = $request->file('propic')->getClientOriginalName();
+            // salvo il file in storage e salvo il path
+            $image_path = Storage::put('uploads',$data['propic']);
+            // inserisco il path deltro il data fillabile
+            $data['propic'] = $image_path;
+        }
     }
 
     /**
@@ -102,6 +112,23 @@ class ProfileController extends Controller
         $doc_update = User::find($id);
         $data = $request->all();
         /* dd($data); */
+
+        //aggiunto da gab foto
+        if(array_key_exists('propic',$data)){
+            // se esiste un'immagine da sostituire elimino quella vecchia
+            if($doc_update->propic){
+                Storage::delete($doc_update->propic);
+            }
+            // prendo in nome del file caricato e lo salvo dentro data come elemento fillabile
+            // $data['cover_original_name'] = $request->file('propic')->getClientOriginalName();
+            // salvo il file in storage e salvo il path
+            $image_path = Storage::put('uploads',$data['propic']);
+            // inserisco il path deltro il data fillabile
+            $data['propic'] = $image_path;
+        }
+        //aggiunto da gab foto
+
+
         $doc_update->update($data);
         $doc_update->specializations()->sync($request['specialization']); //$request non $data !
 

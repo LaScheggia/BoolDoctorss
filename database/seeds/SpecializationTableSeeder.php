@@ -13,7 +13,6 @@ class SpecializationTableSeeder extends Seeder
     public function run()
     {
         $specializations = [
-            "Nessuna specializzazione inserita",
             "Allergologia e immunologia",
             "Anatomia patologica",
             "Chirurgia generale",

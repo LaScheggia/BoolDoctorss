@@ -12,10 +12,10 @@
                 </div>
             </div>
             <div style="height: 250px; width:250px">
-                @if (Auth::user()->propic == null )
-                    <img class="img-thumbnail" src="{{ asset('img/neutraldoctor.png') }}">
+                @if (Auth::user()->propic)
+                    <img style="height: 250px; width:250px" src="{{ asset('storage/' . Auth::user()->propic) }}" alt="{{ Auth::user()->cover_original_name }}">
                 @else
-                    <img style="height: 100%" class="img-thumbnail img-fluid" src="{{ asset(Auth::user()->propic) }}" alt="Immagine di {{Auth::user()->name}} {{Auth::user()->surname}}">
+                    <img style="height: 100%"  class="img-thumbnail" src="{{ asset('img/neutraldoctor.png') }}" alt="Immagine di {{Auth::user()->name}} {{Auth::user()->surname}}">
                 @endif
             </div>
         </div>

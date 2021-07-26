@@ -60,7 +60,7 @@
                 <div class="mb-3">
                     <h6 class="mb-3">Specializzazioni</h6>
                     @foreach ($specializations as $specialization)
-                        <div class="d-inline-block mr-3">
+                        <div class="d-inline-block mr-3 col-lg-3">
                             <input type="checkbox"
                             id="specialization{{ $loop->iteration }}"
                             name="specialization[]"
@@ -137,6 +137,23 @@
                     </div>
                     <textarea class="form-control" aria-label="With textarea" id="services" name="services" rows="5">{{ old('services', Auth::user()->services) }}
                     </textarea>
+                </div>
+
+                <div class="mb-3">
+                    <div>
+                        <label class="label-control" for="cover">Immagine</label>
+                    </div>
+                    @if (Auth::user()->propic)
+                        <img style="height: 150px; width:150px" src="{{ asset('storage/' . Auth::user()->propic) }}" alt="{{ Auth::user()->cover_original_name }}">
+                    @endif
+                    <input
+                        type="file"
+                        id="propic" name="propic"
+                        onchange="previewFile()"
+                        class="form-control @error('propic') is-invalid @enderror">
+                    @error('propic')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <button type="submit" class="btn btn-primary">Conferma le modifiche</button>
