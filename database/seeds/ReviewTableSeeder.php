@@ -110,7 +110,7 @@ class ReviewTableSeeder extends Seeder
         ];
 
         foreach ($users as $user) {
-            $r = rand(3, 20);
+            $r = rand(5, 20);
             for ($i = 0; $i < $r; $i++) {
                 $new_comment = new Review();
 

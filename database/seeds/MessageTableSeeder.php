@@ -40,7 +40,7 @@ class MessageTableSeeder extends Seeder
         ];
 
         foreach ($users as $user) {
-            for ($i = 0; $i < rand(2, 15); $i++) {
+            for ($i = 0; $i < rand(3, 15); $i++) {
                 $new_message = new Message();
                 $new_message->user_id = $user->id;
                 $new_message->patient_name = $this->randomName();
