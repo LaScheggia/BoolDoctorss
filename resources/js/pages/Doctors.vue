@@ -6,11 +6,10 @@
     :name="user.name"
     :surname="user.surname"
     :bio="user.bio"
-    :specialization="user.specialization"
+    :specializations="user.specializations"
     :propic="user.propic"
+    :address="user.address"
     />
-
-
 
     <!-- paginazione -->
     <div>
@@ -46,12 +45,7 @@
     </div>
     </div>
 
-
-
 </template>
-
-
-
 
 
 <script>

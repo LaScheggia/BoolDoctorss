@@ -9,12 +9,17 @@
 
         <div class="card-body">
             <div class="d-flex justify-content-between">
-                <h5 class="card-title">{{name}}</h5>
-                <h5 class="card-title">{{surname}}</h5>
+                <h5 class="card-title">Nome: {{name}}</h5>
+                <h5 class="card-title">Cognome: {{surname}}</h5>
                 <span class="badge badge-success custom-badge">ttert</span>
             </div>
-            <i>{{bio}}</i>
-            <p class="card-text">{{specialization}}</p>
+            <p class="card-text">{{bio}}</p>
+            <p class="card-text">Indirizzo: {{address}}</p>
+            <p v-for="spec in specializations"
+            :key="spec.id"
+            >
+                {{spec.name}}
+            </p>
 
             <!-- <router-link class="btn btn-primary">Vedi post</router-link> -->
         </div>
@@ -25,7 +30,10 @@
 <script>
 export default {
     name: 'Card',
-    props: ['name', 'surname', 'bio', 'specialization', 'propic']
+    props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address'],
+    mounted(){
+        console.log('ciao', this.specializations);
+    }
 
 }
 </script>

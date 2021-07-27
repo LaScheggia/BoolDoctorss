@@ -20,24 +20,6 @@ class DoctorController extends Controller
     public function index()
     {
 
-        /* $doctors = User::all(); */
-
-/*         $doctors = DB::table('users')
-        ->select(
-            'users.id',
-            'users.name',
-            'users.surname',
-            'users.email',
-            'users.address',
-            'users.bio',
-            'users.service',
-            'users.propic',
-            'specializations.name as specializations'
-        )
-        ->join('specialization_user', 'users.id', 'specialization_user.user_id')
-        ->join('specializations', 'specialization_user.specialization_id', 'specializations.id')
-        ->paginate(3); */
-
         $doctors = User::with(['specializations', 'reviews'])->paginate(3);
 
 

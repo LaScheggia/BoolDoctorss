@@ -1960,9 +1960,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Card',
-  props: ['name', 'surname', 'bio', 'specialization', 'propic']
+  props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address'],
+  mounted: function mounted() {
+    console.log('ciao', this.specializations);
+  }
 });
 
 /***/ }),
@@ -2012,12 +2020,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Card.vue */ "./resources/js/components/Card.vue");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3499,23 +3501,38 @@ var render = function() {
   return _c("div", { staticClass: "card flex-row mb-3 class container" }, [
     _c("div", [_c("img", { attrs: { src: _vm.propic, alt: _vm.name } })]),
     _vm._v(" "),
-    _c("div", { staticClass: "card-body" }, [
-      _c("div", { staticClass: "d-flex justify-content-between" }, [
-        _c("h5", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.name))]),
+    _c(
+      "div",
+      { staticClass: "card-body" },
+      [
+        _c("div", { staticClass: "d-flex justify-content-between" }, [
+          _c("h5", { staticClass: "card-title" }, [
+            _vm._v("Nome: " + _vm._s(_vm.name))
+          ]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "card-title" }, [
+            _vm._v("Cognome: " + _vm._s(_vm.surname))
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "badge badge-success custom-badge" }, [
+            _vm._v("ttert")
+          ])
+        ]),
         _vm._v(" "),
-        _c("h5", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.surname))]),
+        _c("p", { staticClass: "card-text" }, [_vm._v(_vm._s(_vm.bio))]),
         _vm._v(" "),
-        _c("span", { staticClass: "badge badge-success custom-badge" }, [
-          _vm._v("ttert")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("i", [_vm._v(_vm._s(_vm.bio))]),
-      _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [
-        _vm._v(_vm._s(_vm.specialization))
-      ])
-    ])
+        _c("p", { staticClass: "card-text" }, [
+          _vm._v("Indirizzo: " + _vm._s(_vm.address))
+        ]),
+        _vm._v(" "),
+        _vm._l(_vm.specializations, function(spec) {
+          return _c("p", { key: spec.id }, [
+            _vm._v("\n            " + _vm._s(spec.name) + "\n        ")
+          ])
+        })
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = []
@@ -3641,8 +3658,9 @@ var render = function() {
             name: user.name,
             surname: user.surname,
             bio: user.bio,
-            specialization: user.specialization,
-            propic: user.propic
+            specializations: user.specializations,
+            propic: user.propic,
+            address: user.address
           }
         })
       }),
