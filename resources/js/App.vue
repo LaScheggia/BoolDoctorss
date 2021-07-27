@@ -1,15 +1,20 @@
 <template>
-  <main class="container">
-    <h1>qua buttiamo a schermo i dottori</h1>
+  <main>
+    <Header />
+    <router-view></router-view>
 
   </main>
 </template>
 
 <script>
+
+
+import Header from './components/Header.vue'
+
 export default {
   name: 'App',
   components: {
-
+    Header,
 
 
   }

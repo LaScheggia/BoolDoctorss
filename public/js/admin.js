@@ -37401,7 +37401,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/gabrisca/Documents/Full Stack Developer/Boolean/Laravel/BoolDoctors/resources/js/admin.js */"./resources/js/admin.js");
+module.exports = __webpack_require__(/*! F:\Boolean\Esercizi Boolean\ProgFinal\BoolDoctors-1-master\resources\js\admin.js */"./resources/js/admin.js");
 
 
 /***/ })
