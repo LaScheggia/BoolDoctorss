@@ -1,27 +1,34 @@
 <template>
-    <div class="card flex-row mb-3 class container" >
+    <div class="card-flex-row">
+            <!-- <router-link class="nav-link" :to="{name: 'profile', params:{ id }}">I nostri dottori</router-link> -->
+        <vs-row vs-justify="center">
+            <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
+                <vs-card>
+                <div slot="header">
+                    <h3 color="primary">
+                        <vs-button disabled type="border">{{name}} {{surname}}</vs-button>
+                    </h3>
+                    <vs-chip color="primary" type="gradient" v-for="spec in specializations" :key="spec.id">
+                        {{spec.name}}
+                    </vs-chip>
+                </div>
+                <hr>
+                <div>
+                    <span>{{bio}}</span>
+                </div>
+                <div slot="footer">
 
-        <div>
-            <!-- <img :src="propic" :alt="name"> -->
-        </div>
 
-        <div class="card-body">
-            <div class="d-flex justify-content-between">
-                <h5 class="card-title">Nome: {{name}}</h5>
-                <h5 class="card-title">Cognome: {{surname}}</h5>
-                <span class="badge badge-success custom-badge">ttert</span>
-            </div>
-            <p class="card-text">{{bio}}</p>
-            <p class="card-text">Indirizzo: {{address}}</p>
-            <p v-for="spec in specializations"
-            :key="spec.id"
-            >
-                {{spec.name}}
-            </p>
-
-            <router-link class="nav-link" :to="{name: 'profile', params:{ id }}">I nostri dottori</router-link>
-        </div>
-
+                    <vs-row vs-justify="flex-end">
+                        <!-- <vs-button type="gradient" color="danger" icon="favorite"></vs-button> -->
+                        <!-- <vs-button color="primary" icon="turned_in_not"></vs-button> -->
+                        <!-- <vs-button color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" ></vs-button> -->
+                        <vs-button color="success" type="gradient" :to="{ name: 'profile', params: { id } }">Deattagli</vs-button>
+                    </vs-row>
+                </div>
+                </vs-card>
+            </vs-col>
+        </vs-row>
     </div>
 </template>
 
@@ -36,17 +43,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-    .custom-badge{
-        display: inline-block;
-        height: 2rem;
-        line-height: 2rem;
-    }
-    .post-cover{
-        width: 300px;
-        img{
-            width: 100%;
-        }
-    }
+<style lang="scss" scoped>
+
 
 </style>

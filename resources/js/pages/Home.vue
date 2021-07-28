@@ -8,52 +8,84 @@
             </div> -->
             <h1>vediamo se funziona</h1>
 
-            <vs-button color="primary" type="filled">Primary</vs-button>
-            <vs-button color="success" type="filled">Success</vs-button>
-            <vs-button color="danger" type="filled">Danger</vs-button>
-            <vs-button color="warning" type="filled">Warning</vs-button>
-            <vs-button color="dark" type="filled">Dark</vs-button>
-            <vs-button color="rgb(134, 4, 98)" type="filled">RGB</vs-button>
-            <vs-button disabled type="filled">Disabled</vs-button>
-            <vs-button color="primary" type="filled" to="/components/list.html">Router</vs-button>
 
 
-            <vs-row vs-justify="center">
-            <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
-                <vs-card>
-                <div slot="header">
-                    <h3>
-                    Hello world !
-                    </h3>
-                </div>
-                <div>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-                </div>
-                <div slot="footer">
-                    <vs-row vs-justify="flex-end">
-                    <vs-button type="gradient" color="danger" icon="favorite"></vs-button>
-                    <vs-button color="primary" icon="turned_in_not"></vs-button>
-                    <vs-button color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></vs-button>
-                    </vs-row>
-                </div>
-                </vs-card>
-            </vs-col>
-            </vs-row>
 
 
+
+
+         <div>
+      <form class="d-flex mt-3 mb-3">
+        <div>
+          <!-- con v-model faccio il binding di textToSearch, ovvero del testo inserito nell'input -->
+          <!-- con @keyup.enter faccio partire la funzione startSearch premendo invio -->
+          <input type="text">
+          <!-- <input
+            v-model.trim="textToSearch"
+            @keyup.enter="startSearch"
+            class="form-control"
+            type="text"
+            placeholder="Find your movie/TV show"
+          /> -->
+        </div>
+        <div class="ms-3">
+          <!-- al click sul bottone faccio partire la funzione startSearch-->
+            <!-- .prevent evita che si ricarichi la pagina ogni volta che clicco -->
+             <vs-button color="success" type="filled">Search</vs-button>
+          <!-- <button
+            @click.prevent="startSearch"
+            class="btn btn-primary mc_btn"
+> -->
 
 
         </div>
+      </form>
+    </div>
+
+        </div>
+
+
 
 </template>
 
 
 <script>
-export default {
-    name: 'Home'
-}
+
+import axios from 'axios';
+  export default {
+    name: 'Home',
+    components:{
+
+    },
+    mounted(){
+        this.getSpecs();
+    },
+    data(){
+        return{
+            users: [],
+            pagination: {},
+        }
+    },
+    methods:{
+        getSpecs(){
+            axios.get('http://127.0.0.1:8000/api/doctors/specs')
+            .then(res => {
+                this.specs=res.data;
+                console.log(this.specs)
+            })
+            .catch(err => {
+                console.error(err);
+            })
+        },
+
+    }
+
+  }
 </script>
 
-<style>
+
+
+<style lang="scss">
+
 
 </style>

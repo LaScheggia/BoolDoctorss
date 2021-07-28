@@ -1,16 +1,18 @@
 <template>
-    <div>
-    <Card
-    v-for="user in users"
-    :key="user.id"
-    :name="user.name"
-    :surname="user.surname"
-    :bio="user.bio"
-    :specializations="user.specializations"
-    :propic="user.propic"
-    :address="user.address"
-    :id="user.id"
-    />
+
+<div>
+    <div class="custom-major">
+        <Card
+        v-for="user in users"
+        :key="user.id"
+        :name="user.name"
+        :surname="user.surname"
+        :bio="user.bio"
+        :specializations="user.specializations"
+        :propic="user.propic"
+        :address="user.address"
+        :id="user.id"
+        />
 
     <!-- paginazione -->
     <div>
@@ -45,6 +47,8 @@
         </nav>
     </div>
     </div>
+</div>
+
 
 </template>
 
@@ -94,6 +98,10 @@ import axios from 'axios';
 
 
 <style lang="scss">
+.custom-major{
+    background-color: aquamarine;
+
+}
 
 
 </style>
