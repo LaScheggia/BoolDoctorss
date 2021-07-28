@@ -2,9 +2,7 @@
     <div class="card flex-row mb-3 class container" >
 
         <div>
-
-            <img :src="propic" :alt="name">
-
+            <!-- <img :src="propic" :alt="name"> -->
         </div>
 
         <div class="card-body">
@@ -21,7 +19,7 @@
                 {{spec.name}}
             </p>
 
-            <!-- <router-link class="btn btn-primary">Vedi post</router-link> -->
+            <router-link class="nav-link" :to="{name: 'profile', params:{ id }}">I nostri dottori</router-link>
         </div>
 
     </div>
@@ -30,9 +28,9 @@
 <script>
 export default {
     name: 'Card',
-    props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address'],
+    props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address', 'id'],
     mounted(){
-        console.log('ciao', this.specializations);
+        //console.log('ciao', this.specializations);
     }
 
 }

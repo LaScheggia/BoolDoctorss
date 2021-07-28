@@ -9,6 +9,7 @@
     :specializations="user.specializations"
     :propic="user.propic"
     :address="user.address"
+    :id="user.id"
     />
 
     <!-- paginazione -->
@@ -70,7 +71,7 @@ import axios from 'axios';
                 }
             })
             .then(res => {
-                console.log(res.data.data);
+                //console.log(res.data.data);
                 this.users = res.data.data;
                 this.pagination = {
                     current: res.data.current_page,

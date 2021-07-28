@@ -22,11 +22,8 @@ class DoctorController extends Controller
 
         $doctors = User::with(['specializations', 'reviews'])->paginate(3);
 
-
         return response()->json($doctors);
     }
-
-
 
 
     /**
@@ -37,17 +34,24 @@ class DoctorController extends Controller
      */
     public function show($id)
     {
-        $doctors = User::all();
-        if($doctors){
+        $doctor = User::where('id', $id)->with(['specializations','reviews'])->first();
+        if($doctor){
+            if($doctor->propic && file_exists('storage/'. $doctor->propic)){
+                $doctor->propic = url('storage/' . $doctor->propic);
+            }else{
+                $doctor->propic = url('img/neutraldoctor.png');
+            }
             return response()->json([   //ho tradotto in file json x poter poi fare la chiamata api dentro a vue
                 'success' => true,
-                'result' => $doctors
+                'result' => $doctor
             ]);
         }
         return response()->json([
             'success' => false,
             'error' => 'Non ho trovato nessun dottore'
         ]);
+
+
     }
 
 

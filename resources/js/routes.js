@@ -6,6 +6,8 @@ Vue.use(VueRouter);
 
 import Home  from './pages/Home.vue';
 import Doctors from './pages/Doctors';
+import Profile from './pages/Profile.vue';
+import Error404 from './pages/Error404.vue';
 
 const router = new VueRouter({
     mode: 'history',
@@ -21,6 +23,16 @@ const router = new VueRouter({
             name: 'doctors',
             component: Doctors
         },
+        {
+            path: '/profile/:id', //parametro variabile
+            name: 'profile',
+            component: Profile
+        },
+/*         {
+            path: '/*',
+            name: 'error404',
+            component: Error404
+        } */
     ]
 })
 
