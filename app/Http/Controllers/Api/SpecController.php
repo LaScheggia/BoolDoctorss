@@ -10,12 +10,7 @@ use Illuminate\Support\Facades\DB;
 class SpecController extends Controller
 {
     public function index(){
-        /* $specs= Specialization::pluck('name'); */
-        $specs = DB::table('specializations')
-        ->select(
-            'specialization.name',
-        )
-        ->get();
+        $specs= Specialization::all();
        return response()->json($specs);
     }
 }

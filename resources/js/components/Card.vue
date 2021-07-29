@@ -1,9 +1,11 @@
 <template>
-    <div class="card-flex-row">
+<div>
+        <div class="card-flex-row">
             <!-- <router-link class="nav-link" :to="{name: 'profile', params:{ id }}">I nostri dottori</router-link> -->
         <vs-row vs-justify="center">
             <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
                 <vs-card>
+                    <img :src="propic" alt="">
                 <div slot="header">
                     <h3 color="primary">
                         <vs-button disabled type="border">{{name}} {{surname}}</vs-button>
@@ -30,6 +32,8 @@
             </vs-col>
         </vs-row>
     </div>
+</div>
+
 </template>
 
 <script>

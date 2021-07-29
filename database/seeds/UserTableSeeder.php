@@ -279,7 +279,7 @@ class UserTableSeeder extends Seeder
             - Attualmente in servizio presso l’ambulatorio di cardiologia dell’Associazione Cavalieri Italiani del Sovrano Militare dell’Ordine di Malta.'
         ];
 
-        for($i=0; $i < 15; $i++){
+        for($i=0; $i < 50; $i++){
             $new_user = new User();
             $new_user->name = $this->randomName();
             // if($new_user->name == 'Donata'|| 'Sara'||'Maria'||'Piera'||'Camilla'||'Giada'||'Licia'||'Teoriana'||'Giulia'||'Rita'||'Giovanni'||'Anna'||'Maria'||'Fiorella'|| 'Edith'||'Marie'||'Marlena'||'Sasha'||'Jurgen'||'Maurizia'||'Kim'||'Yen'){

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use App\Specialization;
 use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -20,9 +21,16 @@ class DoctorController extends Controller
     public function index()
     {
 
-        $doctors = User::with(['specializations', 'reviews'])->paginate(3);
+        $doctors = User::with(['specializations', 'reviews'])
+
+        ->paginate(3);
 
         return response()->json($doctors);
+    }
+
+
+    public function getDocSpec($spec) {
+        return response()->json( Specialization::where('name', $spec)->first()->users()->paginate(5) );
     }
 
 
@@ -54,5 +62,12 @@ class DoctorController extends Controller
 
     }
 
+
+    public function alldoctors(){
+        $doctors = User::with('specializations', 'reviews')
+        ->orderBy('users.id', 'desc')
+        ->get();
+        return response ()->json($doctors);
+    }
 
 }

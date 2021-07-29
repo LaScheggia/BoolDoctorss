@@ -24,7 +24,11 @@ Route::namespace('Api')
     ->name('api.')
     ->group(function(){
         Route::get('doctors', 'DoctorController@index')->name('doctors');
-        Route::get('doctors/{id}', 'DoctorController@show')->name('show');
-        Route::get('specs','SpecController@index')->name('specs');
-
+        Route::get('doctors/{id}', 'DoctorController@show')->name('show')->where(['id'=>'[0-9]+']);
+        Route::get('doctors/specs','SpecController@index')->name('specs');
+        Route::get('doctors/all', 'DoctorController@alldoctors')->name('alldocs');
+        Route::get('specializations/{spec}','DoctorController@getDocSpec')->name('docWithSpec');
+        Route::resource('review','ReviewController');
     });
+
+

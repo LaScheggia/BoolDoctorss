@@ -1,69 +1,66 @@
 <template>
-          <div>
-<!--             <div class="nav-item">
-                <a class="btn btn-primary btn-sm" href="{{ route('login') }}">{{ __('Login') }}</a>
-            </div>
-            <div class="nav-item">
-                <a class="btn btn-outline-success btn-sm" href="{{ route('register') }}">{{ __('Register') }}</a>
-            </div> -->
-            <h1>vediamo se funziona</h1>
 
-
-
-
-
-
-
-         <div>
-      <form class="d-flex mt-3 mb-3">
         <div>
-          <!-- con v-model faccio il binding di textToSearch, ovvero del testo inserito nell'input -->
-          <!-- con @keyup.enter faccio partire la funzione startSearch premendo invio -->
-          <input type="text">
-          <!-- <input
-            v-model.trim="textToSearch"
-            @keyup.enter="startSearch"
-            class="form-control"
-            type="text"
-            placeholder="Find your movie/TV show"
-          /> -->
+            <Banner  />
+
+            <div class="form-group search container mb-5" v-if="specs.length > 0">
+                <select
+                    class="form-control"
+                    name="specializations"
+                    placeholder="Scegli il tipo di specializzazione"
+                    v-model="filterdoctor"
+                    autocomplete="on"
+
+                >
+                    <option value="0" disabled>scegli una specializzazione</option>
+                    <option
+                    v-for="specialization in specs"
+                    :key="specialization.id"
+                    :value="specialization.id"
+                    @click="searchdoctor()"
+                    >
+                        <router-link :to="{name: 'specializations', params:{'spec': specialization.name}}">
+                            {{ specialization.name}}
+                        </router-link>
+
+
+                    </option>
+                </select>
+            </div>
+
         </div>
-        <div class="ms-3">
-          <!-- al click sul bottone faccio partire la funzione startSearch-->
-            <!-- .prevent evita che si ricarichi la pagina ogni volta che clicco -->
-             <vs-button color="success" type="filled">Search</vs-button>
-          <!-- <button
-            @click.prevent="startSearch"
-            class="btn btn-primary mc_btn"
-> -->
-
-
-        </div>
-      </form>
-    </div>
-
-        </div>
-
-
 
 </template>
 
 
 <script>
 
+
 import axios from 'axios';
+import Banner from '../components/Banner.vue';
+//import Profile from '../components/Profile.vue';
+
   export default {
     name: 'Home',
     components:{
+        Banner,
+        //Profile,
 
+    },
+    props: {
+        specializations: [],
     },
     mounted(){
         this.getSpecs();
     },
     data(){
         return{
+            specId: this.selected,
             users: [],
-            pagination: {},
+            results: true,
+            filterdoctor: [],
+            specs: [],
+            doctors: []
         }
     },
     methods:{
@@ -77,15 +74,28 @@ import axios from 'axios';
                 console.error(err);
             })
         },
+        searchdoctor(){
+            //qua dovrebbe cercare i dottori(?)
+        },
+    },
 
-    }
 
   }
 </script>
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
+.form-control:focus {
+  box-shadow: none;
+}
+
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
 
 
 </style>
