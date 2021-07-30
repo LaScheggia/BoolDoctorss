@@ -6,15 +6,6 @@
         <h3>Compila i campi necessari per rendere completo il tuo profilo.</h3>
         <p>Un profilo più completo e con una bella immagine attirerà più clienti.</p>
     </div>
-    {{-- @if ($errors->any())
-        <div class="alert alert-danger container">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif --}}
 
     <div class="container">
         <form action="{{ route('admin.profile.update', Auth::user()) }}" method="POST" enctype="multipart/form-data">

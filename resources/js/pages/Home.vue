@@ -13,7 +13,7 @@
                     autocomplete="on"
 
                 >
-                    <option value="0" disabled>scegli una specializzazione</option>
+                    <option value="0" disabled>Scegli una specializzazione</option>
                     <option
                     v-for="specialization in specs"
                     :key="specialization.id"
@@ -100,8 +100,8 @@ import Heroheader from '../components/Heroheader.vue'
 
 
 .form-control::placeholder {
-  font-size: 0.95rem;
-  color: #aaa;
+  font-size: 1rem;
+  color: #212121;
   font-style: italic;
 }
 

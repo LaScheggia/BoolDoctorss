@@ -3057,7 +3057,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-control[data-v-b3c5cf30]:focus {\n  box-shadow: none;\n}\n.form-control[data-v-b3c5cf30]::-moz-placeholder {\n  font-size: 0.95rem;\n  color: #aaa;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]:-ms-input-placeholder {\n  font-size: 0.95rem;\n  color: #aaa;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]::placeholder {\n  font-size: 0.95rem;\n  color: #aaa;\n  font-style: italic;\n}", ""]);
+exports.push([module.i, ".form-control[data-v-b3c5cf30]:focus {\n  box-shadow: none;\n}\n.form-control[data-v-b3c5cf30]::-moz-placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]:-ms-input-placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]::placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}", ""]);
 
 // exports
 
@@ -6152,7 +6152,7 @@ var render = function() {
                 },
                 [
                   _c("option", { attrs: { value: "0", disabled: "" } }, [
-                    _vm._v("scegli una specializzazione")
+                    _vm._v("Scegli una specializzazione")
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.specs, function(specialization) {
