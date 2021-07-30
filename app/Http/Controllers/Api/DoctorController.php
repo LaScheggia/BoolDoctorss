@@ -24,7 +24,7 @@ class DoctorController extends Controller
 
         $doctors = User::with(['specializations', 'reviews'])
 
-        ->paginate(3);
+        ->paginate(7);
 
         return response()->json($doctors);
     }

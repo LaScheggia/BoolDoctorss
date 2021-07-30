@@ -7,7 +7,9 @@ Vue.use(VueRouter);
 import Home  from './pages/Home.vue';
 import Doctors from './pages/Doctors';
 import Profile from './pages/Profile.vue';
-import Specializations from './pages/Specializations.vue'
+import Specializations from './pages/Specializations.vue';
+import Contacts from './pages/Contacts.vue';
+import Confirmation from './pages/Confirmation.vue';
 import Error404 from './pages/Error404.vue';
 
 const router = new VueRouter({
@@ -33,6 +35,16 @@ const router = new VueRouter({
             path: '/specializations/', //parametro variabile
             name: 'specializations',
             component: Specializations
+        },
+        {
+            path: '/contacts',
+            name: 'contacts',
+            component: Contacts
+        },
+        {
+            path: '/confirmation',
+            name: 'confirmation',
+            component: Confirmation
         },
 /*         {
             path: '/*',

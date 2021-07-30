@@ -1,9 +1,10 @@
 <template>
 
         <div>
-            <Banner  />
+            <Banner  /> <!-- banner con slider -->
 
-            <div class="form-group search container mb-5" v-if="specs.length > 0">
+
+            <div class="input-group search container mb-5" v-if="specs.length > 0"> <!-- campo di select -->
                 <select
                     class="form-control"
                     name="specializations"
@@ -23,11 +24,15 @@
                 </select>
 
                     <router-link :to="{name: 'specializations', params:{'toSearch': filterdoctor}}">
-                        <button>
-                            naviga
-                        </button>
+                        <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient">
+                            Cerca il tuo nuovo dottore
+                        </vs-button>
                     </router-link>
             </div>
+
+            <Heroheader/>
+
+
 
         </div>
 
@@ -39,6 +44,7 @@
 
 import axios from 'axios';
 import Banner from '../components/Banner.vue';
+import Heroheader from '../components/Heroheader.vue'
 //import Profile from '../components/Profile.vue';
 
   export default {
@@ -46,6 +52,7 @@ import Banner from '../components/Banner.vue';
     components:{
         Banner,
         //Profile,
+        Heroheader,
 
     },
     props: {
@@ -61,7 +68,10 @@ import Banner from '../components/Banner.vue';
             results: true,
             filterdoctor: [],
             specs: [],
-            doctors: []
+            doctors: [],
+            colorx:'#009688',
+            colorx2:'#80CBC4'
+
         }
     },
     methods:{

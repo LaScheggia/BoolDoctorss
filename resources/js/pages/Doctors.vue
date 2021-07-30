@@ -15,7 +15,7 @@
         />
 
     <!-- paginazione -->
-    <div>
+    <div class="wrapper">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li
@@ -102,9 +102,41 @@ import axios from 'axios';
 
 
 <style lang="scss">
-.custom-major{
-    background-color: aquamarine;
+body {
+    background-color: #eee
+}
 
+.wrapper {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: rgb(0, 77, 64) !important;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgb(128, 203, 196) !important
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: #fff !important;
+    background-color: rgb(128, 203, 196);
+    border-color: rgb(178, 223, 219)
+}
+
+.page-link:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: none
+}
+
+.page-item.active .page-link{
+    background-color: rgb(128, 203, 196);
 }
 
 
