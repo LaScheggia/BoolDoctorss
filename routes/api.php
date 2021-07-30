@@ -29,6 +29,7 @@ Route::namespace('Api')
         Route::get('doctors/all', 'DoctorController@alldoctors')->name('alldocs');
         Route::get('specializations/{spec}','DoctorController@getDocSpec')->name('docWithSpec');
         Route::resource('review','ReviewController');
+        Route::resource('message','MessController');
     });
 
 

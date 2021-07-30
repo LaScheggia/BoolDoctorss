@@ -13,7 +13,11 @@
 
 
         <div class="form">
-            <!-- <ReviewForm  :doctorId="user.id"/> -->
+            <ReviewForm  :doctorId="user.id"/>
+        </div>
+
+        <div>
+            <MessageForm :doctorId="user.id"/>
         </div>
         <div class="row d-flex justify-content-center mt-100 mb-100">
             <div class="col-lg-8">
@@ -30,6 +34,16 @@
                                 <h5 class="m-b-10 d-block">{{review.title}}</h5>
                                 <p>{{review.text}}</p>
                                 <p>Voto: {{ review.rating }}/5</p>
+
+                                <div
+                                class="stars"
+                                v-for="index in 5"
+                                :key="index">
+                                <i class="fas fa-star"
+                                 v-if="index < Math.round(review.rating)"></i>
+                                <i class="far fa-star" v-else></i>
+                                </div>
+
                                 <div class="comment-footer"> <span class="text-muted float-right">{{review.added_on}}</span> </div>
                                 <hr>
                             </div>
@@ -55,12 +69,14 @@
 <script>
 import axios from 'axios';
 import ReviewForm from '../components/ReviewForm.vue';
+import MessageForm from '../components/MessageForm.vue';
 
 
 export default {
     name: 'Profile',
     components:{
         ReviewForm,
+        MessageForm,
 
     },
     data(){

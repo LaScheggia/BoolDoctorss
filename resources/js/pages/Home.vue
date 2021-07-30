@@ -17,15 +17,16 @@
                     v-for="specialization in specs"
                     :key="specialization.id"
                     :value="specialization.id"
-                    @click="searchdoctor()"
                     >
-                        <router-link :to="{name: 'specializations', params:{'spec': specialization.name}}">
-                            {{ specialization.name}}
-                        </router-link>
-
-
+                    {{ specialization.name}}
                     </option>
                 </select>
+
+                    <router-link :to="{name: 'specializations', params:{'toSearch': filterdoctor}}">
+                        <button>
+                            naviga
+                        </button>
+                    </router-link>
             </div>
 
         </div>
@@ -68,14 +69,11 @@ import Banner from '../components/Banner.vue';
             axios.get('http://127.0.0.1:8000/api/doctors/specs')
             .then(res => {
                 this.specs=res.data;
-                console.log(this.specs)
+                //console.log(this.specs)
             })
             .catch(err => {
                 console.error(err);
             })
-        },
-        searchdoctor(){
-            //qua dovrebbe cercare i dottori(?)
         },
     },
 

@@ -30,7 +30,7 @@ const router = new VueRouter({
             component: Profile
         },
         {
-            path: '/specializations/:spec', //parametro variabile
+            path: '/specializations/', //parametro variabile
             name: 'specializations',
             component: Specializations
         },

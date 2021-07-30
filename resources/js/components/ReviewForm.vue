@@ -76,3 +76,6 @@ export default {
 
 <style>
 </style>
+
+
+//al click del manda review ti manda in una pagina laravel che è un form già fatto che manda in automatico le review sul db//

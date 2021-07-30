@@ -11,6 +11,7 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         $data= $request->all();
+        //dd($data);
         $new_review = new Review();
         $new_review->fill($data);
         $new_review['user_id']=$data['user_id'];

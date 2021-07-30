@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\User;
 use App\Http\Controllers\Controller;
 use App\Specialization;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -29,8 +30,14 @@ class DoctorController extends Controller
     }
 
 
-    public function getDocSpec($spec) {
-        return response()->json( Specialization::where('name', $spec)->first()->users()->paginate(5) );
+    public function getDocSpec($spec_id) {
+        $toSearch = $spec_id;
+        //return response()->json( Specialization::where('name', $spec)->first()->users()->paginate(5) );
+        $doctors = User::with('specializations')->whereHas('specializations', function(Builder $query) use ($toSearch){
+            $query->where('id', '=', $toSearch);
+        })->paginate(5);
+
+        return response()-> json($doctors);
     }
 
 
@@ -59,8 +66,10 @@ class DoctorController extends Controller
             'error' => 'Non ho trovato nessun dottore'
         ]);
 
-
     }
+
+    /* get reviews by user id */
+    /* 2 api 1 x il doc e una x le reviews */
 
 
     public function alldoctors(){
