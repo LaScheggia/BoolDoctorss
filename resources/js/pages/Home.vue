@@ -23,7 +23,7 @@
                     </option>
                 </select>
 
-                    <router-link :to="{name: 'specializations', params:{'toSearch': filterdoctor}}"> <!-- bottone che porta alla pagina coi doc -->
+                    <router-link :to="{name: 'doctors', params:{'spec': filterdoctor}}"> <!-- bottone che porta alla pagina coi doc -->
                         <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient">
                             Cerca il tuo nuovo dottore
                         </vs-button>

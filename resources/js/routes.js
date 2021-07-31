@@ -32,11 +32,6 @@ const router = new VueRouter({
             component: Profile
         },
         {
-            path: '/specializations/', //parametro variabile
-            name: 'specializations',
-            component: Specializations
-        },
-        {
             path: '/contacts',
             name: 'contacts',
             component: Contacts

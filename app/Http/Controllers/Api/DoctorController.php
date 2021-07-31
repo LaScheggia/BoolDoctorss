@@ -10,8 +10,6 @@ use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-
-
 class DoctorController extends Controller
 {
     /**
@@ -19,20 +17,41 @@ class DoctorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(Request $request) {
+        $doctors = User::select(
+                'users.*',
+                DB::raw('ROUND(AVG(reviews.rating)) AS rating_avg'),
+                DB::raw('COUNT(reviews.id) AS reviews_count')
+            )
+            ->with('specializations', 'reviews', 'sponsors')
+            ->join('reviews','reviews.user_id','=','users.id')
+            ->groupBy('users.id');
 
-        $doctors = User::with(['specializations', 'reviews'])
+        if ($request->query('spec') != null) {
+            $spec = $request->query('spec');
+            $doctors = $doctors->whereHas('specializations', function(Builder $query) use ($spec) {
+                $query->where('id', '=', $spec);
+            });
+        }
 
-        ->paginate(7);
+        if ($request->query('sortRevCount') != null) {
+            $sortBy = $request->query('sortRevCount');
+            $doctors = $doctors->orderBy('reviews_count', $sortBy);
+        }
 
+        if ($request->query('avgRating') != null) {
+            $avgRating = $request->query('avgRating');
+            $doctors = $doctors->having('rating_avg', '=', $avgRating);
+        }
+
+        $doctors = $doctors->paginate(7);
         return response()->json($doctors);
     }
 
 
     public function getDocSpec($spec_id) {
         $toSearch = $spec_id;
-        //return response()->json( Specialization::where('name', $spec)->first()->users()->paginate(5) );
+
         $doctors = User::with('specializations')->whereHas('specializations', function(Builder $query) use ($toSearch){
             $query->where('id', '=', $toSearch);
         })->paginate(5);
@@ -72,11 +91,11 @@ class DoctorController extends Controller
     /* 2 api 1 x il doc e una x le reviews */
 
 
-    public function alldoctors(){
+/*     public function alldoctors(){
         $doctors = User::with('specializations', 'reviews')
         ->orderBy('users.id', 'desc')
         ->get();
         return response ()->json($doctors);
-    }
+    } */
 
 }

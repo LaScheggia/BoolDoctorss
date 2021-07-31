@@ -2484,6 +2484,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Card.vue */ "./resources/js/components/Card.vue");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2548,19 +2554,29 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      filters: {},
       users: [],
       pagination: {}
     };
   },
   methods: {
+    createParams: function createParams(page) {
+      var reqParams = {
+        page: page
+      };
+
+      if (this.$route.params.spec) {
+        this.filters["spec"] = this.$route.params.spec;
+      }
+
+      return _objectSpread(_objectSpread({}, reqParams), this.filters);
+    },
     getDocs: function getDocs() {
       var _this = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/api/doctors', {
-        params: {
-          page: page
-        }
+        params: this.createParams(page)
       }).then(function (res) {
         //console.log(res.data.data);
         _this.users = res.data.data;
@@ -2862,7 +2878,7 @@ __webpack_require__.r(__webpack_exports__);
     getDoctors: function getDoctors() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/specializations/' + this.$route.params.toSearch).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/doctors?spec=' + this.$route.params.toSearch).then(function (res) {
         console.log(res.data.data);
         _this.users = res.data.data;
       })["catch"](function (err) {
@@ -6179,10 +6195,7 @@ var render = function() {
                 "router-link",
                 {
                   attrs: {
-                    to: {
-                      name: "specializations",
-                      params: { toSearch: _vm.filterdoctor }
-                    }
+                    to: { name: "doctors", params: { spec: _vm.filterdoctor } }
                   }
                 },
                 [
@@ -39833,11 +39846,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     //parametro variabile
     name: 'profile',
     component: _pages_Profile_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }, {
-    path: '/specializations/',
-    //parametro variabile
-    name: 'specializations',
-    component: _pages_Specializations_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: '/contacts',
     name: 'contacts',

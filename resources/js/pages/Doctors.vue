@@ -58,21 +58,35 @@ import Card from '../components/Card.vue';
 import axios from 'axios';
   export default {
     name: 'Doctors',
-    components:{
+    components: {
         Card,
     },
-    data(){
-        return{
+    data() {
+        return {
+            filters: {},
             users: [],
             pagination: {},
         }
     },
-    methods:{
-        getDocs(page = 1){
-            axios.get('http://127.0.0.1:8000/api/doctors',{
-                params:{
-                    page: page
-                }
+    methods: {
+        createParams(page) {
+            const reqParams = {
+                page: page
+            }
+
+            if (this.$route.params.spec) {
+                this.filters["spec"] = this.$route.params.spec;
+            }
+
+            return {...reqParams, ...this.filters};
+        },
+
+        // Estendere questa funzione per prendere altri 2 parametri (ricerca per num di reviews e per stelle).
+        // Questi 2 parametri verranno passati a createParams per creare la richiesta verso il backend.
+        // Nome parametri: avgRating (valori:  1-5), sortRevCount (valori: asc/desc)
+        getDocs(page = 1) {
+            axios.get('http://127.0.0.1:8000/api/doctors', {
+                params: this.createParams(page)
             })
             .then(res => {
                 //console.log(res.data.data);
@@ -85,17 +99,14 @@ import axios from 'axios';
                         this.users.propic = '../storage/'+this.users.propic;
                     } */
             })
-
             .catch(err => {
                 console.log(err);
             })
         }
-
     },
-    created(){
+    created() {
         this.getDocs();
     }
-
   }
 </script>
 
