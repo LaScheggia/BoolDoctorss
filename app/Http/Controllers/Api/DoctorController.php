@@ -24,8 +24,11 @@ class DoctorController extends Controller
                 DB::raw('COUNT(reviews.id) AS reviews_count')
             )
             ->with('specializations', 'reviews', 'sponsors')
-            ->join('reviews','reviews.user_id','=','users.id')
-            ->groupBy('users.id');
+            ->join('reviews', 'reviews.user_id', '=', 'users.id')
+            ->join('sponsor_user', 'sponsor_user.user_id', '=', 'users.id')
+            ->join('sponsors', 'sponsors.id', '=', 'sponsor_user.sponsor_id')
+            ->groupBy('users.id')
+            ->orderBy('sponsors.id', 'desc');
 
         if ($request->query('spec') != null) {
             $spec = $request->query('spec');
