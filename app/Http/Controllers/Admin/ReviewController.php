@@ -12,13 +12,13 @@ class ReviewController extends Controller
 {
     public function showReviews(){
 
-                // prendo i dati del dottore registrato in base al suo id
-                $doctor_id = Auth::id();
+        // prendo i dati del dottore registrato in base al suo id
+        $doctor_id = Auth::id();
 
-                $user = User::where('id', $doctor_id)->first();
+        $user = User::where('id', $doctor_id)->first();
 
-                // filtro le recensioni in base all'id del dottore
-                $reviews = Review::where('user_id', $doctor_id)->get();
+        // filtro le recensioni in base all'id del dottore
+        $reviews = Review::where('user_id', $doctor_id)->get();
 
 
 
