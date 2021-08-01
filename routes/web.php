@@ -34,7 +34,7 @@ Route::prefix('admin')
     Route::get('review', 'ReviewController@showReviews')->name('review');
     Route::get('plan', 'PlanController@showPlans')->name('plan');
     Route::get('stat', 'StatController@showStats')->name('stat');
-
+    Route::get('/payment/sponsor/{id}', 'PaymentsController@sponsor')->name('payment.sponsor');
 });
 
 
