@@ -18,6 +18,7 @@ class DoctorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
+        //faccio tre livelli di filtri che posso usare tutti insieme o singolarmente...
         $doctors = User::select(
                 'users.*',
                 DB::raw('ROUND(AVG(reviews.rating)) AS rating_avg'),
@@ -25,11 +26,12 @@ class DoctorController extends Controller
             )
             ->with('specializations', 'reviews', 'sponsors')
             ->join('reviews', 'reviews.user_id', '=', 'users.id')
-            ->join('sponsor_user', 'sponsor_user.user_id', '=', 'users.id')
-            ->join('sponsors', 'sponsors.id', '=', 'sponsor_user.sponsor_id')
+            ->join('sponsor_user', 'sponsor_user.user_id', '=', 'users.id') //qui mette già x primi quelli sponsored
+            ->join('sponsors', 'sponsors.id', '=', 'sponsor_user.sponsor_id') //qui mette già x primi quelli sponsored
             ->groupBy('users.id')
             ->orderBy('sponsors.id', 'desc');
 
+        //uno x la specializzazione quindi usando ?spec= e mi trova x specializzazione (bisogna usare i query params)
         if ($request->query('spec') != null) {
             $spec = $request->query('spec');
             $doctors = $doctors->whereHas('specializations', function(Builder $query) use ($spec) {
@@ -37,11 +39,13 @@ class DoctorController extends Controller
             });
         }
 
+        //uno x il numero delle rews quindi usando ?rewscount= e mi ordina x numero di rews (bisogna usare i query params)
         if ($request->query('sortRevCount') != null) {
             $sortBy = $request->query('sortRevCount');
             $doctors = $doctors->orderBy('reviews_count', $sortBy);
         }
 
+        //uno x la media delle rews quindi usando ?rewsavg= e mi ordina x media delle recensioni (bisogna usare i query params)
         if ($request->query('avgRating') != null) {
             $avgRating = $request->query('avgRating');
             $doctors = $doctors->having('rating_avg', '=', $avgRating);
@@ -89,16 +93,5 @@ class DoctorController extends Controller
         ]);
 
     }
-
-    /* get reviews by user id */
-    /* 2 api 1 x il doc e una x le reviews */
-
-
-/*     public function alldoctors(){
-        $doctors = User::with('specializations', 'reviews')
-        ->orderBy('users.id', 'desc')
-        ->get();
-        return response ()->json($doctors);
-    } */
 
 }

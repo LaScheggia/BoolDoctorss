@@ -4,6 +4,8 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\DB;
+use DateTime;
 
 class Kernel extends ConsoleKernel
 {
@@ -25,6 +27,15 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+
+        $schedule->call(function () {
+            DB::table('sponsor_user')
+                ->whereDate('end_date', '<', new DateTime())
+                ->delete();
+        })->hourly();
+        //questo potrebbe funzionare se io avessi un server ma io non ho un server
+        //NDR USASSIMO LARAVEL 8 QUESTO PROBLEMA DEL SERVER NON CI SAREBBE
+        //MA NOI SIAMO STRONZI E USIAMO LA VERSIONE 7
     }
 
     /**
