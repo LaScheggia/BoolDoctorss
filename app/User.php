@@ -44,7 +44,7 @@ class User extends Authenticatable
 
     public function sponsors(){
         //uno user può avere più sponsorizzazioni
-        return $this->belongsToMany('App\Sponsor');
+        return $this->belongsToMany('App\Sponsor')->withPivot('end_date');
     }
 
     public function messages(){
