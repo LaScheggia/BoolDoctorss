@@ -1,4 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+.custom-bg {
+  background: linear-gradient(0deg, rgba(224, 242, 241, 0.3) 20%, rgba(107, 217, 204, 0.5) 50%);
+}
+
+.main-img-bg {
+  background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v870-tang-35_1.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=6cbf529486f505eb83248b88e86066e4.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .navbar-custom {
   background-color: #E0F2F1;
 }

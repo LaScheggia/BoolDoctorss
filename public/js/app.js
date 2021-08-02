@@ -2800,6 +2800,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
  //import Profile from '../components/Profile.vue';
@@ -3220,7 +3221,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-control[data-v-b3c5cf30]:focus {\n  box-shadow: none;\n}\n.form-control[data-v-b3c5cf30]::-moz-placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]:-ms-input-placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]::placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}", ""]);
+exports.push([module.i, ".form-control[data-v-b3c5cf30]:focus {\n  box-shadow: none;\n}\n.form-control[data-v-b3c5cf30]::-moz-placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]:-ms-input-placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}\n.form-control[data-v-b3c5cf30]::placeholder {\n  font-size: 1rem;\n  color: #212121;\n  font-style: italic;\n}\n.special[data-v-b3c5cf30] {\n  background: linear-gradient(to right top, #7ebca9, #72cdb3, #62ddbd, #49eec7, #00ffd2);\n  height: 250px;\n  padding: 150px;\n}", ""]);
 
 // exports
 
@@ -6566,101 +6567,106 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.specs.length > 0
-        ? _c(
-            "div",
-            { staticClass: "input-group search container mb-5" },
-            [
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.filterdoctor,
-                      expression: "filterdoctor"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    name: "specializations",
-                    placeholder: "Scegli il tipo di specializzazione",
-                    autocomplete: "on"
-                  },
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.filterdoctor = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                [
-                  _c("option", { attrs: { value: "0", disabled: "" } }, [
-                    _vm._v("Scegli una specializzazione")
-                  ]),
-                  _vm._v(" "),
-                  _vm._l(_vm.specs, function(specialization) {
-                    return _c(
-                      "option",
+      _c("Heroheader"),
+      _vm._v(" "),
+      _c("div", { staticClass: "special" }, [
+        _vm.specs.length > 0
+          ? _c(
+              "div",
+              { staticClass: "input-group search container mb-5 " },
+              [
+                _c(
+                  "select",
+                  {
+                    directives: [
                       {
-                        key: specialization.id,
-                        domProps: { value: specialization.id }
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterdoctor,
+                        expression: "filterdoctor"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      name: "specializations",
+                      placeholder: "Scegli il tipo di specializzazione",
+                      autocomplete: "on"
+                    },
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.filterdoctor = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  [
+                    _c("option", { attrs: { value: "0", disabled: "" } }, [
+                      _vm._v("Scegli una specializzazione")
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.specs, function(specialization) {
+                      return _c(
+                        "option",
+                        {
+                          key: specialization.id,
+                          domProps: { value: specialization.id }
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(specialization.name) +
+                              "\n                "
+                          )
+                        ]
+                      )
+                    })
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "doctors",
+                        params: { spec: _vm.filterdoctor }
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "vs-button",
+                      {
+                        attrs: {
+                          color: _vm.colorx,
+                          "gradient-color-secondary": _vm.colorx2,
+                          type: "gradient"
+                        }
                       },
                       [
                         _vm._v(
-                          "\n            " +
-                            _vm._s(specialization.name) +
-                            "\n            "
+                          "\n                        Cerca il tuo nuovo dottore\n                    "
                         )
                       ]
                     )
-                  })
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "router-link",
-                {
-                  attrs: {
-                    to: { name: "doctors", params: { spec: _vm.filterdoctor } }
-                  }
-                },
-                [
-                  _c(
-                    "vs-button",
-                    {
-                      attrs: {
-                        color: _vm.colorx,
-                        "gradient-color-secondary": _vm.colorx2,
-                        type: "gradient"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                    Cerca il tuo nuovo dottore\n                "
-                      )
-                    ]
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c("Heroheader"),
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          : _vm._e()
+      ]),
       _vm._v(" "),
       _c("Banner")
     ],

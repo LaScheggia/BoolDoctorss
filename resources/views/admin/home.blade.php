@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -32,7 +33,7 @@
                      <span>Dr. {{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body custom-bg">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -42,7 +43,7 @@
 
                     <div class="row justify-content-center"> {{-- cards dottore --}}
                         <div class="card m-2" style="width: 18rem;"> {{-- visualizza profilo --}}
-                            <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+                            <img class="card-img-top" src="https://picsum.photos/id/341/286/180" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Vedi il tuo porfilo</h5>
                               <p class="card-text">Qua vedrai il tuo porfilo personale e i tuoi dati aggiornati.</p>
@@ -51,7 +52,7 @@
                         </div>
 
                         <div class="card m-2" style="width: 18rem;"> {{-- modifica dati --}}
-                            <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+                            <img class="card-img-top" src="https://picsum.photos/id/180/286/180" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Modifica i tuoi dati personali</h5>
                               <p class="card-text">Qua potrai modificare i tuoi dati e tenere aggiornato il profilo.</p>
@@ -60,7 +61,7 @@
                         </div>
 
                         <div class="card m-2" style="width: 18rem;"> {{-- visualizza messaggi --}}
-                            <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+                            <img class="card-img-top" src="https://picsum.photos/id/160/286/180" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Vedi i tuoi messaggi</h5>
                                 <p class="card-text">Qua potrai vedere tutti i messaggi ricevuti.</p>
@@ -69,7 +70,7 @@
                         </div>
 
                         <div class="card m-2" style="width: 18rem;"> {{-- visualizza recensioni --}}
-                            <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+                            <img class="card-img-top" src="https://picsum.photos/id/4/286/180" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Vedi le tue recensioni</h5>
                                 <p class="card-text">Qua potrai vedere le recensioni lasciate dai tuoi pazienti.</p>
@@ -78,7 +79,7 @@
                         </div>
 
                         <div class="card m-2" style="width: 18rem;"> {{-- visualizza piani pagamento --}}
-                            <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+                            <img class="card-img-top" src="https://picsum.photos/id/20/286/180" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Vedi i tuoi upgrade</h5>
                                 <p class="card-text">Qua potrai vedere vedere il tuo piano di upgrade e i suoi dettagli.</p>
@@ -87,7 +88,7 @@
                         </div>
 
                         <div class="card m-2" style="width: 18rem;"> {{-- vedi le tue stats --}}
-                            <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+                            <img class="card-img-top" src="https://picsum.photos/id/668/286/180" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Vedi le tue statistiche</h5>
                               <p class="card-text">Qua potrai eliminare vedere le tue statistiche.</p>
