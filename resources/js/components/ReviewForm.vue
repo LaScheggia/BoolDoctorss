@@ -4,7 +4,7 @@
 
         <div>
             <label for="patient_name">Il tuo nome</label> <!-- qua il pz dovrebbe inserire il nome -->
-            <input type="text" name="patient_name" id="patient_name" placeholder="Il tuo nome">
+            <input type="text" name="patient_name" id="patient_name" placeholder="Il tuo nome" required>
         </div>
         <div>
             <label for="title">Titolo della recensione</label> <!-- qua il pz dovrebbe il titolo della recensione -->
@@ -13,13 +13,9 @@
 
         <div class="form-group"> <!-- qua il pz dovrebbe inserire il testo della recensione -->
             <label for="text">Corpo della recensione</label>
-            <textarea class="form-control" name="text" id="text" v-model="text" rows="5" placeholder="Corpo della recensione"></textarea>
+            <textarea class="form-control" name="text" id="text" v-model="text" rows="5" placeholder="Corpo della recensione" required></textarea>
         </div>
 
-        <div>
-            <label for="added_on">Inserisci la data</label>
-            <input type="date" name="added_on" id="added_on"/>
-        </div>
         <div class="form-group mt-2">
             <label for="rating">Voto</label>
             <select name="rating" id="rating" class="form-control-sm">
@@ -30,48 +26,47 @@
               <option value="5">5</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Send message</button>
+        <button type="submit" class="btn btn-primary mt-3">{{ sending ? "Invio in corso..." : "Invia Recensione" }}</button>
     </form>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
-  name:'ReviewForm',
-  data(){
-      return{
-          rating:'',
-          patient_name:'',
-          text:'',
-          title: '',
-          id: '',
-          added_on: ''
-      }
+  name: "ReviewForm",
+  data() {
+    return {
+      id: null,
+      patient_name: null,
+      title: null,
+      text: null,
+      rating: null,
+      added_on: new Date().toISOString().substr(0, 10), // 05/09/2019
+      sending: false,
+    };
   },
-  props:[
-      'doctorId',
-  ],
-  mounted(){
-      this.id=this.doctorId;
-      console.log(this.doctorId);
-      console.log('piango');
-      console.log(this.id);
+  props: ["doctorId"],
+  mounted() {
+    this.id = this.doctorId;
+    console.log(this.doctorId);
+    console.log("piango");
+    console.log(this.id);
   },
-  methods:{
-      sendReview(){
-          console.log(this.doctorId);
-          console.log('send message');
-          axios.post('../api/review',)
-          .then(res => {
-              console.log(res)
-              console.log('mandato');
-          })
-          .catch(err => {
-              console.error(err);
-          })
-      }
-  }
-}
+  methods: {
+    sendReview() {
+      this.sending = true;
+      axios
+        .post("../api/review")
+        .then((res) => {
+          console.log(res);
+          this.sending = false;
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

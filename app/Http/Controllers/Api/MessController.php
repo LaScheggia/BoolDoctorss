@@ -23,7 +23,7 @@ class MessController extends Controller
         $new_message->fill($data);
         $new_message['user_id']=$data['user_id'];
         $new_message->save();
-        return redirect('/confirmation');
+        return redirect('/confirmation2');
     }
 
 

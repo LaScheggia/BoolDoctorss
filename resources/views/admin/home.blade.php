@@ -46,7 +46,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Vedi il tuo porfilo</h5>
                               <p class="card-text">Qua vedrai il tuo porfilo personale e i tuoi dati aggiornati.</p>
-                              <a href="{{ route('admin.profile.index') }}" class="btn btn-primary">Vai al tuo profilo</a>
+                              <a href="{{ route('admin.profile.index') }}" class="btn btn-grad">Vai al tuo profilo</a>
                             </div>
                         </div>
 

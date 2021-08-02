@@ -4,17 +4,17 @@
     <input type="hidden" name="user_id" id="user_id" :value="doctorId" >
 
         <div class="form-group">
-            <label for="mail">Inserisci la tua email</label>
-            <input type="email" class="form-control" v-model="patient_mail" placeholder="Inserisci qui la tua mail" name="patient_mail" id="patient_mail"/>
+            <label for="mail">Inserisci la tua email*</label>
+            <input type="email" class="form-control" v-model="patient_mail" placeholder="Inserisci qui la tua mail" required name="patient_mail" id="patient_mail"/>
         </div>
 
         <div class="form-group">
-            <label for="patient_name">Nome</label>
-            <input type="text" class="form-control" name="patient_name" id="patient_name" v-model="patient_name" rows="5" placeholder="Il tuo nome">
+            <label for="patient_name">Nome*</label>
+            <input type="text" class="form-control" name="patient_name" id="patient_name" v-model="patient_name" rows="5" placeholder="Il tuo nome" required>
         </div>
         <div class="form-group">
             <label for="text_message">Cognome</label>
-            <input type="text" class="form-control" name="patient_surname" id="patient_surname" v-model="patient_surname" rows="5" placeholder="Il tuo cognome">
+            <input type="text" class="form-control" name="patient_surname" id="patient_surname" v-model="patient_surname" rows="5" placeholder="Il tuo cognome" required>
         </div>
         <div class="form-group">
             <label for="patient_phone">Phone</label>
@@ -22,56 +22,51 @@
         </div>
         <div class="form-group">
             <label for="text_message">Message</label>
-            <textarea class="form-control" name="text_message" id="text_message" v-model="text_message" rows="5" placeholder="Cosa vorresti dire al dottore? Spiega brevemente la tua richiesta"></textarea>
-        </div>
-        <div>
-            <label for="added_on">Inserisci la data</label>
-            <input type="date" name="added_on" id="added_on"/>
+            <textarea class="form-control" name="text_message" id="text_message" v-model="text_message" rows="5" required placeholder="Cosa vorresti dire al dottore? Spiega brevemente la tua richiesta"></textarea>
         </div>
 
+
         <!-- <vs-button type="submit" >invia il messaggio</vs-button> -->
-        <button type="submit" class="btn btn-success mt-3" >Invia Messaggio</button>
+        <button type="submit" class="btn btn-success mt-3" >{{ sending ? "Invio in corso..." : "Invia Messaggio" }}</button>
     </form>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
-  name:'ContactForm',
-  data(){
-      return{
-          patient_name: '',
-          patient_surname: '',
-          patient_phone:'',
-          patient_email:'',
-          text_message:'',
-          id:'',
-      }
+  name: "MessageForm",
+  data() {
+    return {
+      id: null,
+      patient_name: null,
+      patient_surname: null,
+      patient_phone: null,
+      patient_mail: null,
+      text_message: null,
+      added_on: new Date().toISOString().substr(0, 10), // 05/09/2019
+      sending: false,
+    };
   },
-  props:[
-      'doctorId',
-  ],
-  mounted(){
-      this.id=this.doctorId;
-      console.log(this.id);
+  props: ["doctorId"],
+  mounted() {
+    this.id = this.doctorId;
+    console.log(this.id);
   },
-  methods:{
-      sendMessage(){
-          console.log(this.doctorId);
-          console.log('send message');
-          axios.post('../api/message')
-          .then(res => {
-              console.log(res)
-          })
-          .catch(err => {
-              console.log(err.response.data);
-              'non mandato'
-          })
-          console.log('messagio inviato');
-          /* this.$emit('confermaInviato',false); */
-      }
-  }
-}
+  methods: {
+    sendMessage() {
+      this.sending = true;
+      axios
+        .post("../api/message")
+        .then((res) => {
+          console.log(res);
+          this.sending = false;
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+        });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

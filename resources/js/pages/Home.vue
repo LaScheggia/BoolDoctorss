@@ -4,6 +4,8 @@
             <Banner  /> <!-- banner con slider -->
 
 
+
+
             <div class="input-group search container mb-5" v-if="specs.length > 0"> <!-- campo di select -->
                 <select
                     class="form-control"
@@ -30,6 +32,7 @@
                     </router-link>
             </div>
 
+
             <Heroheader/>
 
 
@@ -45,6 +48,8 @@
 import axios from 'axios';
 import Banner from '../components/Banner.vue';
 import Heroheader from '../components/Heroheader.vue'
+
+
 //import Profile from '../components/Profile.vue';
 
   export default {
@@ -53,6 +58,7 @@ import Heroheader from '../components/Heroheader.vue'
         Banner,
         //Profile,
         Heroheader,
+
 
     },
     props: {
@@ -104,6 +110,8 @@ import Heroheader from '../components/Heroheader.vue'
   color: #212121;
   font-style: italic;
 }
+
+
 
 
 </style>

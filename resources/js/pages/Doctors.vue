@@ -95,9 +95,7 @@ import axios from 'axios';
                     current: res.data.current_page,
                     last: res.data.last_page
                 }
-/*                     if(this.users.propic.startsWith('uploads')){
-                        this.users.propic = '../storage/'+this.users.propic;
-                    } */
+
             })
             .catch(err => {
                 console.log(err);

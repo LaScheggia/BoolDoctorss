@@ -7,6 +7,8 @@ import App from './App.vue';
 import router from './routes';
 import Vuesax from 'vuesax';
 import 'vuesax/dist/vuesax.css'
+import VueCarousel from 'vue-carousel';
+
 
 import 'material-icons/iconfont/material-icons.css';
 
@@ -14,7 +16,7 @@ Vue.config.productionTip = false
 Vue.use(Vuesax, {
     // options here
   })
-
+Vue.use(VueCarousel);
 /* const app = new Vue({
     el: '#app',
     router,

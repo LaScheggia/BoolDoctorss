@@ -24,6 +24,6 @@ class PlanController extends Controller
 
     public function getSelectedPlan(){
         //return Input::get('selectPlan');
-        //probabilemnte qua c'è da fare in modo di fare un barbatruycco x spostare l'input selezionato x il pagamento
+        //probabilemnte qua c'è da fare in modo di fare un barbatrucco x spostare l'input selezionato x il pagamento
     }
 }

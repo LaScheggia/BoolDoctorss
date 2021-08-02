@@ -25,11 +25,11 @@ class DoctorController extends Controller
                 DB::raw('COUNT(reviews.id) AS reviews_count')
             )
             ->with('specializations', 'reviews', 'sponsors')
-            ->join('reviews', 'reviews.user_id', '=', 'users.id')
-            ->join('sponsor_user', 'sponsor_user.user_id', '=', 'users.id') //qui mette già x primi quelli sponsored
-            ->join('sponsors', 'sponsors.id', '=', 'sponsor_user.sponsor_id') //qui mette già x primi quelli sponsored
-            ->groupBy('users.id')
-            ->orderBy('sponsors.id', 'desc');
+            ->leftJoin('reviews', 'reviews.user_id', '=', 'users.id')
+            /* ->leftJoin('sponsor_user', 'sponsor_user.user_id', '=', 'users.id') //qui mette già x primi quelli sponsored */
+            /* ->joinJoin('sponsors', 'sponsors.id', '=', 'sponsor_user.sponsor_id') //qui mette già x primi quelli sponsored */
+            ->groupBy('users.id');
+            /* ->orderBy('sponsors.id', 'desc'); */
 
         //uno x la specializzazione quindi usando ?spec= e mi trova x specializzazione (bisogna usare i query params)
         if ($request->query('spec') != null) {

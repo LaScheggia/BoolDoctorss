@@ -1,13 +1,24 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+
+// Partials and recurrent stuff
+@import 'partials/mixin'; //gradient
+@import 'partials/header';
+
+
 // Variables
 @import 'variables';
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 //fawsome
 // @import "node_modules/font-awesome/scss/font-awesome.scss";
+
+
+
+
 
 
