@@ -12,12 +12,19 @@
                 </div>
             </div>
             <div style="height: 250px; width:250px">
-                @if (Auth::user()->propic)
-                    <img style="height: 250px; width:250px" src="{{ asset('storage/' . Auth::user()->propic) }}" alt="{{ Auth::user()->cover_original_name }}">
+                {{-- immagine profilo --}}
+                @if (Auth::user()->propic && file_exists('storage/' . Auth::user()->propic))
+                <div
+                 style="height: 250px; width:250px;">
+                    <img class="img-thumbnail img-fluid" style="height: 250px; width:250px" src="{{ asset('storage/' . Auth::user()->propic) }}" alt="Immagine di {{ Auth::user()->name }} {{ Auth::user()->surname}}">
+                </div>
                 @else
-                    <img style="height: 100%"  class="img-thumbnail" src="{{ asset('img/neutraldoctor.png') }}" alt="Immagine di {{Auth::user()->name}} {{Auth::user()->surname}}">
-                @endif
-            </div>
+                <div
+                style="height: 250px; width:250px">
+                    <img style="height: 100%"  class="img-thumbnail img-fluid" src="{{ asset('img/neutraldoctor.png') }}" alt="Immagine di {{Auth::user()->name}} {{Auth::user()->surname}}">
+                </div>
+                 @endif
+             </div>
         </div>
 
         <table class="table">

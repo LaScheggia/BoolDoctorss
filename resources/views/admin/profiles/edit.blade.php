@@ -65,53 +65,6 @@
                 </div>
             </div>
 
-            {{-- input specializations multiselect --}}
-            {{-- <div class="form-group mb-3">
-                <div class="">
-                    <label id="specializations" class="input-group-text" for="specializations">Specializzazioni*
-                    </label>
-                </div>
-                <select class="custom-select" multiple id="specialization" name="specialization[]">
-                    @foreach ($specializations as $specialization)
-                        <option
-                        value="{{ old('specializations', $specialization->id) }}">
-                            {{ $specialization->name }}
-                        </option>
-                    @endforeach
-                </select>
-                @error('specializations')
-                    <p class="text-danger">{{ $message }}</p>
-                @enderror
-            </div>
-            <p class="small">* Tieni premuto CTRL o CMD per selezionare più valori</p> --}}
-
-            {{-- input specializations select 1 --}}
-            {{-- <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="specialization">Specializzazione 1</label>
-                </div>
-                <select class="custom-select" id="specialization" name="specialization[]">
-                    @foreach ($specializations as $specialization)
-                        <option value="{{ old('specializations', $specialization->id) }}">
-                            {{ $specialization->name }}
-                        </option>
-                    @endforeach
-                </select>
-            </div> --}}
-            {{-- input specializations select 2 --}}
-            {{-- <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="specialization">Specializzazione 2</label>
-                </div>
-                <select class="custom-select" id="specialization" name="specialization[]">
-                    @foreach ($specializations as $specialization)
-                        <option value="{{ old('specializations', $specialization->id) }}">
-                            {{ $specialization->name }}
-                        </option>
-                    @endforeach
-                </select>
-            </div> --}}
-
             {{-- bio --}}
                 <div class="input-group mb-5">
                     <div class="input-group-prepend">
@@ -134,8 +87,10 @@
                     <div>
                         <label class="label-control" for="cover">Immagine</label>
                     </div>
-                    @if (Auth::user()->propic)
+                    @if (Auth::user()->propic && file_exists('storage/' . Auth::user()->propic))
                         <img style="height: 150px; width:150px" src="{{ asset('storage/' . Auth::user()->propic) }}" alt="{{ Auth::user()->cover_original_name }}">
+                    @else
+                        <img style="height: 150px; width:150px" src="{{ asset('img/neutraldoctor.png') }}" alt="">
                     @endif
                     <input
                         type="file"

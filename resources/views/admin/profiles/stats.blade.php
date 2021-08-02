@@ -154,10 +154,10 @@ var myChart = new Chart(ctx, { /* qua dichiarano il nome della chart */
             label: 'Numero di recensioni',
             data: rewsMonth, /* il numero di rece al mese */
             backgroundColor: [
-                '#0000ff8c',
+                '#80CBC4',
             ],
             borderColor: [
-                '#0000ff',
+                '#004D40',
             ],
             borderWidth: 1
         },
@@ -165,10 +165,10 @@ var myChart = new Chart(ctx, { /* qua dichiarano il nome della chart */
             label: 'Numero di messaggi ricevuti',
             data: messMonth, /* il numero di mess al mese */
             backgroundColor: [
-                '#ff00c88c',
+                '#0097A7',
             ],
             borderColor: [
-                '#ff00c8',
+                '#006064',
             ],
             borderWidth: 1
         },
@@ -195,10 +195,10 @@ var myChart = new Chart(ct2, { /* qua dichiarano il nome della chart */
             label: 'Recensioni con voto 1',
             data: voto1, /* le rece con value 1 */
             backgroundColor: [
-                '#ff00008c',
+                '#D32F2F',
             ],
             borderColor: [
-                'red',
+                '#B71C1C',
             ],
             borderWidth: 1
         },
@@ -206,10 +206,10 @@ var myChart = new Chart(ct2, { /* qua dichiarano il nome della chart */
             label: 'Recensioni con voto 2',
             data: voto2, /* le rece con value 2 */
             backgroundColor: [
-                '#ffa6008c',
+                '#F57C00',
             ],
             borderColor: [
-                'orange',
+                '#BF360C',
             ],
             borderWidth: 1
         },
@@ -217,10 +217,10 @@ var myChart = new Chart(ct2, { /* qua dichiarano il nome della chart */
             label: 'Recensioni con voto 3',
             data: voto3, /* le rece con value 3 */
             backgroundColor: [
-                '#ffff008c',
+                '#FFEB3B',
             ],
             borderColor: [
-                'yellow',
+                '#FBC02D',
             ],
             borderWidth: 1
         },
@@ -228,10 +228,10 @@ var myChart = new Chart(ct2, { /* qua dichiarano il nome della chart */
             label: 'Recensioni con voto 4',
             data: voto4, /* le rece con value 4 */
             backgroundColor: [
-                '#b7dd298c',
+                '#C0CA33',
             ],
             borderColor: [
-                '#b7dd29',
+                '#AFB42B',
             ],
             borderWidth: 1
         },
@@ -239,10 +239,10 @@ var myChart = new Chart(ct2, { /* qua dichiarano il nome della chart */
             label: 'Recensioni con voto 5',
             data: voto5, /* le rece con value 5 */
             backgroundColor: [
-                '#57e32c8c',
+                '#43A047',
             ],
             borderColor: [
-                '#57e32c',
+                '#1B5E20',
             ],
             borderWidth: 1
         },

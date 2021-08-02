@@ -10,6 +10,7 @@ import Profile from './pages/Profile.vue';
 import Contacts from './pages/Contacts.vue';
 import Confirmation from './pages/Confirmation.vue';
 import Confirmation2 from './pages/Confirmation2.vue';
+import Team from './pages/Team.vue';
 import Error404 from './pages/Error404.vue';
 
 const router = new VueRouter({
@@ -45,6 +46,11 @@ const router = new VueRouter({
             path: '/confirmation2',
             name: 'confirmation2',
             component: Confirmation2
+        },
+        {
+            path: '/team',
+            name: 'team',
+            component: Team
         },
 /*         {
             path: '/*',

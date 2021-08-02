@@ -1990,6 +1990,98 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Banner'
 });
@@ -2706,6 +2798,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
  //import Profile from '../components/Profile.vue';
@@ -2854,6 +2948,95 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Team.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'team'
+});
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Banner.vue?vue&type=style&index=0&id=3d01b757&lang=scss&scoped=true&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Banner.vue?vue&type=style&index=0&id=3d01b757&lang=scss&scoped=true& ***!
@@ -2866,7 +3049,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".carousel-item[data-v-3d01b757] {\n  height: 60vh;\n  min-height: 350px;\n  background: no-repeat center center scroll;\n  background-size: cover;\n}", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\nbody[data-v-3d01b757] {\n  margin-top: 20px;\n}\n.btn.btn-outline-primary[data-v-3d01b757]:hover, .bg-primary[data-v-3d01b757] {\n  background-color: #80CBC4 !important;\n}\n.section-medium[data-v-3d01b757] {\n  padding: 55px 0px;\n}\n.testimonial-four blockquote[data-v-3d01b757]:hover::after, .section-arrow-primary-color.section-arrow--bottom-center[data-v-3d01b757]:after {\n  border-right-color: #80CBC4;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-3d01b757]:after {\n  background-color: #80CBC4;\n  border-right-color: #80CBC4;\n  border-bottom-color: #80CBC4;\n}\n.section-arrow--bottom-center[data-v-3d01b757]:after {\n  z-index: 1;\n  position: absolute;\n  left: 50%;\n  margin-left: -15px;\n  content: \"\";\n  position: absolute;\n  bottom: -15px;\n  width: 30px;\n  height: 30px;\n  border-right: 1px solid #262626;\n  border-bottom: 1px solid #262626;\n  transform: rotate(45deg);\n  background-color: #262626;\n}\n.text-white h1[data-v-3d01b757], .text-white h2[data-v-3d01b757], .text-white h3[data-v-3d01b757], .text-white h4[data-v-3d01b757], .text-white h5[data-v-3d01b757], .text-white h6[data-v-3d01b757] {\n  color: white !important;\n}\n.section-title[data-v-3d01b757] {\n  font-size: 32px;\n  font-weight: 600;\n  margin-top: 0.45em;\n  margin-bottom: 0.35em;\n  color: #303133;\n  font-family: Poppins;\n  letter-spacing: -0.02em;\n}\n.section-sub-title[data-v-3d01b757] {\n  font-size: 18px;\n  margin-bottom: 20px;\n  font-weight: 400;\n  font-family: Poppins;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-3d01b757]:after {\n  border-bottom-color: #80CBC4;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-3d01b757]:after {\n  background-color: #80CBC4;\n}\n.special-heading.line span[data-v-3d01b757]:before, .special-heading.line span[data-v-3d01b757]:after, .footer.footer-minimal[data-v-3d01b757], .t-bordered[data-v-3d01b757] {\n  border-top-color: #eaeaea;\n}\n.t-bordered[data-v-3d01b757] {\n  border-top: 1px solid #eaeaea;\n}\n.section-primary[data-v-3d01b757] {\n  padding: 75px 0px;\n}\nsection[data-v-3d01b757] {\n  position: relative;\n}\n.testimonial-two[data-v-3d01b757] {\n  padding: 20px;\n  border: 2px solid #80CBC4;\n  border-radius: 2px;\n}\n.testimonial-two blockquote p[data-v-3d01b757]:before {\n  font-family: \"Playfair Display\";\n  font-size: 54px;\n  color: #0cb4ce;\n  font-weight: 900;\n  left: 10px;\n  color: #FFF;\n  content: \"\\201C\";\n  font-style: normal;\n  line-height: 1;\n  position: absolute;\n  top: 5px;\n  font-size: 45px;\n}\n.testimonial-two blockquote p[data-v-3d01b757]:after {\n  font-family: \"Playfair Display\";\n  font-size: 54px;\n  color: #0cb4ce;\n  content: \"\\201D\";\n  font-size: 80px;\n  font-style: normal;\n  line-height: 1;\n  position: absolute;\n  bottom: -0.5em;\n  right: 10px;\n  font-weight: 900;\n  transform: scaleY(-1);\n  font-size: 45px;\n  bottom: -5px;\n}\n.testimonial-two blockquote[data-v-3d01b757] {\n  padding: 15px 15px 15px 48px;\n  position: relative;\n}\n.testimonial-two blockquote p[data-v-3d01b757]:before,\n.testimonial-two blockquote p[data-v-3d01b757]:after {\n  color: #0cb4ce;\n  font-weight: 900;\n}\n.testimonial-two blockquote p[data-v-3d01b757] {\n  font-size: inherit;\n  font-weight: inherit;\n}\n.testimonial-two .testimonial-author p[data-v-3d01b757] {\n  color: #999;\n  margin: 0 0 0 25px;\n  text-align: left;\n}\n.testimonial-two .testimonial-author strong[data-v-3d01b757] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 500;\n  font-size: 14px;\n  color: #444;\n}\n.testimonial-two .testimonial-author span[data-v-3d01b757] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-two .testimonial-author .testimonial-author-thumbnail[data-v-3d01b757] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-two .testimonial-author img[data-v-3d01b757] {\n  max-width: 55px;\n}\n.testimonial-two .testimonial-author[data-v-3d01b757] {\n  margin-left: 12px;\n  margin-bottom: 15px;\n}\n.testimonial-two .owl-theme .owl-nav.disabled + .owl-dots[data-v-3d01b757] {\n  margin-top: 0px;\n}\n.testimonial-two .owl-theme .owl-dots[data-v-3d01b757] {\n  text-align: left;\n  margin-left: 50px;\n}\n.testimonial-two .owl-carousel .owl-dots .owl-dot.active span[data-v-3d01b757],\n.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span[data-v-3d01b757] {\n  border-color: #0cb4ce;\n}\n.testimonial-two .owl-carousel .owl-dots .owl-dot.active span[data-v-3d01b757]:before,\n.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span[data-v-3d01b757]:before {\n  background-color: #0cb4ce;\n}\n.testimonial-three .testimonial-image[data-v-3d01b757] {\n  float: left;\n  margin: 0 20px 0 0;\n  width: 80px;\n  height: 80px;\n  border-radius: 100px;\n  overflow: hidden;\n}\n.testimonial-three .testimonial-content[data-v-3d01b757] {\n  overflow: hidden;\n}\n.testimonial-three .testimonial-meta[data-v-3d01b757] {\n  position: relative;\n  overflow: hidden;\n  margin-left: 100px;\n}\n.testimonial-three .testimonial-name[data-v-3d01b757] {\n  display: block;\n}\n.testimonial-three .testimonial-three-col[data-v-3d01b757] {\n  padding-bottom: 35px;\n}\n.testimonial-three .testimonial-three-col[data-v-3d01b757] {\n  border-right-style: dashed;\n  border-right-width: 1px;\n  border-bottom-style: dashed;\n  border-bottom-width: 1px;\n  border-right-color: #ddd;\n  border-bottom-color: #ddd;\n  padding: 25px;\n}\n.testimonial-three .testimonial-three-col[data-v-3d01b757]:hover {\n  background-color: #f7f7f7;\n}\n.alternate-color .testimonial-three .testimonial-three-col[data-v-3d01b757]:hover {\n  background-color: white;\n}\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-3d01b757]:nth-child(2n) {\n  border-right: none;\n}\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-3d01b757]:nth-last-child(-n+2),\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-3d01b757]:last-child {\n  border-bottom: none;\n}\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-3d01b757]:nth-child(3n) {\n  border-right: none;\n}\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-3d01b757]:nth-last-child(-n+3),\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-3d01b757]:nth-last-child(-n+2),\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-3d01b757]:last-child {\n  border-bottom: none;\n}\n.testimonial-four .testimonial-author .testimonial-author-thumbnail[data-v-3d01b757] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-four .testimonial-author img[data-v-3d01b757] {\n  max-width: 55px;\n}\n.testimonial-four .testimonial-author strong[data-v-3d01b757] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 500;\n  font-size: 14px;\n  color: #444;\n}\n.testimonial-four .testimonial-author span[data-v-3d01b757] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-four blockquote[data-v-3d01b757] {\n  padding: 30px;\n  width: 100%;\n  border-radius: 4px;\n  position: relative;\n  margin-bottom: 20px;\n  padding-bottom: 25px;\n  border: 2px solid #eaeaea;\n}\n.testimonial-four blockquote[data-v-3d01b757]::after {\n  content: \"\";\n  border-right: 2px solid #eaeaea;\n  border-bottom: 2px solid #eaeaea;\n  transform: rotate(55deg);\n  position: absolute;\n  left: 55px;\n  bottom: -12px;\n  width: 15px;\n  height: 21px;\n  overflow: hidden;\n  background: white;\n}\n.testimonial-four .owl-theme .owl-nav.disabled + .owl-dots[data-v-3d01b757] {\n  position: absolute;\n  float: right;\n  text-align: right;\n  right: 3px;\n  bottom: 40px;\n}\n.testimonial-four .testimonial-author[data-v-3d01b757] {\n  position: relative;\n  overflow: hidden;\n}\n.testimonial-four blockquote[data-v-3d01b757]:hover::after {\n  border-right: 2px solid #0cb4ce;\n  border-bottom: 2px solid #0cb4ce;\n}\n.testimonial-four blockquote[data-v-3d01b757]:hover {\n  border: 2px solid #0cb4ce;\n}\n.testimonial-five blockquote p[data-v-3d01b757] {\n  font-weight: 400;\n  font-size: 14.58px;\n  line-height: 1.6;\n  margin-bottom: 0;\n}\n.testimonial-five .testimonial-author .testimonial-author-thumbnail[data-v-3d01b757] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-five .testimonial-author img[data-v-3d01b757] {\n  max-width: 55px;\n}\n.testimonial-five .testimonial-author strong[data-v-3d01b757] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 600;\n  font-size: 13px;\n}\n.testimonial-five .testimonial-author span[data-v-3d01b757] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-five blockquote[data-v-3d01b757] {\n  padding: 32px 41px 37px;\n  width: 100%;\n  border-radius: 4px;\n  position: relative;\n  margin-bottom: 30px;\n  border: 0px solid #eaeaea;\n  background-color: #f7f7f7;\n}\n.testimonial-five blockquote[data-v-3d01b757]::after {\n  content: \"\";\n  border-right: 0px solid #eaeaea;\n  border-bottom: 0px solid #eaeaea;\n  transform: rotate(55deg);\n  position: absolute;\n  left: 55px;\n  bottom: -10px;\n  width: 15px;\n  height: 21px;\n  overflow: hidden;\n  background: #f7f7f7;\n}\n.testimonial-five.testimonial-light blockquote[data-v-3d01b757] {\n  background-color: white;\n}\n.testimonial-five.testimonial-light blockquote[data-v-3d01b757]::after {\n  background: white;\n}\n.testimonial-five .owl-theme .owl-nav.disabled + .owl-dots[data-v-3d01b757] {\n  position: absolute;\n  float: right;\n  text-align: right;\n  right: 3px;\n  bottom: 40px;\n}\n.testimonial-five .testimonial-author[data-v-3d01b757] {\n  position: relative;\n  overflow: hidden;\n}\n.testimonial-five blockquote[data-v-3d01b757]:before {\n  content: \"\\201C\";\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  font-size: 170px;\n  color: rgba(189, 189, 189, 0.2);\n  position: absolute;\n  top: 10px;\n  left: 20px;\n}\nimg[data-v-3d01b757] {\n  max-width: 100%;\n  height: auto;\n}", ""]);
 
 // exports
 
@@ -3057,6 +3240,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "body[data-v-074da5b0] {\n  background-color: #D32F2F;\n  font-family: \"Calibri\", sans-serif !important;\n}\n.mt-100[data-v-074da5b0] {\n  margin-top: 100px;\n}\n.mb-100[data-v-074da5b0] {\n  margin-bottom: 100px;\n}\n.card[data-v-074da5b0] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: border-box;\n  border: 0px solid transparent;\n  border-radius: 0px;\n}\n.card-body[data-v-074da5b0] {\n  flex: 1 1 auto;\n  padding: 1.25rem;\n}\n.card .card-title[data-v-074da5b0] {\n  position: relative;\n  font-weight: 600;\n  margin-bottom: 10px;\n}\n.comment-widgets[data-v-074da5b0] {\n  position: relative;\n  margin-bottom: 10px;\n}\n.comment-widgets .comment-row[data-v-074da5b0] {\n  border-bottom: 1px solid transparent;\n  padding: 14px;\n  display: flex;\n  margin: 10px 0;\n}\n.p-2[data-v-074da5b0] {\n  padding: 0.5rem !important;\n}\n.comment-text[data-v-074da5b0] {\n  padding-left: 15px;\n}\n.w-100[data-v-074da5b0] {\n  width: 100% !important;\n}\n.m-b-15[data-v-074da5b0] {\n  margin-bottom: 15px;\n}\n.btn-sm[data-v-074da5b0] {\n  padding: 0.25rem 0.5rem;\n  font-size: 0.76563rem;\n  line-height: 1.5;\n  border-radius: 1px;\n}\n.btn-cyan[data-v-074da5b0] {\n  color: #fff;\n  background-color: #27a9e3;\n  border-color: #27a9e3;\n}\n.btn-cyan[data-v-074da5b0]:hover {\n  color: #fff;\n  background-color: #1a93ca;\n  border-color: #198bbe;\n}\n.comment-widgets .comment-row[data-v-074da5b0]:hover {\n  background: rgba(0, 0, 0, 0.05);\n}\n\n/* BUTTON MODAL */\n.button[data-v-074da5b0] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  display: inline-block;\n  padding: 15px 25px;\n  background-image: linear-gradient(to right, #CC2E5D, #FF5858);\n  border-radius: 8px;\n  color: #FFF;\n  font-size: 18px;\n  font-weight: 700;\n  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);\n  transition: 0.4s ease-out;\n}\n.button[data-v-074da5b0]:hover {\n  box-shadow: 6px 6px rgba(0, 0, 0, 0.6);\n}\n.modal-overlay[data-v-074da5b0] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 98;\n  background-color: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-074da5b0] {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 99;\n  width: 100%;\n  max-width: 400px;\n  background-color: #FFF;\n  border-radius: 16px;\n  padding: 25px;\n}\n.modal h1[data-v-074da5b0] {\n  color: #222;\n  font-size: 32px;\n  font-weight: 900;\n  margin-bottom: 15px;\n}\n.modal p[data-v-074da5b0] {\n  color: #666;\n  font-size: 18px;\n  font-weight: 400;\n  margin-bottom: 15px;\n}\n.fade-enter-active[data-v-074da5b0],\n.fade-leave-active[data-v-074da5b0] {\n  transition: opacity 0.5s;\n}\n.fade-enter[data-v-074da5b0],\n.fade-leave-to[data-v-074da5b0] {\n  opacity: 0;\n}\n.slide-enter-active[data-v-074da5b0],\n.slide-leave-active[data-v-074da5b0] {\n  transition: transform 0.5s;\n}\n.slide-enter[data-v-074da5b0],\n.slide-leave-to[data-v-074da5b0] {\n  transform: translateY(-50%) translateX(100vw);\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body[data-v-5fa376e6] {\n  font-family: tahoma;\n  height: 100vh;\n  background-image: url(https://picsum.photos/g/3000/2000);\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  align-items: center;\n}\n.our-team[data-v-5fa376e6] {\n  padding: 30px 0 40px;\n  margin-bottom: 30px;\n  background-color: #E0F2F1;\n  text-align: center;\n  overflow: hidden;\n  position: relative;\n}\n.our-team .picture[data-v-5fa376e6] {\n  display: inline-block;\n  height: 130px;\n  width: 130px;\n  margin-bottom: 50px;\n  z-index: 1;\n  position: relative;\n}\n.our-team .picture[data-v-5fa376e6]::before {\n  content: \"\";\n  width: 100%;\n  height: 0;\n  border-radius: 50%;\n  background-color: #00796B;\n  position: absolute;\n  bottom: 135%;\n  right: 0;\n  left: 0;\n  opacity: 0.9;\n  transform: scale(3);\n  transition: all 0.3s linear 0s;\n}\n.our-team:hover .picture[data-v-5fa376e6]::before {\n  height: 100%;\n}\n.our-team .picture[data-v-5fa376e6]::after {\n  content: \"\";\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: #00796B;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: -1;\n}\n.our-team .picture img[data-v-5fa376e6] {\n  width: 100%;\n  height: auto;\n  border-radius: 50%;\n  transform: scale(1);\n  transition: all 0.9s ease 0s;\n}\n.our-team:hover .picture img[data-v-5fa376e6] {\n  box-shadow: 0 0 0 14px #B2DFDB;\n  transform: scale(0.7);\n}\n.our-team .title[data-v-5fa376e6] {\n  display: block;\n  font-size: 15px;\n  color: #4e5052;\n  text-transform: capitalize;\n}\n.our-team .social[data-v-5fa376e6] {\n  width: 100%;\n  padding: 0;\n  margin: 0;\n  background-color: #00796B;\n  position: absolute;\n  bottom: -100px;\n  left: 0;\n  transition: all 0.5s ease 0s;\n}\n.our-team:hover .social[data-v-5fa376e6] {\n  bottom: 0;\n}\n.our-team .social li[data-v-5fa376e6] {\n  display: inline-block;\n}\n.our-team .social li a[data-v-5fa376e6] {\n  display: block;\n  padding: 10px;\n  font-size: 17px;\n  color: white;\n  transition: all 0.3s ease 0s;\n  text-decoration: none;\n}\n.our-team .social li a[data-v-5fa376e6]:hover {\n  color: #00796B;\n  background-color: #B2DFDB;\n}", ""]);
 
 // exports
 
@@ -4079,6 +4281,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -4730,167 +4962,350 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("header", [
-        _c(
-          "div",
-          {
-            staticClass: "carousel slide",
-            attrs: { id: "carouselExampleCaptions", "data-bs-ride": "carousel" }
-          },
-          [
-            _c("div", { staticClass: "carousel-indicators" }, [
-              _c("button", {
-                staticClass: "active",
-                attrs: {
-                  type: "button",
-                  "data-bs-target": "#carouselExampleCaptions",
-                  "data-bs-slide-to": "0",
-                  "aria-current": "true",
-                  "aria-label": "Slide 1"
-                }
-              }),
-              _vm._v(" "),
-              _c("button", {
-                attrs: {
-                  type: "button",
-                  "data-bs-target": "#carouselExampleCaptions",
-                  "data-bs-slide-to": "1",
-                  "aria-label": "Slide 2"
-                }
-              }),
-              _vm._v(" "),
-              _c("button", {
-                attrs: {
-                  type: "button",
-                  "data-bs-target": "#carouselExampleCaptions",
-                  "data-bs-slide-to": "2",
-                  "aria-label": "Slide 3"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-inner" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "carousel-item active",
-                  staticStyle: {
-                    "background-image":
-                      "url('https://via.placeholder.com/1920x1080')"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "carousel-caption" }, [
-                    _c("h5", [_vm._v("First slide label")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Some representative placeholder content for the first slide."
-                      )
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "carousel-item",
-                  staticStyle: {
-                    "background-image":
-                      "url('https://via.placeholder.com/1920x1080')"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "carousel-caption" }, [
-                    _c("h5", [_vm._v("Second slide label")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Some representative placeholder content for the second slide."
-                      )
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "carousel-item",
-                  staticStyle: {
-                    "background-image":
-                      "url('https://via.placeholder.com/1920x1080')"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "carousel-caption" }, [
-                    _c("h5", [_vm._v("Third slide label")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Some representative placeholder content for the third slide."
-                      )
-                    ])
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "carousel-control-prev",
-                attrs: {
-                  type: "button",
-                  "data-bs-target": "#carouselExampleCaptions",
-                  "data-bs-slide": "prev"
-                }
-              },
-              [
-                _c("span", {
-                  staticClass: "carousel-control-prev-icon",
-                  attrs: { "aria-hidden": "true" }
-                }),
+      _c(
+        "section",
+        {
+          staticClass:
+            "section-medium section-arrow--bottom-center section-arrow-primary-color bg-primary"
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12 text-white text-center" }, [
+                _c("h2", { staticClass: "section-title " }, [
+                  _vm._v(" Cosa dicono di noi")
+                ]),
                 _vm._v(" "),
-                _c("span", { staticClass: "visually-hidden" }, [
-                  _vm._v("Previous")
+                _c("p", { staticClass: "section-sub-title" }, [
+                  _vm._v(
+                    "\n                    Ecco cosa dicono di noi chi si è già affidato a *ins nome*\n                    "
+                  ),
+                  _c("br"),
+                  _vm._v(
+                    " per trovare lo specialista adatto alle proprie esigenze.\n                "
+                  )
                 ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "carousel-control-next",
-                attrs: {
-                  type: "button",
-                  "data-bs-target": "#carouselExampleCaptions",
-                  "data-bs-slide": "next"
-                }
-              },
-              [
-                _c("span", {
-                  staticClass: "carousel-control-next-icon",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "visually-hidden" }, [_vm._v("Next")])
-              ]
-            )
-          ]
-        )
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("section", { staticClass: "section-primary t-bordered" }, [
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            {
+              staticClass: "row testimonial-three testimonial-three--col-three"
+            },
+            [
+              _c("div", { staticClass: "col-md-4 testimonial-three-col" }, [
+                _c("div", { staticClass: "testimonial-inner" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "testimonial-image",
+                      attrs: { itemprop: "image" }
+                    },
+                    [
+                      _c("img", {
+                        attrs: {
+                          width: "180",
+                          height: "180",
+                          src: "https://i.pravatar.cc/150?img=69"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-content" }, [
+                    _c("p", [
+                      _vm._v(
+                        "\n                            Che sito fantastico! Comodissimo perché posso cercare i dottori anche da mobile!\n                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-meta" }, [
+                    _c(
+                      "strong",
+                      {
+                        staticClass: "testimonial-name",
+                        attrs: { itemprop: "name" }
+                      },
+                      [_vm._v("Ugo de Ughi")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "testimonial-job-title",
+                        attrs: { itemprop: "jobTitle" }
+                      },
+                      [_vm._v("Musicista")]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 testimonial-three-col" }, [
+                _c("div", { staticClass: "testimonial-inner" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "testimonial-image",
+                      attrs: { itemprop: "image" }
+                    },
+                    [
+                      _c("img", {
+                        attrs: {
+                          width: "180",
+                          height: "180",
+                          src: "https://i.pravatar.cc/150?img=65"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-content" }, [
+                    _c("p", [
+                      _vm._v(
+                        "\n                            Comodissimo il poter inviare al dottore un messaggio! Dovrebbe esserci su tutti i siti!!\n                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-meta" }, [
+                    _c(
+                      "strong",
+                      {
+                        staticClass: "testimonial-name",
+                        attrs: { itemprop: "name" }
+                      },
+                      [_vm._v("Gianfraschio ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "testimonial-job-title",
+                        attrs: { itemprop: "jobTitle" }
+                      },
+                      [_vm._v("Pensionato")]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 testimonial-three-col" }, [
+                _c("div", { staticClass: "testimonial-inner" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "testimonial-image",
+                      attrs: { itemprop: "image" }
+                    },
+                    [
+                      _c("img", {
+                        attrs: {
+                          width: "180",
+                          height: "180",
+                          src: "https://i.pravatar.cc/150?img=9"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-content" }, [
+                    _c("p", [
+                      _vm._v(
+                        "\n                            Mi piace tantissimo!! Ho finalmente risolto il mio problema alla schiena con la dottoressa trovata qua sopra! Finalemnte posso tornare a fare la stripper!\n                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-meta" }, [
+                    _c(
+                      "strong",
+                      {
+                        staticClass: "testimonial-name",
+                        attrs: { itemprop: "name" }
+                      },
+                      [_vm._v("Marisa Belarda")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "testimonial-job-title",
+                        attrs: { itemprop: "jobTitle" }
+                      },
+                      [_vm._v("Stripper professionista")]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 testimonial-three-col" }, [
+                _c("div", { staticClass: "testimonial-inner" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "testimonial-image",
+                      attrs: { itemprop: "image" }
+                    },
+                    [
+                      _c("img", {
+                        attrs: {
+                          width: "180",
+                          height: "180",
+                          src: "https://i.pravatar.cc/150?img=11"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-content" }, [
+                    _c("p", [
+                      _vm._v(
+                        "\n                            Non trovo sito migliore che questo! Ho avuto un problema dove non riuscivo a contattare lo specialista di cui avevo bisogno e l'assistenza mi ha subito risolto il problema.\n                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-meta" }, [
+                    _c(
+                      "strong",
+                      {
+                        staticClass: "testimonial-name",
+                        attrs: { itemprop: "name" }
+                      },
+                      [_vm._v("Andrej PerBoschi")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "testimonial-job-title",
+                        attrs: { itemprop: "jobTitle" }
+                      },
+                      [_vm._v("Boscaiolo")]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 testimonial-three-col" }, [
+                _c("div", { staticClass: "testimonial-inner" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "testimonial-image",
+                      attrs: { itemprop: "image" }
+                    },
+                    [
+                      _c("img", {
+                        attrs: {
+                          width: "180",
+                          height: "180",
+                          src: "https://i.pravatar.cc/150?img=19"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-content" }, [
+                    _c("p", [
+                      _vm._v(
+                        "\n                            Fantastico! Finalmente una piattaforma dove trovare tutti i professionisti della città di Milano! Ora non dovrò più perdere pomeriggi a cercare su google un dottore!\n                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-meta" }, [
+                    _c(
+                      "strong",
+                      {
+                        staticClass: "testimonial-name",
+                        attrs: { itemprop: "name" }
+                      },
+                      [_vm._v("Maria Chespanzada")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "testimonial-job-title",
+                        attrs: { itemprop: "jobTitle" }
+                      },
+                      [_vm._v("Tuffatrice")]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 testimonial-three-col" }, [
+                _c("div", { staticClass: "testimonial-inner" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "testimonial-image",
+                      attrs: { itemprop: "image" }
+                    },
+                    [
+                      _c("img", {
+                        attrs: {
+                          width: "180",
+                          height: "180",
+                          src: "https://i.pravatar.cc/150?img=29"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-content" }, [
+                    _c("p", [
+                      _vm._v(
+                        "\n                            La miglior piattaforma in circolazione! Dovrebbe esistere per ogni città non solo per Milano!\n                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-meta" }, [
+                    _c(
+                      "strong",
+                      {
+                        staticClass: "testimonial-name",
+                        attrs: { itemprop: "name" }
+                      },
+                      [_vm._v("Galina Cocimelova")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "testimonial-job-title",
+                        attrs: { itemprop: "jobTitle" }
+                      },
+                      [_vm._v("Cuoca")]
+                    )
+                  ])
+                ])
+              ])
+            ]
+          )
+        ])
       ]),
       _vm._v(" "),
       _c("section", { staticClass: "py-5" }, [
         _c("div", { staticClass: "container" }, [
           _c("h1", { staticClass: "fw-light" }, [
-            _vm._v("I'll also write something nice Here")
+            _vm._v("In molti si sono già affidati a *inserire nome*")
           ]),
           _vm._v(" "),
           _c("p", { staticClass: "lead" }, [
             _vm._v(
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vero nemo et ad! Deleniti, incidunt maiores corporis cumque cum et! Libero animi exercitationem rerum ad? Laudantium, a! Commodi, quod illo."
+              "Unisciti agli oltre 123.000 utenti attivi sulla nostra piattaforma che cercano un professionista adatto alle loro esigenze. Scegli il tuo specialista oggi stesso."
             )
           ])
         ])
@@ -5022,15 +5437,63 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("body", { staticClass: "d-flex flex-column" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("footer", { staticClass: "bg-white" }, [
+      _c("div", { staticClass: "container py-5" }, [
+        _c("div", { staticClass: "row py-4" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-2 col-md-6 mb-4 mb-lg-0" }, [
+            _c("h6", { staticClass: "text-uppercase font-weight-bold mb-4" }, [
+              _vm._v("The Company")
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-unstyled mb-0" }, [
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Team3")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5)
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(6)
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(7)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("body", { staticClass: "d-flex flex-column" }, [
-      _c("div", { staticClass: "container-fluid flex-grow-1 flex-shrink-0" }, [
+    return _c(
+      "div",
+      { staticClass: "container-fluid flex-grow-1 flex-shrink-0" },
+      [
         _c("div", { staticClass: "px-lg-5" }, [
           _c("div", { staticClass: "row py-5" }, [
             _c(
@@ -5048,186 +5511,178 @@ var staticRenderFns = [
             )
           ])
         ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4 col-md-6 mb-4 mb-lg-0" }, [
+      _c("img", {
+        staticClass: "mb-3",
+        attrs: { src: "", alt: "", width: "180" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "font-italic text-muted" }, [
+        _vm._v("Per rimanere aggiornato seguici sui nostri social.")
       ]),
       _vm._v(" "),
-      _c("footer", { staticClass: "bg-white" }, [
-        _c("div", { staticClass: "container py-5" }, [
-          _c("div", { staticClass: "row py-4" }, [
-            _c("div", { staticClass: "col-lg-4 col-md-6 mb-4 mb-lg-0" }, [
-              _c("img", {
-                staticClass: "mb-3",
-                attrs: { src: "", alt: "", width: "180" }
-              }),
-              _vm._v(" "),
-              _c("p", { staticClass: "font-italic text-muted" }, [
-                _vm._v("Per rimanere aggiornato seguici sui nostri social.")
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-inline mt-4" }, [
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "#", target: "_blank", title: "twitter" }
-                    },
-                    [_c("i", { staticClass: "fab fa-facebook-square" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "#", target: "_blank", title: "facebook" }
-                    },
-                    [_c("i", { staticClass: "fab fa-linkedin" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "#", target: "_blank", title: "instagram" }
-                    },
-                    [_c("i", { staticClass: "fab fa-youtube" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "#", target: "_blank", title: "pinterest" }
-                    },
-                    [_c("i", { staticClass: "fab fa-instagram" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "list-inline-item" }, [
-                  _c(
-                    "a",
-                    { attrs: { href: "#", target: "_blank", title: "vimeo" } },
-                    [_c("i", { staticClass: "fab fa-twitter-square" })]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-2 col-md-6 mb-4 mb-lg-0" }, [
-              _c(
-                "h6",
-                { staticClass: "text-uppercase font-weight-bold mb-4" },
-                [_vm._v("F.A.Q")]
-              ),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled mb-0" }, [
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("AAA")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("BBB")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("CCC")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("DDD")
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-2 col-md-6 mb-4 mb-lg-0" }, [
-              _c(
-                "h6",
-                { staticClass: "text-uppercase font-weight-bold mb-4" },
-                [_vm._v("The Company")]
-              ),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled mb-0" }, [
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("AAA")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("AAAA")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("AAAA")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mb-2" }, [
-                  _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                    _vm._v("AAA")
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4 col-md-6 mb-lg-0" }, [
-              _c(
-                "h6",
-                { staticClass: "text-uppercase font-weight-bold mb-4" },
-                [_vm._v("Newsletter")]
-              ),
-              _vm._v(" "),
-              _c("p", { staticClass: "text-muted mb-4" }, [
-                _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus."
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "p-1 rounded border" }, [
-                _c("div", { staticClass: "input-group" }, [
-                  _c("input", {
-                    staticClass: "form-control border-0 shadow-0",
-                    attrs: {
-                      type: "email",
-                      placeholder: "Enter your email address",
-                      "aria-describedby": "button-addon1"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "input-group-append" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-link",
-                        attrs: { id: "button-addon1", type: "submit" }
-                      },
-                      [_c("i", { staticClass: "fa fa-paper-plane" })]
-                    )
-                  ])
-                ])
-              ])
-            ])
+      _c("ul", { staticClass: "list-inline mt-4" }, [
+        _c("li", { staticClass: "list-inline-item" }, [
+          _c(
+            "a",
+            { attrs: { href: "#", target: "_blank", title: "twitter" } },
+            [_c("i", { staticClass: "fab fa-facebook-square" })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-inline-item" }, [
+          _c(
+            "a",
+            { attrs: { href: "#", target: "_blank", title: "facebook" } },
+            [_c("i", { staticClass: "fab fa-linkedin" })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-inline-item" }, [
+          _c(
+            "a",
+            { attrs: { href: "#", target: "_blank", title: "instagram" } },
+            [_c("i", { staticClass: "fab fa-youtube" })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-inline-item" }, [
+          _c(
+            "a",
+            { attrs: { href: "#", target: "_blank", title: "pinterest" } },
+            [_c("i", { staticClass: "fab fa-instagram" })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-inline-item" }, [
+          _c("a", { attrs: { href: "#", target: "_blank", title: "vimeo" } }, [
+            _c("i", { staticClass: "fab fa-twitter-square" })
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-2 col-md-6 mb-4 mb-lg-0" }, [
+      _c("h6", { staticClass: "text-uppercase font-weight-bold mb-4" }, [
+        _vm._v("F.A.Q")
+      ]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-unstyled mb-0" }, [
+        _c("li", { staticClass: "mb-2" }, [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("AAA")
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "bg-light py-4" }, [
-          _c("div", { staticClass: "container text-center" }, [
-            _c("p", { staticClass: "text-muted mb-0 py-2" }, [
-              _vm._v("© 2021 Team3 All rights reserved.")
-            ])
+        _c("li", { staticClass: "mb-2" }, [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("BBB")
           ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mb-2" }, [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("CCC")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mb-2" }, [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("DDD")
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-2" }, [
+      _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+        _vm._v("AAAA")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-2" }, [
+      _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+        _vm._v("AAAA")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-2" }, [
+      _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+        _vm._v("AAA")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4 col-md-6 mb-lg-0" }, [
+      _c("h6", { staticClass: "text-uppercase font-weight-bold mb-4" }, [
+        _vm._v("Newsletter")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-muted mb-4" }, [
+        _vm._v(
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus."
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "p-1 rounded border" }, [
+        _c("div", { staticClass: "input-group" }, [
+          _c("input", {
+            staticClass: "form-control border-0 shadow-0",
+            attrs: {
+              type: "email",
+              placeholder: "Enter your email address",
+              "aria-describedby": "button-addon1"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-group-append" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-link",
+                attrs: { id: "button-addon1", type: "submit" }
+              },
+              [_c("i", { staticClass: "fa fa-paper-plane" })]
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "bg-light py-4" }, [
+      _c("div", { staticClass: "container text-center" }, [
+        _c("p", { staticClass: "text-muted mb-0 py-2" }, [
+          _vm._v("© 2021 Team3 All rights reserved.")
         ])
       ])
     ])
@@ -6111,8 +6566,6 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("Banner"),
-      _vm._v(" "),
       _vm.specs.length > 0
         ? _c(
             "div",
@@ -6207,7 +6660,9 @@ var render = function() {
           )
         : _vm._e(),
       _vm._v(" "),
-      _c("Heroheader")
+      _c("Heroheader"),
+      _vm._v(" "),
+      _c("Banner")
     ],
     1
   )
@@ -6355,6 +6810,217 @@ var staticRenderFns = [
           width: "50"
         }
       })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=template&id=5fa376e6&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Team.vue?vue&type=template&id=5fa376e6&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", [
+        _c("h1", [_vm._v("Meet our team!")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-4 col-lg-3" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "picture" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "https://placekeanu.com/150/150" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "name" }, [
+                    _vm._v("Donata Casalini")
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "title" }, [
+                    _vm._v("Jr. Fullstack Web Developer")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-github",
+                      attrs: {
+                        href: "https://github.com/LaScheggia",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: {
+                        href: "https://www.linkedin.com/in/donata-casalini/",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-4 col-lg-3" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "picture" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "https://placekeanu.com/150/150" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "name" }, [
+                    _vm._v("Donata Casalini")
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "title" }, [
+                    _vm._v("Jr. Fullstack Web Developer")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-github",
+                      attrs: {
+                        href: "https://github.com/LaScheggia",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: {
+                        href: "https://www.linkedin.com/in/donata-casalini/",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-4 col-lg-3" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "picture" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "https://placekeanu.com/150/150" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "name" }, [
+                    _vm._v("Donata Casalini")
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "title" }, [
+                    _vm._v("Jr. Fullstack Web Developer")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-github",
+                      attrs: {
+                        href: "https://github.com/LaScheggia",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: {
+                        href: "https://www.linkedin.com/in/donata-casalini/",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-4 col-lg-3" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "picture" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "https://placekeanu.com/150/150" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "name" }, [
+                    _vm._v("Donata Casalini")
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "title" }, [
+                    _vm._v("Jr. Fullstack Web Developer")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-github",
+                      attrs: {
+                        href: "https://github.com/LaScheggia",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: {
+                        href: "https://www.linkedin.com/in/donata-casalini/",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
@@ -39748,6 +40414,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/Team.vue":
+/*!*************************************!*\
+  !*** ./resources/js/pages/Team.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Team_vue_vue_type_template_id_5fa376e6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Team.vue?vue&type=template&id=5fa376e6&scoped=true& */ "./resources/js/pages/Team.vue?vue&type=template&id=5fa376e6&scoped=true&");
+/* harmony import */ var _Team_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Team.vue?vue&type=script&lang=js& */ "./resources/js/pages/Team.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Team_vue_vue_type_style_index_0_id_5fa376e6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true& */ "./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Team_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Team_vue_vue_type_template_id_5fa376e6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Team_vue_vue_type_template_id_5fa376e6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5fa376e6",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/Team.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/Team.vue?vue&type=script&lang=js&":
+/*!**************************************************************!*\
+  !*** ./resources/js/pages/Team.vue?vue&type=script&lang=js& ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Team.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true& ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_style_index_0_id_5fa376e6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=style&index=0&id=5fa376e6&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_style_index_0_id_5fa376e6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_style_index_0_id_5fa376e6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_style_index_0_id_5fa376e6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_style_index_0_id_5fa376e6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/Team.vue?vue&type=template&id=5fa376e6&scoped=true&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/pages/Team.vue?vue&type=template&id=5fa376e6&scoped=true& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_template_id_5fa376e6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Team.vue?vue&type=template&id=5fa376e6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Team.vue?vue&type=template&id=5fa376e6&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_template_id_5fa376e6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Team_vue_vue_type_template_id_5fa376e6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/routes.js":
 /*!********************************!*\
   !*** ./resources/js/routes.js ***!
@@ -39766,10 +40519,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Contacts_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/Contacts.vue */ "./resources/js/pages/Contacts.vue");
 /* harmony import */ var _pages_Confirmation_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/Confirmation.vue */ "./resources/js/pages/Confirmation.vue");
 /* harmony import */ var _pages_Confirmation2_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/Confirmation2.vue */ "./resources/js/pages/Confirmation2.vue");
-/* harmony import */ var _pages_Error404_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Error404.vue */ "./resources/js/pages/Error404.vue");
+/* harmony import */ var _pages_Team_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Team.vue */ "./resources/js/pages/Team.vue");
+/* harmony import */ var _pages_Error404_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Error404.vue */ "./resources/js/pages/Error404.vue");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
 
 
 
@@ -39804,6 +40559,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/confirmation2',
     name: 'confirmation2',
     component: _pages_Confirmation2_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }, {
+    path: '/team',
+    name: 'team',
+    component: _pages_Team_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
   /*         {
               path: '/*',

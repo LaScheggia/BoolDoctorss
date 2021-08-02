@@ -1,7 +1,7 @@
 <template>
 
         <div>
-            <Banner  /> <!-- banner con slider -->
+
 
 
 
@@ -31,9 +31,11 @@
                         </vs-button>
                     </router-link>
             </div>
-
-
             <Heroheader/>
+            <Banner  /> <!-- banner con slider -->
+
+
+
 
 
 
