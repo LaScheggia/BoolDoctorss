@@ -31,6 +31,7 @@
 
 
                     <div class="postcard__subtitle small">
+
                         <p>{{ truncateText }}</p>
                     </div>
 

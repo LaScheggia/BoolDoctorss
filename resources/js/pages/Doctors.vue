@@ -11,7 +11,7 @@
                 <select class="mb-1 col-3 col-xs-12" name="" id=""
                     v-model="filters['spec']"
                 >
-                    <option value="">Seleziona tutti i dottori</option>
+                    <option value="" selected>Seleziona tutti i dottori</option>
                     <option
                     :value="specialization.id"
                     v-for="specialization in specializations"
@@ -48,20 +48,26 @@
         </form>
 
 
+        <div v-if="users.lenght">
 
-        <Card
-            v-for="user in users"
-            :key="user.id"
-            :name="user.name"
-            :surname="user.surname"
-            :bio="user.bio"
-            :specializations="user.specializations"
-            :propic="user.propic"
-            :address="user.address"
-            :id="user.id"
-            :ratingAvg="user.rating_avg"
-            :countRev="user.reviews_count"
-        />
+            <Card
+                v-for="user in users"
+                :key="user.id"
+                :name="user.name"
+                :surname="user.surname"
+                :bio="user.bio"
+                :specializations="user.specializations"
+                :propic="user.propic"
+                :address="user.address"
+                :id="user.id"
+                :ratingAvg="user.rating_avg"
+                :countRev="user.reviews_count"
+            />
+        </div>
+
+        <div v-else class="container d-flex align-items-center">
+            <h1>Nessun dottore con i parametri da te scelti.</h1>
+        </div>
 
     <!-- paginazione -->
         <div class="wrapper">

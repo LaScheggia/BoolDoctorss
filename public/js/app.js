@@ -2154,6 +2154,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Card',
   props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address', 'id', 'ratingAvg', 'countRev'],
@@ -2691,6 +2692,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7154,278 +7161,259 @@ var render = function() {
     { staticClass: "custom-bg" },
     [
       !_vm.loading
-        ? _c(
-            "div",
-            { staticClass: "custom-major" },
-            [
-              _c("form", { staticClass: "form-row container" }, [
-                _c(
-                  "div",
-                  { staticClass: "d-flex justify-content-lg-around" },
-                  [
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.filters["spec"],
-                            expression: "filters['spec']"
-                          }
-                        ],
-                        staticClass: "mb-1 col-3 col-xs-12",
-                        attrs: { name: "", id: "" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.filters,
-                              "spec",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
+        ? _c("div", { staticClass: "custom-major" }, [
+            _c("form", { staticClass: "form-row container" }, [
+              _c(
+                "div",
+                { staticClass: "d-flex justify-content-lg-around" },
+                [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.filters["spec"],
+                          expression: "filters['spec']"
                         }
-                      },
-                      [
-                        _c("option", { attrs: { value: "" } }, [
-                          _vm._v("Seleziona tutti i dottori")
-                        ]),
-                        _vm._v(" "),
-                        _vm._l(_vm.specializations, function(specialization) {
-                          return _c(
-                            "option",
-                            {
-                              key: "specialization" + specialization.id,
-                              domProps: { value: specialization.id }
-                            },
-                            [_vm._v(_vm._s(specialization.name))]
-                          )
-                        })
                       ],
-                      2
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
+                      staticClass: "mb-1 col-3 col-xs-12",
+                      attrs: { name: "", id: "" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.filters,
+                            "spec",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "", selected: "" } }, [
+                        _vm._v("Seleziona tutti i dottori")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.specializations, function(specialization) {
+                        return _c(
+                          "option",
                           {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.filters["avgRating"],
-                            expression: "filters['avgRating']"
-                          }
-                        ],
-                        staticClass: "mb-1 col-3 col-xs-12",
-                        attrs: { name: "", id: "" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.filters,
-                              "avgRating",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { value: "0" } }, [
-                          _vm._v("Seleziona un numero")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "" } }, [
-                          _vm._v("Nessun filtro selezionato")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "2" } }, [_vm._v("2")]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "3" } }, [_vm._v("3")]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "4" } }, [_vm._v("4")]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "5" } }, [_vm._v("5")])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.filters["sortRevCount"],
-                            expression: "filters['sortRevCount']"
-                          }
-                        ],
-                        staticClass: "mb-1 col-3 col-xs-12",
-                        attrs: { name: "", id: "" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.filters,
-                              "sortRevCount",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { value: "" } }, [
-                          _vm._v("Nessun filtro selezionato")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "desc" } }, [
-                          _vm._v("desc")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "asc" } }, [
-                          _vm._v("asc")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "vs-button",
-                      {
-                        staticClass: "col",
-                        attrs: {
-                          color: _vm.colorx,
-                          "gradient-color-secondary": _vm.colorx2,
-                          type: "gradient"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.getDocs2()
-                          }
-                        }
-                      },
-                      [
-                        _vm._v(
-                          "\n                    Cerca il dottore\n                "
+                            key: "specialization" + specialization.id,
+                            domProps: { value: specialization.id }
+                          },
+                          [_vm._v(_vm._s(specialization.name))]
                         )
-                      ]
-                    )
-                  ],
+                      })
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.filters["avgRating"],
+                          expression: "filters['avgRating']"
+                        }
+                      ],
+                      staticClass: "mb-1 col-3 col-xs-12",
+                      attrs: { name: "", id: "" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.filters,
+                            "avgRating",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "0" } }, [
+                        _vm._v("Seleziona un numero")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Nessun filtro selezionato")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "2" } }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "3" } }, [_vm._v("3")]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "4" } }, [_vm._v("4")]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "5" } }, [_vm._v("5")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.filters["sortRevCount"],
+                          expression: "filters['sortRevCount']"
+                        }
+                      ],
+                      staticClass: "mb-1 col-3 col-xs-12",
+                      attrs: { name: "", id: "" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.filters,
+                            "sortRevCount",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Nessun filtro selezionato")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "desc" } }, [
+                        _vm._v("desc")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "asc" } }, [_vm._v("asc")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "vs-button",
+                    {
+                      staticClass: "col",
+                      attrs: {
+                        color: _vm.colorx,
+                        "gradient-color-secondary": _vm.colorx2,
+                        type: "gradient"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.getDocs2()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                    Cerca il dottore\n                "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm.users.lenght
+              ? _c(
+                  "div",
+                  _vm._l(_vm.users, function(user) {
+                    return _c("Card", {
+                      key: user.id,
+                      attrs: {
+                        name: user.name,
+                        surname: user.surname,
+                        bio: user.bio,
+                        specializations: user.specializations,
+                        propic: user.propic,
+                        address: user.address,
+                        id: user.id,
+                        ratingAvg: user.rating_avg,
+                        countRev: user.reviews_count
+                      }
+                    })
+                  }),
                   1
                 )
-              ]),
-              _vm._v(" "),
-              _vm._l(_vm.users, function(user) {
-                return _c("Card", {
-                  key: user.id,
-                  attrs: {
-                    name: user.name,
-                    surname: user.surname,
-                    bio: user.bio,
-                    specializations: user.specializations,
-                    propic: user.propic,
-                    address: user.address,
-                    id: user.id,
-                    ratingAvg: user.rating_avg,
-                    countRev: user.reviews_count
-                  }
-                })
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "wrapper" }, [
-                _c(
-                  "nav",
-                  { attrs: { "aria-label": "Page navigation example" } },
+              : _c(
+                  "div",
+                  { staticClass: "container d-flex align-items-center" },
                   [
-                    _c(
-                      "ul",
-                      { staticClass: "pagination" },
-                      [
-                        _c(
-                          "li",
-                          {
-                            staticClass: "page-item",
-                            class: { disabled: _vm.pagination.current === 1 }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "page-link",
-                                on: {
-                                  click: function($event) {
-                                    return _vm.getDocs(
-                                      _vm.pagination.current - 1
-                                    )
-                                  }
-                                }
-                              },
-                              [_vm._v("«")]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _vm._l(_vm.pagination.last, function(i) {
-                          return _c(
-                            "li",
+                    _c("h1", [
+                      _vm._v("Nessun dottore con i parametri da te scelti.")
+                    ])
+                  ]
+                ),
+            _vm._v(" "),
+            _c("div", { staticClass: "wrapper" }, [
+              _c(
+                "nav",
+                { attrs: { "aria-label": "Page navigation example" } },
+                [
+                  _c(
+                    "ul",
+                    { staticClass: "pagination" },
+                    [
+                      _c(
+                        "li",
+                        {
+                          staticClass: "page-item",
+                          class: { disabled: _vm.pagination.current === 1 }
+                        },
+                        [
+                          _c(
+                            "button",
                             {
-                              key: "i" + i,
-                              staticClass: "page-item",
-                              class: { active: _vm.pagination.current === i }
+                              staticClass: "page-link",
+                              on: {
+                                click: function($event) {
+                                  return _vm.getDocs(_vm.pagination.current - 1)
+                                }
+                              }
                             },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "page-link",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.getDocs(i)
-                                    }
-                                  }
-                                },
-                                [_vm._v(_vm._s(i))]
-                              )
-                            ]
+                            [_vm._v("«")]
                           )
-                        }),
-                        _vm._v(" "),
-                        _c(
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm._l(_vm.pagination.last, function(i) {
+                        return _c(
                           "li",
                           {
+                            key: "i" + i,
                             staticClass: "page-item",
-                            class: {
-                              disabled:
-                                _vm.pagination.current === _vm.pagination.last
-                            }
+                            class: { active: _vm.pagination.current === i }
                           },
                           [
                             _c(
@@ -7434,25 +7422,47 @@ var render = function() {
                                 staticClass: "page-link",
                                 on: {
                                   click: function($event) {
-                                    return _vm.getDocs(
-                                      _vm.pagination.current + 1
-                                    )
+                                    return _vm.getDocs(i)
                                   }
                                 }
                               },
-                              [_vm._v("»")]
+                              [_vm._v(_vm._s(i))]
                             )
                           ]
                         )
-                      ],
-                      2
-                    )
-                  ]
-                )
-              ])
-            ],
-            2
-          )
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "page-item",
+                          class: {
+                            disabled:
+                              _vm.pagination.current === _vm.pagination.last
+                          }
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "page-link",
+                              on: {
+                                click: function($event) {
+                                  return _vm.getDocs(_vm.pagination.current + 1)
+                                }
+                              }
+                            },
+                            [_vm._v("»")]
+                          )
+                        ]
+                      )
+                    ],
+                    2
+                  )
+                ]
+              )
+            ])
+          ])
         : _c("Loader")
     ],
     1
