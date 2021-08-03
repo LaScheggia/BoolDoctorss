@@ -21,10 +21,9 @@
                         <router-link class="nav-link navbar-text" :to="{ name: 'doctors' }"><i class="fas fa-briefcase-medical"></i> I nostri dottori</router-link>
                     </li>
                 </ul>
-                <ul class="navbar-nav pl-1 pr-1">
+                <ul class="navbar-nav pl-1 pr-1 d-flex align-items-center">
                     <li class="nav-item">
-                        <p class="navbar-text"> <i class="fas fa-user-md"></i> Sei un dottore?</p>
-
+                        <a class="nav-link navbar-text" href="/register"><i class="fas fa-user-md"></i> Sei un dottore?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-text" href="/login"> <i class="fas fa-sign-in-alt"></i> Login</a>

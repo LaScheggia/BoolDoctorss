@@ -2132,10 +2132,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Card',
-  props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address', 'id'],
-  mounted: function mounted() {//console.log('ciao', this.specializations);
+  props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address', 'id', 'ratingAvg', 'countRev'],
+  data: function data() {
+    return {
+      maxTextLength: 300
+    };
+  },
+  computed: {
+    truncateText: function truncateText() {
+      // creo una funzione che tronca il testo dopo 20 caratteri e aggiunge ...
+      var text = this.bio;
+
+      if (text.length > this.maxTextLength) {
+        return text.substr(0, this.maxTextLength) + '...';
+      }
+
+      return text;
+    }
   }
 });
 
@@ -2239,7 +2276,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -2713,11 +2749,60 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Doctors',
+  name: "Doctors",
   components: {
     Card: _components_Card_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Loader: _components_Loader_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2727,11 +2812,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       filters: {},
       users: [],
       pagination: {},
-      loading: true
+      specializations: '',
+      specs: [],
+      avgRat: '',
+      revCount: '',
+      loading: true,
+      colorx: '#009688',
+      colorx2: '#80CBC4'
     };
   },
   methods: {
-    createParams: function createParams(page) {
+    createParams1: function createParams1(page) {
       var reqParams = {
         page: page
       };
@@ -2740,17 +2831,47 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.filters["spec"] = this.$route.params.spec;
       }
 
+      if (this.$route.params.avgRating) {
+        this.filters["avgRating"] = this.$route.params.avgRating;
+      }
+
+      if (this.$route.params.sortRevCount) {
+        this.filters["sortRevCount"] = this.$route.params.sortRevCount;
+      }
+
+      console.log(this.filters["spec"]);
+      return _objectSpread(_objectSpread({}, reqParams), this.filters);
+    },
+    createParams2: function createParams2(page) {
+      var reqParams = {
+        page: page
+      };
+
+      if (this.$route.params.spec) {
+        this.$route.params.spec = this.filters["spec"];
+      }
+
+      if (this.$route.params.avgRating) {
+        this.filters["avgRating"] = this.$route.params.avgRating;
+      }
+
+      if (this.$route.params.sortRevCount) {
+        this.filters["sortRevCount"] = this.$route.params.sortRevCount;
+      }
+
+      console.log(this.filters["spec"]);
       return _objectSpread(_objectSpread({}, reqParams), this.filters);
     },
     // Estendere questa funzione per prendere altri 2 parametri (ricerca per num di reviews e per stelle).
     // Questi 2 parametri verranno passati a createParams per creare la richiesta verso il backend.
     // Nome parametri: avgRating (valori:  1-5), sortRevCount (valori: asc/desc)
-    getDocs: function getDocs() {
+    getDocs1: function getDocs1() {
       var _this = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8000/api/doctors', {
-        params: this.createParams(page)
+      // this.filters['spec']= '',
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("http://127.0.0.1:8000/api/doctors", {
+        params: this.createParams1(page)
       }).then(function (res) {
         //console.log(res.data.data);
         _this.users = res.data.data;
@@ -2758,14 +2879,44 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         _this.pagination = {
           current: res.data.current_page,
           last: res.data.last_page
-        };
+        }; //   console.log(this.users);
       })["catch"](function (err) {
         console.log(err);
+      });
+    },
+    getDocs2: function getDocs2() {
+      var _this2 = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      this.loading = true;
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("http://127.0.0.1:8000/api/doctors", {
+        params: this.createParams2(page)
+      }).then(function (res) {
+        //console.log(res.data.data);
+        _this2.users = res.data.data;
+        _this2.loading = false;
+        _this2.pagination = {
+          current: res.data.current_page,
+          last: res.data.last_page
+        }; //   console.log(this.users);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    getSpecs: function getSpecs() {
+      var _this3 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8000/api/doctors/specs').then(function (res) {
+        _this3.specializations = res.data;
+        console.log(_this3.specializations);
+      })["catch"](function (err) {
+        console.error(err);
       });
     }
   },
   created: function created() {
-    this.getDocs();
+    this.getDocs1();
+    this.getSpecs();
   }
 });
 
@@ -2812,20 +2963,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Banner_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Banner.vue */ "./resources/js/components/Banner.vue");
 /* harmony import */ var _components_Heroheader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Heroheader.vue */ "./resources/js/components/Heroheader.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3375,7 +3512,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".custom-bg[data-v-333bf1bb] {\n  background: #44A08D;\n  /* fallback for old browsers */\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #093637, #44A08D);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n.wrapper[data-v-333bf1bb] {\n  height: 150px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.page-link[data-v-333bf1bb] {\n  position: relative;\n  display: block;\n  color: #004d40 !important;\n  text-decoration: none;\n  background-color: #fff;\n  border: 1px solid #80cbc4 !important;\n}\n.page-link[data-v-333bf1bb]:hover {\n  z-index: 2;\n  color: #fff !important;\n  background-color: #80cbc4;\n  border-color: #b2dfdb;\n}\n.page-link[data-v-333bf1bb]:focus {\n  z-index: 3;\n  outline: 0;\n  box-shadow: none;\n}\n.page-item.active .page-link[data-v-333bf1bb] {\n  background-color: #80cbc4;\n}", ""]);
+exports.push([module.i, ".form-row[data-v-333bf1bb] {\n  padding: 15px;\n}\n.inline-search[data-v-333bf1bb] {\n  padding: 15px;\n}\n.custom-bg[data-v-333bf1bb] {\n  background: #44A08D;\n  /* fallback for old browsers */\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #093637, #44A08D);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n.wrapper[data-v-333bf1bb] {\n  height: 150px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.page-link[data-v-333bf1bb] {\n  position: relative;\n  display: block;\n  color: #004d40 !important;\n  text-decoration: none;\n  background-color: #fff;\n  border: 1px solid #80cbc4 !important;\n}\n.page-link[data-v-333bf1bb]:hover {\n  z-index: 2;\n  color: #fff !important;\n  background-color: #80cbc4;\n  border-color: #b2dfdb;\n}\n.page-link[data-v-333bf1bb]:focus {\n  z-index: 3;\n  outline: 0;\n  box-shadow: none;\n}\n.page-item.active .page-link[data-v-333bf1bb] {\n  background-color: #80cbc4;\n}", ""]);
 
 // exports
 
@@ -5720,17 +5857,38 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
+          _c(
+            "div",
+            { staticStyle: { positione: "relative", "margin-bottom": "20px" } },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticStyle: { position: "absolute", color: "darkgoldenrod" }
+                },
+                _vm._l(parseInt(_vm.ratingAvg), function(star) {
+                  return _c("i", {
+                    key: star,
+                    staticClass: "fas fa-star",
+                    staticStyle: { "margin-right": "4px" }
+                  })
+                }),
+                0
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("p", [_vm._v("Recensioni ricevute: " + _vm._s(_vm.countRev))]),
+          _vm._v(" "),
           _c("div", { staticClass: "postcard__subtitle small" }, [
-            _c("p", [_vm._v(_vm._s(_vm.bio))])
+            _c("p", [_vm._v(_vm._s(_vm.truncateText))])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "postcard__bar" }),
           _vm._v(" "),
-          _c("div", { staticClass: "postcard__preview-txt" }, [
-            _vm._v(
-              "I'll write something here || prob la media dei voti || con stelline?"
-            )
-          ]),
+          _c("div", { staticClass: "postcard__preview-txt" }),
           _vm._v(" "),
           _c(
             "ul",
@@ -5777,7 +5935,28 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticStyle: { position: "absolute", color: "darkgoldenrod" } },
+      [
+        _c("i", { staticClass: "far fa-star" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "far fa-star" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "far fa-star" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "far fa-star" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "far fa-star" })
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -6207,33 +6386,47 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "navbar-nav pl-1 pr-1" }, [
-      _c("li", { staticClass: "nav-item" }, [
-        _c("p", { staticClass: "navbar-text" }, [
-          _c("i", { staticClass: "fas fa-user-md" }),
-          _vm._v(" Sei un dottore?")
+    return _c(
+      "ul",
+      { staticClass: "navbar-nav pl-1 pr-1 d-flex align-items-center" },
+      [
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link navbar-text",
+              attrs: { href: "/register" }
+            },
+            [
+              _c("i", { staticClass: "fas fa-user-md" }),
+              _vm._v(" Sei un dottore?")
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            { staticClass: "nav-link navbar-text", attrs: { href: "/login" } },
+            [_c("i", { staticClass: "fas fa-sign-in-alt" }), _vm._v(" Login")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link navbar-text",
+              attrs: { href: "/register" }
+            },
+            [
+              _c("i", { staticClass: "fas fa-user-circle" }),
+              _vm._v(" Registrati")
+            ]
+          )
         ])
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "nav-item" }, [
-        _c(
-          "a",
-          { staticClass: "nav-link navbar-text", attrs: { href: "/login" } },
-          [_c("i", { staticClass: "fas fa-sign-in-alt" }), _vm._v(" Login")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "nav-item" }, [
-        _c(
-          "a",
-          { staticClass: "nav-link navbar-text", attrs: { href: "/register" } },
-          [
-            _c("i", { staticClass: "fas fa-user-circle" }),
-            _vm._v(" Registrati")
-          ]
-        )
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -6965,6 +7158,191 @@ var render = function() {
             "div",
             { staticClass: "custom-major" },
             [
+              _c("form", { staticClass: "form-row container" }, [
+                _c(
+                  "div",
+                  { staticClass: "d-flex justify-content-lg-around" },
+                  [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.filters["spec"],
+                            expression: "filters['spec']"
+                          }
+                        ],
+                        staticClass: "mb-1 col-3 col-xs-12",
+                        attrs: { name: "", id: "" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.filters,
+                              "spec",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Seleziona tutti i dottori")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.specializations, function(specialization) {
+                          return _c(
+                            "option",
+                            {
+                              key: "specialization" + specialization.id,
+                              domProps: { value: specialization.id }
+                            },
+                            [_vm._v(_vm._s(specialization.name))]
+                          )
+                        })
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.filters["avgRating"],
+                            expression: "filters['avgRating']"
+                          }
+                        ],
+                        staticClass: "mb-1 col-3 col-xs-12",
+                        attrs: { name: "", id: "" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.filters,
+                              "avgRating",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "0" } }, [
+                          _vm._v("Seleziona un numero")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Nessun filtro selezionato")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "2" } }, [_vm._v("2")]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "3" } }, [_vm._v("3")]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "4" } }, [_vm._v("4")]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "5" } }, [_vm._v("5")])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.filters["sortRevCount"],
+                            expression: "filters['sortRevCount']"
+                          }
+                        ],
+                        staticClass: "mb-1 col-3 col-xs-12",
+                        attrs: { name: "", id: "" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.filters,
+                              "sortRevCount",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Nessun filtro selezionato")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "desc" } }, [
+                          _vm._v("desc")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "asc" } }, [
+                          _vm._v("asc")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "vs-button",
+                      {
+                        staticClass: "col",
+                        attrs: {
+                          color: _vm.colorx,
+                          "gradient-color-secondary": _vm.colorx2,
+                          type: "gradient"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.getDocs2()
+                          }
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                    Cerca il dottore\n                "
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
               _vm._l(_vm.users, function(user) {
                 return _c("Card", {
                   key: user.id,
@@ -6975,7 +7353,9 @@ var render = function() {
                     specializations: user.specializations,
                     propic: user.propic,
                     address: user.address,
-                    id: user.id
+                    id: user.id,
+                    ratingAvg: user.rating_avg,
+                    countRev: user.reviews_count
                   }
                 })
               }),

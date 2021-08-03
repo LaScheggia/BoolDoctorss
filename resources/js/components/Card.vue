@@ -8,12 +8,36 @@
                 </a>
                 <div class="postcard__text t-dark">
                     <h1 class="postcard__title blue"><a :to="{ name: 'profile', params: { id } }">{{name}} {{surname}}</a></h1>
+
+                    <div style="positione: relative; margin-bottom: 20px">
+                        <div style="position: absolute;color: darkgoldenrod;">
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div style="position: absolute; color: darkgoldenrod;">
+                        <i
+                        v-for="star in parseInt(ratingAvg)"
+                        :key="star"
+                        class="fas fa-star" style="margin-right: 4px;"></i>
+                        <!-- rating: {{ ratingAvg }} -->
+                        </div>
+
+                        </div>
+
+                    <p>Recensioni ricevute: {{ countRev }}</p>
+
+
                     <div class="postcard__subtitle small">
-                        <p>{{bio}}</p>
+                        <p>{{ truncateText }}</p>
                     </div>
+
+
                     <div class="postcard__bar"></div>
 
-                    <div class="postcard__preview-txt">I'll write something here || prob la media dei voti || con stelline?</div>
+                    <div class="postcard__preview-txt"></div>
                     <ul class="postcard__tagbox">
                         <vs-chip color="success" type="gradient" v-for="spec in specializations" :key="spec.id">
                                 {{spec.name}}
@@ -29,16 +53,25 @@
         </div>
 </div>
 
-
-
 </template>
 
 <script>
 export default {
     name: 'Card',
-    props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address', 'id'],
-    mounted(){
-        //console.log('ciao', this.specializations);
+    props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address', 'id', 'ratingAvg', 'countRev'],
+        data(){
+            return{
+                maxTextLength:300
+            }
+        },
+    computed:{
+        truncateText(){ // creo una funzione che tronca il testo dopo 20 caratteri e aggiunge ...
+            let text = this.bio;
+            if(text.length > this.maxTextLength){
+                return text.substr(0,this.maxTextLength) + '...';
+            }
+            return text;
+        }
     }
 
 }

@@ -1,61 +1,47 @@
 <template>
 
+    <div>
+        <Heroheader/>
         <div>
-            <Heroheader/>
+            <div class="home-bg"> <!-- background container -->
+                <div class="container">
+                    <div class="text-home"> <!-- div text -->
+                        <h1>Cerca il tuo prossimo specialista ora</h1>
+                        <h5>La nostra ricerca avanzata inoltre, ti permetterà di filtrare lo specialista in base al numero delle recensioni e in base ai suoi voti.</h5>
+                    </div>
+                    <div class="search-home"> <!-- div search -->
+                        <div class="input-group search container mb-5 d-flex p-2 align-items-start" v-if="specs.length > 0"> <!-- campo di select -->
+                            <select
+                                class="form-control"
+                                name="specializations"
+                                placeholder="Scegli il tipo di specializzazione"
+                                v-model="filterdoctor"
+                                autocomplete="on"
 
-            <div>
-                <div class="home-bg"> <!-- background container -->
-                    <div class="container">
-                        <div class="text-home"> <!-- div text -->
-                            <h1>Cerca il tuo prossimo specialista ora</h1>
-                            <h5>La nostra ricerca avanzata inoltre, ti permetterà di filtrare lo specialista in base al numero delle recensioni e in base ai suoi voti.</h5>
-                        </div>
-
-                        <div class="search-home"> <!-- div search -->
-                            <div class="input-group search container mb-5 d-flex p-2 align-items-start" v-if="specs.length > 0"> <!-- campo di select -->
-                                <select
-                                    class="form-control"
-                                    name="specializations"
-                                    placeholder="Scegli il tipo di specializzazione"
-                                    v-model="filterdoctor"
-                                    autocomplete="on"
-
+                            >
+                                <option value="0" disabled>Scegli una specializzazione</option> <!-- ciclo delle specializzazioni -->
+                                <option
+                                v-for="specialization in specs"
+                                :key="specialization.id"
+                                :value="specialization.id"
                                 >
-                                    <option value="0" disabled>Scegli una specializzazione</option> <!-- ciclo delle specializzazioni -->
-                                    <option
-                                    v-for="specialization in specs"
-                                    :key="specialization.id"
-                                    :value="specialization.id"
-                                    >
-                                    {{ specialization.name}}
-                                    </option>
-                                </select>
+                                {{ specialization.name}}
+                                </option>
+                            </select>
 
-                                <router-link :to="{name: 'doctors', params:{'spec': filterdoctor}}"> <!-- bottone che porta alla pagina coi doc -->
-                                    <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient">
-                                        Cerca il tuo nuovo dottore
-                                    </vs-button>
-                                </router-link>
-                            </div>
+                            <router-link :to="{name: 'doctors', params:{'spec': filterdoctor}}"> <!-- bottone che porta alla pagina coi doc -->
+                                <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient">
+                                    Cerca il tuo nuovo dottore
+                                </vs-button>
+                            </router-link>
                         </div>
-
                     </div>
                 </div>
-
-
-
-
-
             </div>
-
-            <!-- che odio  -->
-
-
-
-
-
-            <Banner  /> <!-- banner con slider -->
         </div>
+
+        <Banner  /> <!-- banner con slider -->
+    </div>
 
 </template>
 
@@ -129,8 +115,6 @@ import Heroheader from '../components/Heroheader.vue'
   color: #212121;
   font-style: italic;
 }
-
-
 
 
 .home-bg{
