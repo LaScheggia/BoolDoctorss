@@ -15,7 +15,7 @@
                 <div class="row">
                     @foreach ($reviews as $review)
                         @if ($review->rating === 3 || $review->rating === 4 || $review->rating === 5)
-                            <div class="col-12 border border-success shadow p-3 mb-5 bg-body rounded">
+                            <div class="col-12 border border-success shadow p-3 mb-5 bg-body rounded"  style="background-color: rgba(38, 166, 154, 0.5)">
                                 <h4 class="">{{ $review->title }}</h4>
                                 <div class="d-flex justify-content-end">
                                     <h5>Valutazione: {{ $review->rating }}/5</h5>
@@ -37,7 +37,7 @@
                 <div class="row">
                     @foreach ($reviews as $review)
                         @if ($review->rating === 1 || $review->rating === 2)
-                            <div class="col-12 border border-danger shadow p-3 mb-5 bg-body rounded">
+                            <div class="col-12 border border-danger shadow p-3 mb-5 bg-body rounded" style="background-color: rgb(198, 40, 40, 0.5)">
                                 <h4 class="">{{ $review->title }}</h4>
                                 <div class="d-flex justify-content-end">
                                     <h5>Valutazione: {{ $review->rating }}/5</h5>
@@ -55,6 +55,6 @@
         </div>
         {{-- se il dottore ha ricevuto recensioni le mostro in pagina --}}
 
-        <a class="btn btn-primary" href="{{ route('admin.home') }}">Torna alla Dashboard</a>
+        <a class="btn btn-grad" href="{{ route('admin.home') }}">Torna alla Dashboard</a>
     </div>
 @endsection

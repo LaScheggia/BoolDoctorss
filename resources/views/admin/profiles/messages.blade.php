@@ -18,7 +18,8 @@
                 @if ($message->read === 0)
                 <div
                 class="mb-3 p-3"
-                style="border: 2px solid black;">
+                style="background: rgb(128, 203, 196);
+                    background: linear-gradient(338deg, rgba(200, 230, 201, .3) 0%, rgba(224, 242, 241, 0.3) 0%); border:1px solid rgb(0, 77, 64)">
                     <div class="mb-3">
                         <div class="d-flex justify-content-lg-between">
                             <h5>Inviato da: {{$message->patient_name}} {{$message->patient_surname}} <span class="badge badge-success">New</span></h5>
@@ -42,14 +43,14 @@
                     @if ($message->read === 1)
                     <div
                     class="mb-3 p-3"
-                    style="background: rgb(4,219,98);
-                    background: linear-gradient(338deg, rgba(4,219,98,1) 0%, rgba(138,233,176,0.6834267154127276) 0%);">
+                    style="background: rgb(189, 189, 189);
+                    background: linear-gradient(338deg, rgba(189, 189, 189, .5) 0%, rgba(158, 158, 158, 0.4) 0%);">
                         <div class="mb-3">
                             <div class="d-flex justify-content-lg-between">
                             <h5>Inviato da: {{$message->patient_name}} {{$message->patient_surname}}</h5>
                             <div><i class="{{ ($message->read === 0) ? 'fas fa-share' : 'fas fa-check' }}" style={{ ($message->read === 0) ? 'color:red;' : 'color:green;' }}></i></div>
                             </div>
-                            <h6><a href="mailto:{{ $message->patient_mail }}">{{$message->patient_mail}}</a></h6>
+                            <h6><a style="color: rgb(0, 77, 64)" href="mailto:{{ $message->patient_mail }}">{{$message->patient_mail}}</a></h6>
                             {{-- <button type="button" class="btn btn-insert">Risolvi richiesta</button> --}}
                         </div>
                         <h3 class="mb-3"><i>{{$message->text_message}}</i></h3>
@@ -60,7 +61,7 @@
                     @endif
                 @endforeach
 
-            <a class="btn btn-primary" href="{{ route('admin.home') }}">Torna alla Dashboard</a>
+            <a class="btn btn-grad" href="{{ route('admin.home') }}">Torna alla Dashboard</a>
         </div>
     </div>
 @endsection

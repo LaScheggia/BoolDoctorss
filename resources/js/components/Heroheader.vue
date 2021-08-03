@@ -2,8 +2,8 @@
     <div>
         <section class="hero">
             <div class="content">
-                <h2>Hero Header</h2>
-                <p>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non</p>
+                <h2>Cerca oggi lo specialista adatto a te.</h2>
+                <p>iSpecialists è la più grande piattaforma web dove trovare in pochi istanti si può trovare il medico adatto alle proprie.</p>
                 </div>
             <div class="waves"></div>
         </section>
@@ -49,14 +49,14 @@ body {
   font-size: 4.5rem;
   margin: 0 0 10px;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
 }
 
 .hero p {
   position: relative;
   z-index: 1;
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: black;
   line-height: 1.4;
 }
 

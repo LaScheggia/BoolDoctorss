@@ -10,6 +10,37 @@
   background-size: cover;
 }
 
+thead {
+  color: wheat;
+}
+
+.custom-head {
+  background-color: #80cbc4;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #00897b 0%, #80cbc4 25%, #26a69a 50%, #00897b 100%);
+}
+
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 .navbar-custom {
   background-color: #E0F2F1;
 }

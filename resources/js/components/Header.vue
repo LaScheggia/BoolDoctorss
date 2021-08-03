@@ -1,7 +1,7 @@
 <template>
     <header class="navbar-custom">
         <nav id="nav" class="navbar navbar-expand-lg container">
-            <router-link id="logo" class="navbar-brand" :to="{ name: 'home' }">BoolDoc</router-link>
+            <router-link id="logo" class="navbar-brand" :to="{ name: 'home' }">iSpecialists</router-link>
             <button
                 class="navbar-toggler navbar-text"
                 type="button"
@@ -18,15 +18,19 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav pl-1 pr-1">
                     <li class="nav-item ">
-                        <router-link class="nav-link navbar-text" :to="{ name: 'doctors' }">I nostri dottori</router-link>
+                        <router-link class="nav-link navbar-text" :to="{ name: 'doctors' }"><i class="fas fa-briefcase-medical"></i> I nostri dottori</router-link>
                     </li>
                 </ul>
                 <ul class="navbar-nav pl-1 pr-1">
-                    <li class="nav-item ">
-                        <a class="nav-link navbar-text" href="/login">Login</a>
+                    <li class="nav-item">
+                        <p class="navbar-text"> <i class="fas fa-user-md"></i> Sei un dottore?</p>
+
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="/register">Registrati</a>
+                        <a class="nav-link navbar-text" href="/login"> <i class="fas fa-sign-in-alt"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text" href="/register"><i class="fas fa-user-circle"></i> Registrati</a>
                     </li>
                 </ul>
             </div>
@@ -41,6 +45,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+img {
+    height: 50px;
+}
 .navbar-custom {
     background-color: #e0f2f1;
 }

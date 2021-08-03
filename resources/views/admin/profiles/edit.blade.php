@@ -102,7 +102,7 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="btn btn-primary">Conferma le modifiche</button>
+                <button type="submit" class="btn btn-grad">Conferma le modifiche</button>
         </form>
     </div>
 

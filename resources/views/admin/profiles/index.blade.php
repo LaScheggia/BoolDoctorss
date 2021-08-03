@@ -28,7 +28,7 @@
         </div>
 
         <table class="table">
-            <thead class="p-3 mb-2 bg-success text-dark">
+            <thead class="p-3 mb-2 custom-head text-dark">
                 <tr>
                     <th class="text-uppercase" colspan="3"><i class="fas fa-user-md"></i> Il tuo curriculum</th>
                 </tr>
@@ -43,7 +43,7 @@
         </table>
 
         <table class="table">
-            <thead class="p-3 mb-2 bg-success text-dark">
+            <thead class="p-3 mb-2 custom-head text-dark">
                 <tr>
                     <th class="text-uppercase" colspan="3"><i class="fas fa-stethoscope"></i> Le tue specializzazioni</th>
                 </tr>
@@ -59,8 +59,8 @@
             </tbody>
         </table>
 
-        <table class="table">
-            <thead class="p-3 mb-2 bg-success text-dark">
+{{--         <table class="table">
+            <thead class="p-3 mb-2 custom-head text-dark">
                 <tr>
                     <th class="text-uppercase" colspan="3"><i class="fas fa-clinic-medical"></i> I tuoi servizi</th>
                 </tr>
@@ -76,7 +76,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table> --}}
 
         {{-- inizialmente c'è un placeholder con un'iconcina (nella table troviamo il modo di mettere un'immagine fissa caricata da noi) --}}
         {{-- poi il dottore nell'edit può modificare la pic --}}
@@ -89,7 +89,7 @@
         <h1>{{ Auth::user()->surname }}</h1> --}}
     <div class="d-flex justify-content-between mt-3">
         <div> {{-- bottone copia-incollone da mettere in tutte le views --}}
-            <a class="btn btn-info" href="{{ route('admin.home') }}">Torna alla tua dashboard</a>
+            <a class="btn btn-grad" href="{{ route('admin.home') }}">Torna alla tua dashboard</a>
         </div>
         <div>
             <a class="btn btn-secondary" href="{{ route('admin.profile.edit', $user) }}">Modifica i tuoi dati</a>

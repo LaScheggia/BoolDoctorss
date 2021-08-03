@@ -56,7 +56,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Modifica i tuoi dati personali</h5>
                               <p class="card-text">Qua potrai modificare i tuoi dati e tenere aggiornato il profilo.</p>
-                              <a href="{{ route('admin.profile.edit', Auth::user()->id) }}" class="btn btn-primary">Vai alla modifica</a>
+                              <a href="{{ route('admin.profile.edit', Auth::user()->id) }}" class="btn btn-grad">Vai alla modifica</a>
                             </div>
                         </div>
 
@@ -65,7 +65,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Vedi i tuoi messaggi</h5>
                                 <p class="card-text">Qua potrai vedere tutti i messaggi ricevuti.</p>
-                                <a href="{{ route('admin.message') }}" class="btn btn-primary">Vai ai messaggi</a>
+                                <a href="{{ route('admin.message') }}" class="btn btn-grad">Vai ai messaggi</a>
                             </div>
                         </div>
 
@@ -74,7 +74,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Vedi le tue recensioni</h5>
                                 <p class="card-text">Qua potrai vedere le recensioni lasciate dai tuoi pazienti.</p>
-                                <a href="{{ route('admin.review') }}" class="btn btn-primary">Vai alle tue recensioni</a>
+                                <a href="{{ route('admin.review') }}" class="btn btn-grad">Vai alle tue recensioni</a>
                             </div>
                         </div>
 
@@ -83,7 +83,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Vedi i tuoi upgrade</h5>
                                 <p class="card-text">Qua potrai vedere vedere il tuo piano di upgrade e i suoi dettagli.</p>
-                                <a href="{{ route('admin.plan') }}" class="btn btn-primary">Vai ai tuoi upgrade</a>
+                                <a href="{{ route('admin.plan') }}" class="btn btn-grad">Vai ai tuoi upgrade</a>
                             </div>
                         </div>
 
@@ -92,7 +92,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Vedi le tue statistiche</h5>
                               <p class="card-text">Qua potrai eliminare vedere le tue statistiche.</p>
-                              <a href="{{ route('admin.stat') }}" class="btn btn-primary">Vai alle statistiche</a>
+                              <a href="{{ route('admin.stat') }}" class="btn btn-grad">Vai alle statistiche</a>
                             </div>
                         </div>
                     </div>

@@ -18,7 +18,7 @@
     <canvas id="myOtherChart"></canvas> {{-- tag canvas del "plug-in" che fa le chart con id="ide della chart sotto" --}}
   </div>
   @endif
-  <p class="link_dashboard"><a href="{{ route('admin.profile.index') }}">Torna alla Dashboard</a></p> {{-- BTN CHE VA INDIETRO --}}
+  <a class="btn btn-grad" href="{{ route('admin.home') }}">Torna alla Dashboard</a>{{-- BTN CHE VA INDIETRO --}}
 </div>
 
 

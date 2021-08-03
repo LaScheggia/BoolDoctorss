@@ -7,7 +7,7 @@
             <div class="col-md-12 text-white text-center">
                 <h2 class="section-title "> Cosa dicono di noi</h2>
                 <p class="section-sub-title">
-                    Ecco cosa dicono di noi chi si è già affidato a *ins nome*
+                    Ecco cosa dice di noi chi si è già affidato a iSpecialists
                     <br> per trovare lo specialista adatto alle proprie esigenze.
                 </p>
             </div>
@@ -129,7 +129,7 @@
 
     <section class="py-5"> <!-- Page Content -->
     <div class="container">
-        <h1 class="fw-light">In molti si sono già affidati a *inserire nome*</h1>
+        <h1 class="fw-light">In molti si sono già affidati a iSpecialists..</h1>
         <p class="lead">Unisciti agli oltre 123.000 utenti attivi sulla nostra piattaforma che cercano un professionista adatto alle loro esigenze. Scegli il tuo specialista oggi stesso.</p>
     </div>
     </section> <!-- /Page Content -->
@@ -191,14 +191,14 @@ body{margin-top:20px;}
     margin-top: 0.45em;
     margin-bottom: 0.35em;
     color: #303133;
-    font-family: Poppins;
+
     letter-spacing: -0.02em;
 }
 .section-sub-title {
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: 400;
-    font-family: Poppins;
+
 }
 .section-arrow-primary-color.section-arrow--bottom-center:after {
     border-bottom-color: #80CBC4;
@@ -229,7 +229,7 @@ section {
 
 
 .testimonial-two blockquote p:before {
-    font-family: 'Playfair Display';
+
     font-size: 54px;
     color: #0cb4ce;
     font-weight: 900;
@@ -244,7 +244,7 @@ section {
 }
 
 .testimonial-two blockquote p:after {
-    font-family: 'Playfair Display';
+
     font-size: 54px;
     color: #0cb4ce;
     content: "”";

@@ -25,5 +25,18 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#app {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #eee
+}
 
 </style>

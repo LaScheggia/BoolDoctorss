@@ -37,6 +37,8 @@
                 <button id="submit-button">Request payment method</button>
             </div>
         </div>
+
+        <a class="btn btn-grad" href="{{ route('admin.home') }}">Torna alla Dashboard</a>
     </div>
 
     <script>

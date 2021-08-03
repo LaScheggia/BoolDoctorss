@@ -52,11 +52,11 @@ const router = new VueRouter({
             name: 'team',
             component: Team
         },
-/*         {
+        {
             path: '/*',
             name: 'error404',
             component: Error404
-        } */
+        }
     ]
 })
 

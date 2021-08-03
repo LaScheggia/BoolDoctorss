@@ -1,27 +1,63 @@
 <template>
     <div>
         <div class="container">
-        <div>
-            <img :src="user.propic" :alt="user.name">
-        </div>
+            <div class="parent-box mb-3">
+                <div class="image">
+                    <img class="image-prof" :src="user.propic" :alt="user.name">
+                </div>
+                <div class="names">
+                    <h1>{{user.name}} {{user.surname}}</h1>
+                    <p>{{user.email}}</p>
+                </div>
+            </div>
 
-        <h1>{{user.name}}</h1>
+
+
+
         <p>{{user.bio}}</p>
-        <p>{{user.email}}</p>
+
         </div>
 
-        <div class="form">
+        <div class=" container flex buttons">
+            <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient"
+
+
+                v-on:click="
+                () => {
+                    isHidden = !isHidden;
+                    isHiddenReview = true;
+                }
+                "
+            >
+                Invia Messaggio
+            </vs-button>
+            <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient"
+
+
+                v-on:click="
+                () => {
+                    isHiddenReview = !isHiddenReview;
+                    isHidden = true;
+                }
+                "
+            >
+                Lascia Recensione
+            </vs-button>
+        </div>
+
+        <div class="form" v-if="!isHiddenReview">
             <ReviewForm  :doctorId="user.id"/>
         </div>
 
-        <div>
+        <div class="form" v-if="!isHidden">
             <MessageForm :doctorId="user.id"/>
         </div>
+
         <div class="row d-flex justify-content-center mt-100 mb-100">
             <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h4 class="card-title">Latest Reviews</h4>
+                        <h4 class="card-title">Recensioni di {{user.name}}</h4>
                     </div>
                     <div class="comment-widgets"  v-for="review in user.reviews" :key="review.id">
                         <!-- Comment Row -->
@@ -38,11 +74,11 @@
                                 v-for="index in 5"
                                 :key="index">
                                 <i class="fas fa-star"
-                                 v-if="index < Math.round(review.rating)"></i>
+                                 v-if="index <= review.rating"></i>
                                 <i class="far fa-star" v-else></i>
                                 </div>
 
-                                <div class="comment-footer"> <span class="text-muted float-right">{{review.added_on}}</span> </div>
+                                <div class="comment-footer"> <span class="text-muted float-right">Lasciata il: {{review.added_on}}</span> </div>
                                 <hr>
                             </div>
                         </div> <!-- Comment Row -->
@@ -70,6 +106,10 @@ export default {
     data(){
         return{
             user: {},
+            isHidden: true,
+            isHiddenReview: true,
+            colorx:'#009688',
+            colorx2:'#80CBC4'
 
         }
     },
@@ -97,9 +137,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-    background-color: #D32F2F;
-    font-family: 'Calibri', sans-serif !important
+.image-prof{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.parent-box{
+    display: flex;
+    padding-top: 30px;
+}
+.images{
+    width: 50%;
+    flex: 1;
+}
+.names{
+    padding: 50px;
+    width: 50%;
+    flex: 1;
+}
+
+.stars{
+    display: inline-block;
+    color: #FDD835;
 }
 
 .mt-100 {
@@ -194,87 +253,5 @@ body {
 }
 
 
-/* BUTTON MODAL */
-.button {
- appearance: none;
- outline: none;
- border: none;
- background: none;
- cursor: pointer;
 
- display: inline-block;
- padding: 15px 25px;
- background-image: linear-gradient(to right, #CC2E5D, #FF5858);
- border-radius: 8px;
-
- color: #FFF;
- font-size: 18px;
- font-weight: 700;
-
- box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
- transition: 0.4s ease-out;
-
- &:hover {
-  box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
- }
-}
-
-.modal-overlay {
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- z-index: 98;
- background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modal {
- position: fixed;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- z-index: 99;
-
- width: 100%;
- max-width: 400px;
- background-color: #FFF;
- border-radius: 16px;
-
- padding: 25px;
-
- h1 {
-  color: #222;
-  font-size: 32px;
-  font-weight: 900;
-  margin-bottom: 15px;
- }
-
- p {
-  color: #666;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 15px;
- }
-}
-
-.fade-enter-active,
-.fade-leave-active {
- transition: opacity .5s;
-}
-
-.fade-enter,
-.fade-leave-to {
- opacity: 0;
-}
-
-.slide-enter-active,
-.slide-leave-active {
- transition: transform .5s;
-}
-
-.slide-enter,
-.slide-leave-to {
- transform: translateY(-50%) translateX(100vw);
-}
 </style>
