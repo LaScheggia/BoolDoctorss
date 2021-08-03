@@ -2,9 +2,9 @@
     <div>
         <section class="hero">
             <div class="content">
-                <h2>Cerca oggi lo specialista adatto a te.</h2>
-                <p>iSpecialists è la più grande piattaforma web dove trovare in pochi istanti si può trovare il medico adatto alle proprie.</p>
-                </div>
+                <h2>Cerca oggi il tuo specialista</h2>
+                <p>iSpecialists è la più grande piattaforma web dove trovare in pochi istanti il medico adatto alle proprie esigenze.</p>
+            </div>
             <div class="waves"></div>
         </section>
     </div>
@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style lang="scss">
+
+
+
 :root {
   --color: rgb(77, 182, 172);
 }
@@ -31,6 +34,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 20px;
+
 }
 
 .hero {
@@ -49,14 +53,14 @@ body {
   font-size: 4.5rem;
   margin: 0 0 10px;
   line-height: 1;
-  color: black;
+  color: #004D40;
 }
 
 .hero p {
   position: relative;
   z-index: 1;
   font-size: 1.1rem;
-  color: black;
+  color: #004D40;
   line-height: 1.4;
 }
 

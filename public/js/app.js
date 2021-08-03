@@ -2225,6 +2225,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -3144,6 +3145,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'team'
 });
@@ -3238,7 +3242,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ":root {\n  --color: rgb(77, 182, 172);\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n.content {\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.hero {\n  position: relative;\n  background: #00695c;\n  color: white;\n  height: 50vh;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n}\n.hero h2 {\n  position: relative;\n  z-index: 1;\n  font-size: 4.5rem;\n  margin: 0 0 10px;\n  line-height: 1;\n  color: black;\n}\n.hero p {\n  position: relative;\n  z-index: 1;\n  font-size: 1.1rem;\n  color: black;\n  line-height: 1.4;\n}\n\n/* ========================= */\n.waves {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 200px;\n  background-color: var(--color);\n  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);\n  transition: 500ms;\n}\n.waves::before,\n.waves::after {\n  content: \"\";\n  position: absolute;\n  width: 300vw;\n  height: 300vw;\n  top: -65vw;\n  left: 50%;\n  transform: translate(-50%, -75%);\n}\n.waves::before {\n  border-radius: 44%;\n  background: linear-gradient(to right, #009688, #B2DFDB);\n  -webkit-animation: waves 8s linear infinite;\n          animation: waves 8s linear infinite;\n}\n.waves::after {\n  border-radius: 44%;\n  background: linear-gradient(to right, #009688, #B2DFDB);\n  -webkit-animation: waves 15s linear infinite;\n          animation: waves 15s linear infinite;\n}\n@-webkit-keyframes waves {\n0% {\n    transform: translate(-50%, -75%) rotate(0deg);\n}\n100% {\n    transform: translate(-50%, -75%) rotate(360deg);\n}\n}\n@keyframes waves {\n0% {\n    transform: translate(-50%, -75%) rotate(0deg);\n}\n100% {\n    transform: translate(-50%, -75%) rotate(360deg);\n}\n}", ""]);
+exports.push([module.i, ":root {\n  --color: rgb(77, 182, 172);\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n.content {\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n.hero {\n  position: relative;\n  background: #00695c;\n  color: white;\n  height: 50vh;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n}\n.hero h2 {\n  position: relative;\n  z-index: 1;\n  font-size: 4.5rem;\n  margin: 0 0 10px;\n  line-height: 1;\n  color: #004D40;\n}\n.hero p {\n  position: relative;\n  z-index: 1;\n  font-size: 1.1rem;\n  color: #004D40;\n  line-height: 1.4;\n}\n\n/* ========================= */\n.waves {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 200px;\n  background-color: var(--color);\n  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);\n  transition: 500ms;\n}\n.waves::before,\n.waves::after {\n  content: \"\";\n  position: absolute;\n  width: 300vw;\n  height: 300vw;\n  top: -65vw;\n  left: 50%;\n  transform: translate(-50%, -75%);\n}\n.waves::before {\n  border-radius: 44%;\n  background: linear-gradient(to right, #009688, #B2DFDB);\n  -webkit-animation: waves 8s linear infinite;\n          animation: waves 8s linear infinite;\n}\n.waves::after {\n  border-radius: 44%;\n  background: linear-gradient(to right, #009688, #B2DFDB);\n  -webkit-animation: waves 15s linear infinite;\n          animation: waves 15s linear infinite;\n}\n@-webkit-keyframes waves {\n0% {\n    transform: translate(-50%, -75%) rotate(0deg);\n}\n100% {\n    transform: translate(-50%, -75%) rotate(360deg);\n}\n}\n@keyframes waves {\n0% {\n    transform: translate(-50%, -75%) rotate(0deg);\n}\n100% {\n    transform: translate(-50%, -75%) rotate(360deg);\n}\n}", ""]);
 
 // exports
 
@@ -5803,7 +5807,77 @@ var render = function() {
         _c("div", { staticClass: "row py-4" }, [
           _vm._m(1),
           _vm._v(" "),
-          _vm._m(2),
+          _c("div", { staticClass: "col-lg-2 col-md-6 mb-4 mb-lg-0" }, [
+            _c("h6", { staticClass: "text-uppercase font-weight-bold mb-4" }, [
+              _vm._v("F.A.Q")
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-unstyled mb-0" }, [
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Chi")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Dove?")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Quando?")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Perché?")]
+                  )
+                ],
+                1
+              )
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-2 col-md-6 mb-4 mb-lg-0" }, [
             _c("h6", { staticClass: "text-uppercase font-weight-bold mb-4" }, [
@@ -5827,19 +5901,61 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _vm._m(3),
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Chi siamo")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(4),
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Cosa facciamo")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(5)
+              _c(
+                "li",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "mb-2 text-muted",
+                      attrs: { to: { name: "team" } }
+                    },
+                    [_vm._v("Domande?")]
+                  )
+                ],
+                1
+              )
             ])
           ]),
           _vm._v(" "),
-          _vm._m(6)
+          _vm._m(2)
         ])
       ]),
       _vm._v(" "),
-      _vm._m(7)
+      _vm._m(3)
     ])
   ])
 }
@@ -5859,11 +5975,11 @@ var staticRenderFns = [
               { staticClass: "col-lg-12 mx-auto text-white text-center" },
               [
                 _c("h1", { staticClass: "display-4" }, [
-                  _vm._v("This will be part of the footer")
+                  _vm._v("iSpecialists")
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "lead mb-0" }, [
-                  _vm._v("Here i'll write something nice")
+                  _vm._v("Il futuro delle piattaforme mediche.")
                 ])
               ]
             )
@@ -5879,7 +5995,13 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-lg-4 col-md-6 mb-4 mb-lg-0" }, [
       _c("img", {
         staticClass: "mb-3",
-        attrs: { src: "", alt: "", width: "180" }
+        attrs: {
+          src:
+            "https://www.pngjoy.com/pngl/867/10215693_doctor-icon-physician-png-download.png",
+          alt: "",
+          height: "130",
+          width: "130"
+        }
       }),
       _vm._v(" "),
       _c("p", { staticClass: "font-italic text-muted" }, [
@@ -5931,72 +6053,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-2 col-md-6 mb-4 mb-lg-0" }, [
-      _c("h6", { staticClass: "text-uppercase font-weight-bold mb-4" }, [
-        _vm._v("F.A.Q")
-      ]),
-      _vm._v(" "),
-      _c("ul", { staticClass: "list-unstyled mb-0" }, [
-        _c("li", { staticClass: "mb-2" }, [
-          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-            _vm._v("AAA")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "mb-2" }, [
-          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-            _vm._v("BBB")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "mb-2" }, [
-          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-            _vm._v("CCC")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "mb-2" }, [
-          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-            _vm._v("DDD")
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-2" }, [
-      _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-        _vm._v("AAAA")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-2" }, [
-      _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-        _vm._v("AAAA")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-2" }, [
-      _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-        _vm._v("AAA")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-lg-4 col-md-6 mb-lg-0" }, [
       _c("h6", { staticClass: "text-uppercase font-weight-bold mb-4" }, [
         _vm._v("Newsletter")
@@ -6004,7 +6060,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "text-muted mb-4" }, [
         _vm._v(
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus."
+          "Iscriviti alla Newsletter per rimanere informato su tutte le novità."
         )
       ]),
       _vm._v(" "),
@@ -6211,11 +6267,11 @@ var staticRenderFns = [
     return _c("div", [
       _c("section", { staticClass: "hero" }, [
         _c("div", { staticClass: "content" }, [
-          _c("h2", [_vm._v("Cerca oggi lo specialista adatto a te.")]),
+          _c("h2", [_vm._v("Cerca oggi il tuo specialista")]),
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "iSpecialists è la più grande piattaforma web dove trovare in pochi istanti si può trovare il medico adatto alle proprie."
+              "iSpecialists è la più grande piattaforma web dove trovare in pochi istanti il medico adatto alle proprie esigenze."
             )
           ])
         ]),
@@ -7472,7 +7528,15 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("div", [
-        _c("h1", [_vm._v("Meet our team!")]),
+        _c("div", { staticClass: "container" }, [
+          _c("h1", [_vm._v("Conosci il Team3!")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Qua le cards con i profili LinkedIn e GitHub del team che ha realizzato questo progetto."
+            )
+          ])
+        ]),
         _vm._v(" "),
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
@@ -7481,7 +7545,10 @@ var staticRenderFns = [
                 _c("div", { staticClass: "picture" }, [
                   _c("img", {
                     staticClass: "img-fluid",
-                    attrs: { src: "https://placekeanu.com/150/150" }
+                    attrs: {
+                      src:
+                        "https://media-exp1.licdn.com/dms/image/C4D03AQEzALTCywmClw/profile-displayphoto-shrink_200_200/0/1624953967148?e=1633564800&v=beta&t=c38p6qIXtyQjoB2PKEfnN2Pt_R3NNZOGixHiN-3rp-8"
+                    }
                   })
                 ]),
                 _vm._v(" "),
@@ -7524,13 +7591,60 @@ var staticRenderFns = [
                 _c("div", { staticClass: "picture" }, [
                   _c("img", {
                     staticClass: "img-fluid",
-                    attrs: { src: "https://placekeanu.com/150/150" }
+                    attrs: {
+                      src:
+                        "https://media-exp1.licdn.com/dms/image/C4D03AQGFiHqJW_dPZQ/profile-displayphoto-shrink_200_200/0/1588082247129?e=1633564800&v=beta&t=BrkAgPvYhVUz2N9I9laCTMgjV4P8GYQs16DSv8wDFIo"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "team-content" }, [
+                  _c("h3", { staticClass: "name" }, [_vm._v("Michael Rosa")]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "title" }, [
+                    _vm._v("Jr. Fullstack Web Developer")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "social" }, [
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-github",
+                      attrs: {
+                        href: "https://github.com/",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", {
+                      staticClass: "fab fa-linkedin",
+                      attrs: {
+                        href: "https://www.linkedin.com/in/michaelrosa9/",
+                        "aria-hidden": "true"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-4 col-lg-3" }, [
+              _c("div", { staticClass: "our-team" }, [
+                _c("div", { staticClass: "picture" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: {
+                      src:
+                        "https://media-exp1.licdn.com/dms/image/C5603AQEu6gu6vx5q0w/profile-displayphoto-shrink_800_800/0/1568988004685?e=1633564800&v=beta&t=aliUuRj8S5FdIaxthG76E0SrmR3mGkKTeBe-Hk9Q5I0"
+                    }
                   })
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "team-content" }, [
                   _c("h3", { staticClass: "name" }, [
-                    _vm._v("Donata Casalini")
+                    _vm._v("Gabriele Scarparo")
                   ]),
                   _vm._v(" "),
                   _c("h4", { staticClass: "title" }, [
@@ -7543,7 +7657,7 @@ var staticRenderFns = [
                     _c("a", {
                       staticClass: "fab fa-github",
                       attrs: {
-                        href: "https://github.com/LaScheggia",
+                        href: "https://github.com/",
                         "aria-hidden": "true"
                       }
                     })
@@ -7553,7 +7667,8 @@ var staticRenderFns = [
                     _c("a", {
                       staticClass: "fab fa-linkedin",
                       attrs: {
-                        href: "https://www.linkedin.com/in/donata-casalini/",
+                        href:
+                          "https://www.linkedin.com/in/gabriele-scarparo-500372a9/",
                         "aria-hidden": "true"
                       }
                     })
@@ -7572,9 +7687,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "team-content" }, [
-                  _c("h3", { staticClass: "name" }, [
-                    _vm._v("Donata Casalini")
-                  ]),
+                  _c("h3", { staticClass: "name" }, [_vm._v("Simone Capozzi")]),
                   _vm._v(" "),
                   _c("h4", { staticClass: "title" }, [
                     _vm._v("Jr. Fullstack Web Developer")
@@ -7596,50 +7709,7 @@ var staticRenderFns = [
                     _c("a", {
                       staticClass: "fab fa-linkedin",
                       attrs: {
-                        href: "https://www.linkedin.com/in/donata-casalini/",
-                        "aria-hidden": "true"
-                      }
-                    })
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-4 col-lg-3" }, [
-              _c("div", { staticClass: "our-team" }, [
-                _c("div", { staticClass: "picture" }, [
-                  _c("img", {
-                    staticClass: "img-fluid",
-                    attrs: { src: "https://placekeanu.com/150/150" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "team-content" }, [
-                  _c("h3", { staticClass: "name" }, [
-                    _vm._v("Donata Casalini")
-                  ]),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "title" }, [
-                    _vm._v("Jr. Fullstack Web Developer")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "social" }, [
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-github",
-                      attrs: {
-                        href: "https://github.com/LaScheggia",
-                        "aria-hidden": "true"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", {
-                      staticClass: "fab fa-linkedin",
-                      attrs: {
-                        href: "https://www.linkedin.com/in/donata-casalini/",
+                        href: "https://www.linkedin.com/in/simone-capozzi/",
                         "aria-hidden": "true"
                       }
                     })

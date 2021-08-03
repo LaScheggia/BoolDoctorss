@@ -2,13 +2,16 @@
     <!-- <h1>Meet ors developers</h1> -->
     <div>
         <div>
-            <h1>Meet our team!</h1>
+            <div class="container">
+                <h1>Conosci il Team3!</h1>
+                <p>Qua le cards con i profili LinkedIn e GitHub del team che ha realizzato questo progetto.</p>
+            </div>
             <div class="container"> <!-- container web dev -->
                 <div class="row"> <!-- row web dev -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 1 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 1  Dona-->
                         <div class="our-team">
                             <div class="picture">
-                                <img class="img-fluid" src="https://placekeanu.com/150/150">
+                                <img class="img-fluid" src="https://media-exp1.licdn.com/dms/image/C4D03AQEzALTCywmClw/profile-displayphoto-shrink_200_200/0/1624953967148?e=1633564800&v=beta&t=c38p6qIXtyQjoB2PKEfnN2Pt_R3NNZOGixHiN-3rp-8">
                             </div>
                             <div class="team-content">
                                 <h3 class="name">Donata Casalini</h3>
@@ -20,48 +23,48 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 2 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 2  Mike-->
                         <div class="our-team">
                             <div class="picture">
-                                <img class="img-fluid" src="https://placekeanu.com/150/150">
+                                <img class="img-fluid" src="https://media-exp1.licdn.com/dms/image/C4D03AQGFiHqJW_dPZQ/profile-displayphoto-shrink_200_200/0/1588082247129?e=1633564800&v=beta&t=BrkAgPvYhVUz2N9I9laCTMgjV4P8GYQs16DSv8wDFIo">
                             </div>
                             <div class="team-content">
-                                <h3 class="name">Donata Casalini</h3>
+                                <h3 class="name">Michael Rosa</h3>
                                 <h4 class="title">Jr. Fullstack Web Developer</h4>
                             </div>
                             <ul class="social">
-                                <li><a href="https://github.com/LaScheggia" class="fab fa-github" aria-hidden="true"></a></li>
-                                <li><a href="https://www.linkedin.com/in/donata-casalini/" class="fab fa-linkedin" aria-hidden="true"></a></li>
+                                <li><a href="https://github.com/" class="fab fa-github" aria-hidden="true"></a></li>
+                                <li><a href="https://www.linkedin.com/in/michaelrosa9/" class="fab fa-linkedin" aria-hidden="true"></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 3 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 3  Ga-->
                         <div class="our-team">
                             <div class="picture">
-                                <img class="img-fluid" src="https://placekeanu.com/150/150">
+                                <img class="img-fluid" src="https://media-exp1.licdn.com/dms/image/C5603AQEu6gu6vx5q0w/profile-displayphoto-shrink_800_800/0/1568988004685?e=1633564800&v=beta&t=aliUuRj8S5FdIaxthG76E0SrmR3mGkKTeBe-Hk9Q5I0">
                             </div>
                             <div class="team-content">
-                                <h3 class="name">Donata Casalini</h3>
+                                <h3 class="name">Gabriele Scarparo</h3>
                                 <h4 class="title">Jr. Fullstack Web Developer</h4>
                             </div>
                             <ul class="social">
-                                <li><a href="https://github.com/LaScheggia" class="fab fa-github" aria-hidden="true"></a></li>
-                                <li><a href="https://www.linkedin.com/in/donata-casalini/" class="fab fa-linkedin" aria-hidden="true"></a></li>
+                                <li><a href="https://github.com/" class="fab fa-github" aria-hidden="true"></a></li>
+                                <li><a href="https://www.linkedin.com/in/gabriele-scarparo-500372a9/" class="fab fa-linkedin" aria-hidden="true"></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 4 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 4  Simo-->
                         <div class="our-team">
                             <div class="picture">
                                 <img class="img-fluid" src="https://placekeanu.com/150/150">
                             </div>
                             <div class="team-content">
-                                <h3 class="name">Donata Casalini</h3>
+                                <h3 class="name">Simone Capozzi</h3>
                                 <h4 class="title">Jr. Fullstack Web Developer</h4>
                             </div>
                             <ul class="social">
                                 <li><a href="https://github.com/LaScheggia" class="fab fa-github" aria-hidden="true"></a></li>
-                                <li><a href="https://www.linkedin.com/in/donata-casalini/" class="fab fa-linkedin" aria-hidden="true"></a></li>
+                                <li><a href="https://www.linkedin.com/in/simone-capozzi/" class="fab fa-linkedin" aria-hidden="true"></a></li>
                             </ul>
                         </div>
                     </div>
