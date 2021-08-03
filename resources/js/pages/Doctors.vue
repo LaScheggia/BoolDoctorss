@@ -1,7 +1,7 @@
 <template>
 
 <div class="custom-bg">
-    <div class="custom-major">
+    <div class="custom-major" v-if="!loading">
         <Card
         v-for="user in users"
         :key="user.id"
@@ -47,6 +47,9 @@
         </nav>
     </div>
     </div>
+    <Loader v-else />
+
+
 </div>
 
 
@@ -55,17 +58,23 @@
 
 <script>
 import Card from '../components/Card.vue';
+import Loader from '../components/Loader.vue';
 import axios from 'axios';
+
+
   export default {
     name: 'Doctors',
     components: {
         Card,
+        Loader,
+
     },
     data() {
         return {
             filters: {},
             users: [],
             pagination: {},
+            loading:true,
         }
     },
     methods: {
@@ -91,6 +100,7 @@ import axios from 'axios';
             .then(res => {
                 //console.log(res.data.data);
                 this.users = res.data.data;
+                this.loading = false
                 this.pagination = {
                     current: res.data.current_page,
                     last: res.data.last_page
