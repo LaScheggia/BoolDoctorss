@@ -26,6 +26,16 @@
               <option value="5">5</option>
             </select>
         </div>
+
+        <div class="form-group mt-2">
+            <input
+                type="hidden"
+                name="added_on"
+                id="added_on"
+                v-model="added_on"
+                required
+            />
+        </div>
         <button type="submit" class="btn btn-primary mt-3">{{ sending ? "Invio in corso..." : "Invia Recensione" }}</button>
     </form>
 </template>

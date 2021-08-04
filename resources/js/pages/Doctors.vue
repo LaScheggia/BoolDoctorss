@@ -48,7 +48,7 @@
         </form>
 
 
-        <div v-if="users.lenght">
+        <div>
 
             <Card
                 v-for="user in users"
@@ -65,9 +65,9 @@
             />
         </div>
 
-        <div v-else class="container d-flex align-items-center">
+<!--         <div class="container d-flex align-items-center">
             <h1>Nessun dottore con i parametri da te scelti.</h1>
-        </div>
+        </div -->>
 
     <!-- paginazione -->
         <div class="wrapper">
@@ -77,7 +77,8 @@
                     :class="{'disabled': pagination.current === 1}"
                     class="page-item">
                         <button
-                        @click="getDocs(pagination.current - 1)"
+                        @click="getDocs2(pagination.current - 1)"
+
                         class="page-link" >&laquo;</button>
                     </li>
 
@@ -87,7 +88,7 @@
                     :class="{'active' : pagination.current === i}"
                     class="page-item">
                         <button
-                        @click="getDocs(i)"
+                        @click="getDocs2(i)"
                             class="page-link">{{ i }}</button></li>
 
 
@@ -95,7 +96,7 @@
                     :class="{'disabled': pagination.current === pagination.last}"
                     class="page-item">
                         <button
-                        @click="getDocs(pagination.current + 1)"
+                        @click="getDocs2(pagination.current + 1)"
                         class="page-link" >&raquo;</button>
                     </li>
                 </ul>

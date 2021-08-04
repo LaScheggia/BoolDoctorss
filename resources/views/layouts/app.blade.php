@@ -23,8 +23,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
     <script src="https://js.braintreegateway.com/web/dropin/1.31.1/js/dropin.min.js"></script>
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light  shadow-sm navbar-custom">
@@ -102,7 +105,7 @@
             </div>
         </nav>
 
-        <main class="py-4 main-img-bg">
+        <main class="py-4 custom-bg"> {{-- qua prende il bg generico x tutti --}}
             @yield('content')
         </main>
     </div>

@@ -279,7 +279,7 @@ class UserTableSeeder extends Seeder
             - Attualmente in servizio presso l’ambulatorio di cardiologia dell’Associazione Cavalieri Italiani del Sovrano Militare dell’Ordine di Malta.'
         ];
 
-        for($i=0; $i < 50; $i++){
+        for($i=0; $i < 100; $i++){
             $new_user = new User();
             $new_user->name = $this->randomName();
             // if($new_user->name == 'Donata'|| 'Sara'||'Maria'||'Piera'||'Camilla'||'Giada'||'Licia'||'Teoriana'||'Giulia'||'Rita'||'Giovanni'||'Anna'||'Maria'||'Fiorella'|| 'Edith'||'Marie'||'Marlena'||'Sasha'||'Jurgen'||'Maurizia'||'Kim'||'Yen'){
@@ -288,7 +288,7 @@ class UserTableSeeder extends Seeder
             //     $new_user -> propic ='img/maledoctor.png';
             // }
             $new_user->surname = $this->randomSurname();
-            $new_user->address = $faker->streetAddress();
+            $new_user->address = $this->randAddress();
             $new_user->bio = $bios[array_rand($bios)];
 
             //questo faker restituisce una stringa con un percorso come se la foto fosse stata caricata da un pc
@@ -307,14 +307,20 @@ class UserTableSeeder extends Seeder
 
     //questa è una funzione che prendere in ordine randomico i nomi dei doctors
     private function randomName(){
-        $array = ['Donata', 'Simone', 'Mike', 'Cosmin', 'Gabriele', 'Sara', 'Maria', 'Piera', 'Camilla', 'Giada', 'Rocco', 'Licia', 'James', 'Jeremy', 'Giuseppe', 'Teoriana', 'Giulia', 'Marco', 'Renzo', 'Rita', 'Giovanni', 'Anna', 'Maria', 'Nino', 'Fiorella', 'Edith', 'Jason', 'Dylan', 'Perry', 'Christopher', 'Ted', 'Giancarlo', 'Marie', 'Marlena', 'Sasha', 'Jurgen', 'Maurizia', 'Kim', 'Yen'];
+        $array = ['Ajay', 'Gabriele', 'Mike', 'Simone', 'Donata', 'Ada', 'Alfio', 'Bruno', 'Brigitte', 'Carmelo', 'Carmen', 'Davide', 'Emanuele', 'Ermenegilda', 'Francesco', 'Federica', 'Giulio', 'Gaia', 'Henry', 'Hilary', 'Ilenia', 'Igor', 'Juan', 'Juanita', 'Keanu', 'Kate', 'Leopoldo', 'Luigina', 'Mario', 'Maria', 'Nicholas', 'Nicole', 'Orietta', 'Otello', 'Perry', 'Petunia', 'Quasimodo', 'Quasimada', 'Richard', 'Rachele', 'Sandrina', 'Thomas', 'Tiziana', 'Ugo', 'Ughina', 'Vincent', 'Victoria', 'Willian', 'Wanda', 'Xavier', 'Xena', 'Yolanda', 'Yoda', 'Zach', 'Zelda' ];
         shuffle($array); //mischia
         return $array[0];
     }
 
     //questa è una funzione che prendere in ordine randomico i nomi dei doctors
     private function randomSurname(){
-        $array = ['Rossi', 'Verdi', 'Testa', 'Posta', 'Cielo', 'Arcano', 'Modello', 'Klaus', 'Barbarossa', 'Hewit', 'Diamante', 'Camaleonte', 'Cox', 'Dorian', 'Jekyll', 'Hyde', 'Burioni', 'Hamilton', 'Verstappen', 'Leclerc', 'Turk', 'Gleeson', 'Wallace', 'Bernadette', 'Pauli', 'Sarri', 'Nicodemano', 'Smith', 'Johnson', 'Williamson', 'Lodi', 'Teller', 'Monroe', 'Rig', 'Zangh', 'Chan'];
+        $array = ['Rosa', 'Scarparo', 'Capozzi', 'Casalini', 'Leclerc', 'Reeves', 'Gallus', 'Rozzi', 'Logallo', 'DeUghi', 'Corradi', 'DeLuca', 'Mosca', 'Sardo', 'DiMedda', 'Skywalker', 'Griffin', 'DiCesare', 'Dallavalle', 'Jacobs', 'Tamberi', 'Turk', 'Dorian', 'Cox', 'Reid', 'Peralta', 'Santiago', 'Diaz', 'House', 'Mosby', 'Picard', 'Stinson', 'Rossi', 'Sanchez', 'Montecchi', 'Capuleti', 'Montecristo', 'Villanueva', 'DiMonza', 'Mondella', 'Tramaglino'];
+        shuffle($array); //mischia
+        return $array[0];
+    }
+
+    private function randAddress(){
+        $array = ['Via della Stalla, 15', 'Via de Ughi, 30', 'Via del Sacro Cuore, 80', 'Via Parco della Vittoria, 67', 'Via dei Compagni non Lavoratori, 1', 'Viale Gran Sasso, 180', 'Viale Romano, 45', 'Via dei Cuori, 50', 'Piazza della Repubblica, 150', 'Vicolo Corto, 14', 'Viale dei Pioppi, 155', 'Via della Molisana, 23', 'Via dei Dischi, 98', 'Via del Watsapp, 52', 'Via Json non Trovato, 33', 'Via Snacks, 39', 'Corso Rick&Morty, 78', 'Via della Sardegna, 25', 'Via bruciata, 63', 'Via quel Paese, 55' ];
         shuffle($array); //mischia
         return $array[0];
     }

@@ -11,9 +11,7 @@
             </div>
             @endif
 
-            {{-- messaggi non letti --}}
-            <h2 class="text-center">Messaggi in attesa di risposta</h2>
-            <div class="mb-5">
+            <div class="mb-5"> {{-- ciclo i messaggi del dottore --}}
                 @foreach ($messages as $message)
 
                 <div
@@ -40,4 +38,6 @@
             <a class="btn btn-grad" href="{{ route('admin.home') }}">Torna alla Dashboard</a>
         </div>
     </div>
+
+    {{-- ps. sappiamo che verrete a copiarci il codice, futuri team del progetto finale di boolean --}}
 @endsection

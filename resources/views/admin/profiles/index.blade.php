@@ -58,6 +58,24 @@
                 </tr>
             </tbody>
         </table>
+        <table class="table">
+            <thead class="p-3 mb-2 custom-head text-dark">
+                <tr>
+                    <th class="text-uppercase" colspan="3"><i class="fas fa-stethoscope"></i>I tuoi servizi </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @if (Auth::user()->services)
+                        {!! nl2br(e(Auth::user()->services)) !!}
+                        @else
+                            -
+                        @endif
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
 {{--         <table class="table">
             <thead class="p-3 mb-2 custom-head text-dark">

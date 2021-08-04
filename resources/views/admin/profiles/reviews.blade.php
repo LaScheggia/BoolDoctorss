@@ -5,7 +5,7 @@
         <h1 class="mb-4">Le tue recensioni</h1>
         {{-- controllo se ci sono recensioni relative al dottore --}}
         @if (count($reviews) == 0)
-            <h2>Nessuna recensione ricevuta</h2>
+            <h2 class="text-center mb-5">Nessuna recensione ricevuta</h2>
         @endif
 
         <div class="row d-flex justify-content-between">

@@ -18,6 +18,10 @@ thead {
   background-color: #80cbc4;
 }
 
+.my-height {
+  height: 100vh;
+}
+
 .btn-grad {
   background-image: linear-gradient(to right, #00897b 0%, #80cbc4 25%, #26a69a 50%, #00897b 100%);
 }

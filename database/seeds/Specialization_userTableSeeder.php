@@ -18,7 +18,7 @@ class Specialization_userTableSeeder extends Seeder
         foreach ($users as $user) {
             DB::table('specialization_user')->insert([
                 'user_id'=>$user['id'],
-                'specialization_id'=>rand(1,25)
+                'specialization_id'=>rand(1,30)
             ]);
         }
     }

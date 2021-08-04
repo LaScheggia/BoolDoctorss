@@ -78,14 +78,14 @@
                             </div>
                         </div>
 
-                        <div class="card m-2" style="width: 18rem;"> {{-- visualizza piani pagamento --}}
+{{--                         <div class="card m-2" style="width: 18rem;">
                             <img class="card-img-top" src="https://picsum.photos/id/20/286/180" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Vedi i tuoi upgrade</h5>
                                 <p class="card-text">Qua potrai vedere vedere il tuo piano di upgrade e i suoi dettagli.</p>
                                 <a href="{{ route('admin.plan') }}" class="btn btn-grad">Vai ai tuoi upgrade</a>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="card m-2" style="width: 18rem;"> {{-- vedi le tue stats --}}
                             <img class="card-img-top" src="https://picsum.photos/id/668/286/180" alt="Card image cap">

@@ -36,11 +36,17 @@ class MessageTableSeeder extends Seeder
             'Dottore salve. Ma le mascherine servono? E a chi?',
             'A chi vengono fatti i tamponi? Perché non li fanno a tutti?',
             'Dottore, posso ammalarmi due volte di Covid-19?',
-            'Cos’è l’immunità di gregge?'
+            'Cos’è l’immunità di gregge?',
+            'Dottò cosa succede se esco di casa quando sono positivo al coviddì?',
+            'Dottò non ce nè di Coviddi',
+            'Buongiorno, quanto costa una visita presso il suo studio?',
+            'Buongiorno, vorrei fare una mastoplastica, posso sapere i prezzi?',
+            'Salve, ho fatto il vaccino Astrazeneca due giorni fa ma ho ancora 39.5 di febbre, è normale?',
+            'Dottore, mia moglie mi tradisce, è normale?'
         ];
 
         foreach ($users as $user) {
-            for ($i = 0; $i < rand(3, 15); $i++) {
+            for ($i = 0; $i < rand(7, 14); $i++) { //un dottore avrà da 7 a 14 messaggi generati randomicamente
                 $new_message = new Message();
                 $new_message->user_id = $user->id;
                 $new_message->patient_name = $this->randomName();
@@ -54,7 +60,7 @@ class MessageTableSeeder extends Seeder
                     $new_message->text_message = $messages[array_rand($messages)];
                 }
 
-                $new_message->added_on = $faker->dateTimeBetween("-5 months", "now");
+                $new_message->added_on = $faker->dateTimeBetween("-6 months", "now");
                 if (rand(0, 1)) {
                     $new_message->read = 1;
                 }

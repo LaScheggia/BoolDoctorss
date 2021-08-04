@@ -33,7 +33,7 @@
                                 <h4 class="title">Jr. Fullstack Web Developer</h4>
                             </div>
                             <ul class="social">
-                                <li><a href="https://github.com/" class="fab fa-github" aria-hidden="true"></a></li>
+                                <li><a href="https://github.com/MichaelRosa9/" class="fab fa-github" aria-hidden="true"></a></li>
                                 <li><a href="https://www.linkedin.com/in/michaelrosa9/" class="fab fa-linkedin" aria-hidden="true"></a></li>
                             </ul>
                         </div>
@@ -48,7 +48,7 @@
                                 <h4 class="title">Jr. Fullstack Web Developer</h4>
                             </div>
                             <ul class="social">
-                                <li><a href="https://github.com/" class="fab fa-github" aria-hidden="true"></a></li>
+                                <li><a href="https://github.com/gabrisca/" class="fab fa-github" aria-hidden="true"></a></li>
                                 <li><a href="https://www.linkedin.com/in/gabriele-scarparo-500372a9/" class="fab fa-linkedin" aria-hidden="true"></a></li>
                             </ul>
                         </div>
@@ -56,14 +56,14 @@
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- webdev 4  Simo-->
                         <div class="our-team">
                             <div class="picture">
-                                <img class="img-fluid" src="https://placekeanu.com/150/150">
+                                <img class="img-fluid" src="https://media-exp1.licdn.com/dms/image/C4E03AQGjlRb3HZndvw/profile-displayphoto-shrink_800_800/0/1628062445723?e=1633564800&v=beta&t=YS8cigr_B7ghoAjAW7-jSQBy7EpuwI1hHBSld_OMXqs">
                             </div>
                             <div class="team-content">
                                 <h3 class="name">Simone Capozzi</h3>
                                 <h4 class="title">Jr. Fullstack Web Developer</h4>
                             </div>
                             <ul class="social">
-                                <li><a href="https://github.com/LaScheggia" class="fab fa-github" aria-hidden="true"></a></li>
+                                <li><a href="https://github.com/SimoneCapozzi" class="fab fa-github" aria-hidden="true"></a></li>
                                 <li><a href="https://www.linkedin.com/in/simone-capozzi/" class="fab fa-linkedin" aria-hidden="true"></a></li>
                             </ul>
                         </div>

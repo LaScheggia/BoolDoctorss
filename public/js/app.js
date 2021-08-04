@@ -2155,6 +2155,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Card',
   props: ['name', 'surname', 'bio', 'specializations', 'propic', 'address', 'id', 'ratingAvg', 'countRev'],
@@ -2805,6 +2807,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -3075,6 +3078,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_ReviewForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ReviewForm.vue */ "./resources/js/components/ReviewForm.vue");
 /* harmony import */ var _components_MessageForm_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MessageForm.vue */ "./resources/js/components/MessageForm.vue");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5895,7 +5904,13 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "postcard__bar" }),
           _vm._v(" "),
-          _c("div", { staticClass: "postcard__preview-txt" }),
+          _c("div", { staticClass: "postcard__preview-txt" }, [
+            _vm._v(
+              "\n                        " +
+                _vm._s(_vm.address) +
+                "\n                    "
+            )
+          ]),
           _vm._v(" "),
           _c(
             "ul",
@@ -7345,36 +7360,28 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm.users.lenght
-              ? _c(
-                  "div",
-                  _vm._l(_vm.users, function(user) {
-                    return _c("Card", {
-                      key: user.id,
-                      attrs: {
-                        name: user.name,
-                        surname: user.surname,
-                        bio: user.bio,
-                        specializations: user.specializations,
-                        propic: user.propic,
-                        address: user.address,
-                        id: user.id,
-                        ratingAvg: user.rating_avg,
-                        countRev: user.reviews_count
-                      }
-                    })
-                  }),
-                  1
-                )
-              : _c(
-                  "div",
-                  { staticClass: "container d-flex align-items-center" },
-                  [
-                    _c("h1", [
-                      _vm._v("Nessun dottore con i parametri da te scelti.")
-                    ])
-                  ]
-                ),
+            _c(
+              "div",
+              _vm._l(_vm.users, function(user) {
+                return _c("Card", {
+                  key: user.id,
+                  attrs: {
+                    name: user.name,
+                    surname: user.surname,
+                    bio: user.bio,
+                    specializations: user.specializations,
+                    propic: user.propic,
+                    address: user.address,
+                    id: user.id,
+                    ratingAvg: user.rating_avg,
+                    countRev: user.reviews_count
+                  }
+                })
+              }),
+              1
+            ),
+            _vm._v(" "),
+            _vm._v(">\n\n    "),
             _vm._v(" "),
             _c("div", { staticClass: "wrapper" }, [
               _c(
@@ -7398,7 +7405,9 @@ var render = function() {
                               staticClass: "page-link",
                               on: {
                                 click: function($event) {
-                                  return _vm.getDocs(_vm.pagination.current - 1)
+                                  return _vm.getDocs2(
+                                    _vm.pagination.current - 1
+                                  )
                                 }
                               }
                             },
@@ -7422,7 +7431,7 @@ var render = function() {
                                 staticClass: "page-link",
                                 on: {
                                   click: function($event) {
-                                    return _vm.getDocs(i)
+                                    return _vm.getDocs2(i)
                                   }
                                 }
                               },
@@ -7448,7 +7457,9 @@ var render = function() {
                               staticClass: "page-link",
                               on: {
                                 click: function($event) {
-                                  return _vm.getDocs(_vm.pagination.current + 1)
+                                  return _vm.getDocs2(
+                                    _vm.pagination.current + 1
+                                  )
                                 }
                               }
                             },
@@ -7722,12 +7733,18 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("p", [_vm._v(_vm._s(_vm.user.bio))])
+      _c("p", [_vm._v(_vm._s(_vm.user.bio))]),
+      _vm._v(" "),
+      _c("div", { staticClass: "mb-5" }, [
+        _c("h4", { staticClass: "mb-2" }, [_vm._v("I servizi attivi ")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(_vm._s(_vm.user.services))])
+      ])
     ]),
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: " container flex buttons" },
+      { staticClass: " container flex buttons mb-1" },
       [
         _c(
           "vs-button",
@@ -7771,7 +7788,7 @@ var render = function() {
     !_vm.isHiddenReview
       ? _c(
           "div",
-          { staticClass: "form" },
+          { staticClass: "form " },
           [_c("ReviewForm", { attrs: { doctorId: _vm.user.id } })],
           1
         )
@@ -8001,7 +8018,7 @@ var staticRenderFns = [
                     _c("a", {
                       staticClass: "fab fa-github",
                       attrs: {
-                        href: "https://github.com/",
+                        href: "https://github.com/MichaelRosa9/",
                         "aria-hidden": "true"
                       }
                     })
@@ -8047,7 +8064,7 @@ var staticRenderFns = [
                     _c("a", {
                       staticClass: "fab fa-github",
                       attrs: {
-                        href: "https://github.com/",
+                        href: "https://github.com/gabrisca/",
                         "aria-hidden": "true"
                       }
                     })
@@ -8072,7 +8089,10 @@ var staticRenderFns = [
                 _c("div", { staticClass: "picture" }, [
                   _c("img", {
                     staticClass: "img-fluid",
-                    attrs: { src: "https://placekeanu.com/150/150" }
+                    attrs: {
+                      src:
+                        "https://media-exp1.licdn.com/dms/image/C4E03AQGjlRb3HZndvw/profile-displayphoto-shrink_800_800/0/1628062445723?e=1633564800&v=beta&t=YS8cigr_B7ghoAjAW7-jSQBy7EpuwI1hHBSld_OMXqs"
+                    }
                   })
                 ]),
                 _vm._v(" "),
@@ -8089,7 +8109,7 @@ var staticRenderFns = [
                     _c("a", {
                       staticClass: "fab fa-github",
                       attrs: {
-                        href: "https://github.com/LaScheggia",
+                        href: "https://github.com/SimoneCapozzi",
                         "aria-hidden": "true"
                       }
                     })

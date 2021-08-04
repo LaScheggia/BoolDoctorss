@@ -38,7 +38,9 @@
 
                     <div class="postcard__bar"></div>
 
-                    <div class="postcard__preview-txt"></div>
+                    <div class="postcard__preview-txt">
+                        {{ address }}
+                    </div>
                     <ul class="postcard__tagbox">
                         <vs-chip color="success" type="gradient" v-for="spec in specializations" :key="spec.id">
                                 {{spec.name}}

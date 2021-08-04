@@ -16,9 +16,15 @@
 
         <p>{{user.bio}}</p>
 
+        <div class="mb-5">
+            <h4 class="mb-2">I servizi attivi </h4>
+            <span >{{user.services}}</span>
         </div>
 
-        <div class=" container flex buttons">
+
+        </div>
+
+        <div class=" container flex buttons mb-1"> <!-- invia mess e rece -->
             <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient"
 
 
@@ -45,24 +51,24 @@
             </vs-button>
         </div>
 
-        <div class="form" v-if="!isHiddenReview">
+        <div class="form " v-if="!isHiddenReview"> <!-- nascondo e mostro con un click il form -->
             <ReviewForm  :doctorId="user.id"/>
         </div>
 
-        <div class="form" v-if="!isHidden">
+        <div class="form" v-if="!isHidden"> <!-- nascondo e mostro con un click il form -->
             <MessageForm :doctorId="user.id"/>
         </div>
 
-        <div class="row d-flex justify-content-center mt-100 mb-100">
+        <div class="row d-flex justify-content-center mt-100 mb-100"> <!-- recensioni -->
             <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h4 class="card-title">Recensioni di {{user.name}}</h4>
+                        <h4 class="card-title">Recensioni di {{user.name}}</h4> <!-- titolo  -->
                     </div>
-                    <div class="comment-widgets"  v-for="review in user.reviews" :key="review.id">
+                    <div class="comment-widgets"  v-for="review in user.reviews" :key="review.id"> <!-- qua ciclo le recensioni -->
                         <!-- Comment Row -->
                         <div class="d-flex flex-row comment-row m-t-0">
-                            <div class="p-2"><img src="https://placekeanu.com/300/300/y" alt="user" width="50" class="rounded-circle"></div>
+                            <div class="p-2"><img src="https://placekeanu.com/300/300/y" alt="user" width="50" class="rounded-circle"></div> <!-- keanu unico amore -->
                             <div class="comment-text w-100">
                                 <h4 class="font-medium">{{review.patient_name}}</h4>
                                 <h5 class="m-b-10 d-block">{{review.title}}</h5>

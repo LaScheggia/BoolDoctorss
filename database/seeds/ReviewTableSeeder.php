@@ -41,6 +41,14 @@ class ReviewTableSeeder extends Seeder
             'HocDoc',
             'DocGiulia',
             'PaoloM',
+            'Gianfrascheitto',
+            'Marisol55',
+            'Holt',
+            'boYle125',
+            'Ughetto',
+            'DeUghitheBest',
+            'BesTkLlaAh',
+            'pusruantJoker'
         ];
 
         $negative_titles = [
@@ -52,7 +60,17 @@ class ReviewTableSeeder extends Seeder
             'Sono frustrata',
             'Lo sconsiglio',
             'Insomma...',
-            'Assolutamente no'
+            'Assolutamente no',
+            'Statene alla larga',
+            'Mio figlio poteva morire',
+            'Mi ha disgnosticato il cancro ma era un tappo intestinale',
+            'Incompetente',
+            'Non ci tornerò mai più',
+            'Studio sporchissimo',
+            'Maleducato',
+            'Se lo becco per strada lo stiro',
+            'Analfabeta funzionale',
+            'La laurea l\'ha trovata negli ovetti Kinder'
         ];
 
         $positive_titles = [
@@ -64,7 +82,14 @@ class ReviewTableSeeder extends Seeder
             'Preparato',
             'Lo consiglio',
             ':) ottimo dottore',
-            'La mia esperienza'
+            'La mia esperienza',
+            'Mi ha salvato la vita!',
+            'Ho finalmente risolto il mio problema',
+            'Ora vivo una vita migliore',
+            'Dottore al top!',
+            '10/10',
+            'Bellissima esperienza',
+            'Esperienza mistica'
         ];
 
         $positive_reviews = [
@@ -73,11 +98,11 @@ class ReviewTableSeeder extends Seeder
             'ottimo!',
             'Grazie ancora dottore. Gentile e disponibile',
             'Molto chiaro nelle spiegazioni. Lo consiglio',
-            'cortese e disponibile. Lo consiglio vivamente ad altre persone.',
+            'Cortese e disponibile. Lo consiglio vivamente ad altre persone.',
             'Puntuale, preparato e cortese. Se dovessi trovare un difetto, direi il costo. Ma si sa che i medici bravi sono cari',
             'Volevodire Che il dottore e’ Bravissimo!',
-            'il dottore è una persona di grande professionalità,molto disponibile e di grande cuore.Mi ha evitato un intervento alla carotide con una sua visita con eco dobbler fatto da lui.Perche mi hanno fatto in un altro laboratorio un eco sbagliato dove era scritto che dovevo essere operato.
-            Quindi ho una grande stima per lui,e lo cosiglio alle persone che avessero bisogno di un chirurgo vascolare',
+            'Il dottore è una persona di grande professionalità, molto disponibile e di grande cuore. Mi ha evitato un intervento alla carotide con una sua visita con eco dobbler fatto da lui. Perché mi hanno fatto in un altro laboratorio un eco sbagliato dove era scritto che dovevo essere operato.
+              Quindi ho una grande stima per lui, e lo cosiglio alle persone che avessero bisogno di un chirurgo vascolare',
 
             'Nello studio ho trovato molta cortesia e disponibilità. Il dottore e propenso all ascolto e subito valuta la situazione di salute. Mi sono sentita subito a mio agio e il dermatologo adatto a me',
             'Molto soddisfatto della visita urologica, professionale, super puntuale e disponibile. Assolutamente consigliato',
@@ -110,7 +135,7 @@ class ReviewTableSeeder extends Seeder
         ];
 
         foreach ($users as $user) {
-            $r = rand(5, 20);
+            $r = rand(7, 14); //il dottore avrà un minimo di 7 e un max di 14 recensioni
             for ($i = 0; $i < $r; $i++) {
                 $new_comment = new Review();
 
@@ -139,7 +164,7 @@ class ReviewTableSeeder extends Seeder
                     }
                 }
                 //questo faker ci restituisce delle date entro un certo lasso di tempo, queste date le useremo x le statistiche dei dottori
-                $new_comment->added_on = $faker->dateTimeBetween("-5 months", "now");
+                $new_comment->added_on = $faker->dateTimeBetween("-6 months", "now");
                 $new_comment->save();
             }
         }
