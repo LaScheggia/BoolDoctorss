@@ -27,7 +27,7 @@
 
 
         <!-- <vs-button type="submit" >invia il messaggio</vs-button> -->
-        <button type="submit" class="btn btn-success mt-3" >{{ sending ? "Invio in corso..." : "Invia Messaggio" }}</button>
+        <button type="submit" class="btn btn-grad mt-3" >{{ sending ? "Invio in corso..." : "Invia Messaggio" }}</button>
     </form>
 </template>
 
@@ -70,6 +70,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.btn-grad {background-image: linear-gradient(to right, #00695C 0%, #80CBC4  51%, #00695C  100%)}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
 
 /* form style */
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);

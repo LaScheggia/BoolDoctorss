@@ -1,14 +1,20 @@
 <template>
     <div>
         <body>
-        <div class="card">
-        <div style="border-radius:200px; height:200px; width:200px; background: rgb(224, 242, 241); margin:0 auto;">
-            <i class="checkmark">✓</i>
-        </div>
-            <h1>Recensione avvenuta con successo!</h1>
-            <p>Abbiamo ricevuto la tua recensione,<br/> la tua recensione sarà visibile per aiutare gli altri a scegliere lo specialista.</p>
-            <p>Il dottore potrà vedere questa recensione, ricordati di scrivere in maniera educata e fatti veritieri.</p>
-        </div>
+            <div class="card">
+                <div style="border-radius:200px; height:200px; width:200px; background: rgb(224, 242, 241); margin:0 auto;">
+                <i class="checkmark">✓</i>
+            </div>
+                <h1>Recensione avvenuta con successo!</h1>
+                <p>Abbiamo ricevuto la tua recensione,<br/> la tua recensione sarà visibile per aiutare gli altri a scegliere lo specialista.</p>
+                <p class="mb-3">Il dottore potrà vedere questa recensione, ricordati di scrivere in maniera educata e fatti veritieri.</p>
+
+                <router-link :to="{name: 'home'}"> <!-- bottone che porta alla pagina coi doc -->
+                    <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient">
+                        Torna alla Home
+                    </vs-button>
+                </router-link>
+            </div>
         </body>
     </div>
 
@@ -16,7 +22,13 @@
 
 <script>
 export default {
-  name:'Confirmation'
+  name:'Confirmation',
+  data(){
+    return {
+      colorx:'#009688',
+      colorx2:'#80CBC4'
+    }
+  },
 }
 </script>
 

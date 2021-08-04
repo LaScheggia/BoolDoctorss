@@ -7,7 +7,13 @@
         </div>
             <h1>Messaggio inviato con successo!</h1>
             <p>Lo specialista ha ricevuto il tuo messaggio,<br/> riceverai una risposta nel minor tempo possibile.</p>
-            <p>Verrai ricontattato tramite il canale che hai scelto in fase di invio del messaggio.</p>
+            <p class="mb-3">Verrai ricontattato tramite il canale che hai scelto in fase di invio del messaggio.</p>
+
+            <router-link :to="{name: 'home'}"> <!-- bottone che porta alla pagina coi doc -->
+                <vs-button :color="colorx" :gradient-color-secondary="colorx2" type="gradient">
+                    Torna alla Home
+                </vs-button>
+            </router-link>
         </div>
         </body>
     </div>
@@ -16,7 +22,13 @@
 
 <script>
 export default {
-  name:'Confirmation2'
+  name:'Confirmation2',
+    data(){
+    return {
+      colorx:'#009688',
+      colorx2:'#80CBC4'
+    }
+  },
 }
 </script>
 

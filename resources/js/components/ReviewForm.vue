@@ -8,7 +8,7 @@
         </div>
         <div>
             <label for="title">Titolo della recensione</label> <!-- qua il pz dovrebbe il titolo della recensione -->
-            <input type="text" name="title" id="title" placeholder="Dai un titolo alla tua recensione">
+            <input type="text" name="title" id="title" placeholder="Dai un titolo alla tua recensione" required>
         </div>
 
         <div class="form-group"> <!-- qua il pz dovrebbe inserire il testo della recensione -->
@@ -19,11 +19,11 @@
         <div class="form-group mt-2">
             <label for="rating">Voto</label>
             <select name="rating" id="rating" class="form-control-sm">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
+              <option value="1">★</option>
+              <option value="2">★★</option>
+              <option value="3">★★★</option>
+              <option value="4">★★★★</option>
+              <option value="5">★★★★★</option>
             </select>
         </div>
 
@@ -36,7 +36,8 @@
                 required
             />
         </div>
-        <button type="submit" class="btn btn-primary mt-3">{{ sending ? "Invio in corso..." : "Invia Recensione" }}</button>
+
+        <button type="submit" class="btn btn-grad mt-3">{{ sending ? "Invio in corso..." : "Invia Recensione" }}</button>
     </form>
 </template>
 
@@ -80,6 +81,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+.btn-grad {background-image: linear-gradient(to right, #00695C 0%, #80CBC4  51%, #00695C  100%)}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
 
 /* form style */
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);

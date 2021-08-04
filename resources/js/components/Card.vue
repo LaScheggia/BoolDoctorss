@@ -19,7 +19,7 @@
                         </div>
                         <div style="position: absolute; color: darkgoldenrod;">
                         <i
-                        v-for="star in parseInt(ratingAvg)"
+                        v-for="star in parseInt(ratingAvg || '0')"
                         :key="star"
                         class="fas fa-star" style="margin-right: 4px;"></i>
                         <!-- rating: {{ ratingAvg }} -->

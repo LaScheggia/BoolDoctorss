@@ -7,7 +7,9 @@
                 </div>
                 <div class="names">
                     <h1>{{user.name}} {{user.surname}}</h1>
-                    <p>{{user.email}}</p>
+                    <p>Mail: <a href="#">{{user.email}}</a></p>
+                    <!-- inserito mail -->
+                    <span>Indirizzo dello studio: {{user.address}}</span>
                 </div>
             </div>
 

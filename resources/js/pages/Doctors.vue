@@ -5,69 +5,78 @@
     <div class="custom-major" v-if="!loading">
 
         <form class="form-row container">
+            <h4 class="my-title">Seleziona: la specializzazione, la media dei voti e il numero delle recensioni</h4>
 
             <div class="d-flex justify-content-lg-around">
 
                 <select class="mb-1 col-3 col-xs-12" name="" id=""
                     v-model="filters['spec']"
                 >
-                    <option value="" selected>Seleziona tutti i dottori</option>
+                    <option selected>Seleziona tutti i dottori</option>
                     <option
                     :value="specialization.id"
                     v-for="specialization in specializations"
                     :key="'specialization' + specialization.id">{{specialization.name}}</option>
-                </select>
+                </select> <!-- select x le specs -->
 
 
-                <select class="mb-1 col-3 col-xs-12"  name="" id=""
+                <select class="mb-1 col-3 col-xs-12"  name="avgSelect"
                     v-model="filters['avgRating']"
                 >
-                    <option value="0">Seleziona un numero</option>
+                    <option selected>Seleziona un numero</option>
                     <option value="">Nessun filtro selezionato</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+                    <option value="1">★</option>
+                    <option value="2">★★</option>
+                    <option value="3">★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="5">★★★★★</option>
+                </select> <!-- select x il rating -->
 
 
                 <select class="mb-1 col-3 col-xs-12" name="" id=""
                     v-model="filters['sortRevCount']"
                 >
                     <option value="">Nessun filtro selezionato</option>
-                    <option value="desc">desc</option>
-                    <option value="asc">asc</option>
-                </select>
+                    <option value="desc">Più recensioni</option>
+                    <option value="asc">Meno recensioni</option>
+                </select> <!-- select x le rews -->
 
                 <vs-button class="col" :color="colorx" :gradient-color-secondary="colorx2" type="gradient" @click="getDocs2()"> <!-- bottone x la searc -->
                     Cerca il dottore
-                </vs-button>
+                </vs-button> <!-- bottone che conferma -->
             </div>
 
         </form>
 
 
         <div>
+            <div v-if="users.length">
+                <Card
+                    v-for="user in users"
+                    :key="user.id"
+                    :name="user.name"
+                    :surname="user.surname"
+                    :bio="user.bio"
+                    :specializations="user.specializations"
+                    :propic="user.propic"
+                    :address="user.address"
+                    :id="user.id"
+                    :ratingAvg="user.rating_avg"
+                    :countRev="user.reviews_count"
+                />
+            </div>
 
-            <Card
-                v-for="user in users"
-                :key="user.id"
-                :name="user.name"
-                :surname="user.surname"
-                :bio="user.bio"
-                :specializations="user.specializations"
-                :propic="user.propic"
-                :address="user.address"
-                :id="user.id"
-                :ratingAvg="user.rating_avg"
-                :countRev="user.reviews_count"
-            />
+            <div
+                v-else
+                class="container text-center  my-box"
+            >
+                <h1 class="my-title">Nessun dottore con i parametri da te scelti <i class="fas fa-sad-tear"></i><i class="fas fa-sad-tear"></i><i class="fas fa-sad-tear"></i></h1>
+
+
+                <h6 class="my-title">Effettua una nuova ricerca per trovare lo specialista adetto a te</h6>
+
+            </div>
         </div>
-
-<!--         <div class="container d-flex align-items-center">
-            <h1>Nessun dottore con i parametri da te scelti.</h1>
-        </div -->>
 
     <!-- paginazione -->
         <div class="wrapper">
@@ -190,6 +199,7 @@ import axios from 'axios';
           //console.log(res.data.data);
           this.users = res.data.data;
           this.loading = false
+          console.log(this.users)
           this.pagination = {
               current: res.data.current_page,
             last: res.data.last_page,
@@ -212,11 +222,11 @@ import axios from 'axios';
           //console.log(res.data.data);
           this.users = res.data.data;
           this.loading = false
+          //console.log(this.users)
           this.pagination = {
               current: res.data.current_page,
             last: res.data.last_page,
           };
-        //   console.log(this.users);
         })
         .catch((err) => {
             console.log(err);
@@ -226,7 +236,7 @@ import axios from 'axios';
             axios.get('http://127.0.0.1:8000/api/doctors/specs')
             .then(res => {
                 this.specializations=res.data;
-                console.log(this.specializations);
+                //console.log(this.specializations);
             })
             .catch(err => {
                 console.error(err);
@@ -243,6 +253,15 @@ import axios from 'axios';
 
 
 <style lang="scss" scoped>
+
+.my-box{
+    padding: 70px;
+}
+.my-title{
+    color: #80CBC4;
+    font-style: oblique;
+    font-size: 34px;
+}
 
 .form-row{
     padding: 15px;

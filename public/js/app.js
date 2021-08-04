@@ -2497,6 +2497,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ReviewForm",
@@ -2561,8 +2572,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Confirmation'
+  name: 'Confirmation',
+  data: function data() {
+    return {
+      colorx: '#009688',
+      colorx2: '#80CBC4'
+    };
+  }
 });
 
 /***/ }),
@@ -2592,8 +2615,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Confirmation2'
+  name: 'Confirmation2',
+  data: function data() {
+    return {
+      colorx: '#009688',
+      colorx2: '#80CBC4'
+    };
+  }
 });
 
 /***/ }),
@@ -2808,6 +2843,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2886,6 +2930,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         //console.log(res.data.data);
         _this.users = res.data.data;
         _this.loading = false;
+        console.log(_this.users);
         _this.pagination = {
           current: res.data.current_page,
           last: res.data.last_page
@@ -2904,11 +2949,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }).then(function (res) {
         //console.log(res.data.data);
         _this2.users = res.data.data;
-        _this2.loading = false;
+        _this2.loading = false; //console.log(this.users)
+
         _this2.pagination = {
           current: res.data.current_page,
           last: res.data.last_page
-        }; //   console.log(this.users);
+        };
       })["catch"](function (err) {
         console.log(err);
       });
@@ -2917,8 +2963,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8000/api/doctors/specs').then(function (res) {
-        _this3.specializations = res.data;
-        console.log(_this3.specializations);
+        _this3.specializations = res.data; //console.log(this.specializations);
       })["catch"](function (err) {
         console.error(err);
       });
@@ -3078,6 +3123,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_ReviewForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ReviewForm.vue */ "./resources/js/components/ReviewForm.vue");
 /* harmony import */ var _components_MessageForm_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MessageForm.vue */ "./resources/js/components/MessageForm.vue");
+//
+//
 //
 //
 //
@@ -3433,7 +3480,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);", ""]);
 
 // module
-exports.push([module.i, "/* form style */\ninput[data-v-367b72d0]::-moz-placeholder, textarea[data-v-367b72d0]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:focus::-moz-placeholder, textarea[data-v-367b72d0]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]::-moz-placeholder, textarea[data-v-367b72d0]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:-ms-input-placeholder, textarea[data-v-367b72d0]:-ms-input-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]::placeholder, textarea[data-v-367b72d0]::placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]:focus:-ms-input-placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]:focus::placeholder, textarea[data-v-367b72d0]::focus:placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]::-ms-placeholder, textarea[data-v-367b72d0]::-ms-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:focus::-ms-placeholder, textarea[data-v-367b72d0]:focus::-ms-placeholder {\n  color: #004d40;\n}\n\n/* on hover placeholder */\ninput[data-v-367b72d0]:hover::-moz-placeholder, textarea[data-v-367b72d0]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:focus::-moz-placeholder, textarea[data-v-367b72d0]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover::-moz-placeholder, textarea[data-v-367b72d0]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:-ms-input-placeholder, textarea[data-v-367b72d0]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover::placeholder, textarea[data-v-367b72d0]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:focus::-moz-placeholder, textarea[data-v-367b72d0]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover:focus:-ms-input-placeholder, textarea[data-v-367b72d0]:hover:focus:-ms-input-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover:focus::placeholder, textarea[data-v-367b72d0]:hover:focus::placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover::-moz-placeholder, textarea[data-v-367b72d0]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:-ms-input-placeholder, textarea[data-v-367b72d0]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover::placeholder, textarea[data-v-367b72d0]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:focus::-ms-placeholder, textarea[data-v-367b72d0]:hover::focus:-ms-placeholder {\n  color: #cbc6c1;\n}\nbody[data-v-367b72d0] {\n  font-family: \"Lato\", sans-serif;\n  background: #e2dedb;\n  color: #b3aca7;\n}\nheader[data-v-367b72d0] {\n  position: relative;\n  margin: 100px 0 25px 0;\n  font-size: 2.3em;\n  text-align: center;\n  letter-spacing: 7px;\n}\n#form[data-v-367b72d0] {\n  position: relative;\n  width: 500px;\n  margin: 50px auto 100px auto;\n}\ninput[data-v-367b72d0] {\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  width: 470px;\n  height: 50px;\n  padding: 0px 15px 0px 15px;\n  background: transparent;\n  outline: none;\n  color: #004d40;\n  border: solid 1px #80cbc4;\n  border-bottom: none;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ninput[data-v-367b72d0]:hover {\n  background: #e0f2f1;\n  color: #004d40;\n}\ntextarea[data-v-367b72d0] {\n  width: 470px;\n  max-width: 470px;\n  height: 110px;\n  max-height: 110px;\n  padding: 15px;\n  background: transparent;\n  outline: none;\n  color: #4db6ac;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  border: solid 1px #80cbc4;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ntextarea[data-v-367b72d0]:hover {\n  background: #e0f2f1;\n  color: #212121;\n}\n#submit[data-v-367b72d0] {\n  width: 502px;\n  padding: 0;\n  margin: -5px 0px 0px 0px;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  color: #b3aca7;\n  outline: none;\n  cursor: pointer;\n  border: solid 1px #b3aca7;\n  border-top: none;\n}\n#submit[data-v-367b72d0]:hover {\n  color: #e2dedb;\n}", ""]);
+exports.push([module.i, ".btn-grad[data-v-367b72d0] {\n  background-image: linear-gradient(to right, #00695C 0%, #80CBC4 51%, #00695C 100%);\n}\n.btn-grad[data-v-367b72d0] {\n  margin: 10px;\n  padding: 15px 45px;\n  text-align: center;\n  transition: 0.5s;\n  background-size: 200% auto;\n  color: white;\n  box-shadow: 0 0 20px #eee;\n  border-radius: 10px;\n  display: block;\n}\n.btn-grad[data-v-367b72d0]:hover {\n  background-position: right center;\n  /* change the direction of the change here */\n  color: #fff;\n  text-decoration: none;\n}\n\n/* form style */\ninput[data-v-367b72d0]::-moz-placeholder, textarea[data-v-367b72d0]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:focus::-moz-placeholder, textarea[data-v-367b72d0]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]::-moz-placeholder, textarea[data-v-367b72d0]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:-ms-input-placeholder, textarea[data-v-367b72d0]:-ms-input-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]::placeholder, textarea[data-v-367b72d0]::placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]:focus:-ms-input-placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]:focus::placeholder, textarea[data-v-367b72d0]::focus:placeholder {\n  color: #004d40;\n}\ninput[data-v-367b72d0]::-ms-placeholder, textarea[data-v-367b72d0]::-ms-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:focus::-ms-placeholder, textarea[data-v-367b72d0]:focus::-ms-placeholder {\n  color: #004d40;\n}\n\n/* on hover placeholder */\ninput[data-v-367b72d0]:hover::-moz-placeholder, textarea[data-v-367b72d0]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:focus::-moz-placeholder, textarea[data-v-367b72d0]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover::-moz-placeholder, textarea[data-v-367b72d0]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:-ms-input-placeholder, textarea[data-v-367b72d0]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover::placeholder, textarea[data-v-367b72d0]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:focus::-moz-placeholder, textarea[data-v-367b72d0]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover:focus:-ms-input-placeholder, textarea[data-v-367b72d0]:hover:focus:-ms-input-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover:focus::placeholder, textarea[data-v-367b72d0]:hover:focus::placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-367b72d0]:hover::-moz-placeholder, textarea[data-v-367b72d0]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:-ms-input-placeholder, textarea[data-v-367b72d0]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover::placeholder, textarea[data-v-367b72d0]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-367b72d0]:hover:focus::-ms-placeholder, textarea[data-v-367b72d0]:hover::focus:-ms-placeholder {\n  color: #cbc6c1;\n}\nbody[data-v-367b72d0] {\n  font-family: \"Lato\", sans-serif;\n  background: #e2dedb;\n  color: #b3aca7;\n}\nheader[data-v-367b72d0] {\n  position: relative;\n  margin: 100px 0 25px 0;\n  font-size: 2.3em;\n  text-align: center;\n  letter-spacing: 7px;\n}\n#form[data-v-367b72d0] {\n  position: relative;\n  width: 500px;\n  margin: 50px auto 100px auto;\n}\ninput[data-v-367b72d0] {\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  width: 470px;\n  height: 50px;\n  padding: 0px 15px 0px 15px;\n  background: transparent;\n  outline: none;\n  color: #004d40;\n  border: solid 1px #80cbc4;\n  border-bottom: none;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ninput[data-v-367b72d0]:hover {\n  background: #e0f2f1;\n  color: #004d40;\n}\ntextarea[data-v-367b72d0] {\n  width: 470px;\n  max-width: 470px;\n  height: 110px;\n  max-height: 110px;\n  padding: 15px;\n  background: transparent;\n  outline: none;\n  color: #4db6ac;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  border: solid 1px #80cbc4;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ntextarea[data-v-367b72d0]:hover {\n  background: #e0f2f1;\n  color: #212121;\n}\n#submit[data-v-367b72d0] {\n  width: 502px;\n  padding: 0;\n  margin: -5px 0px 0px 0px;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  color: #b3aca7;\n  outline: none;\n  cursor: pointer;\n  border: solid 1px #b3aca7;\n  border-top: none;\n}\n#submit[data-v-367b72d0]:hover {\n  color: #e2dedb;\n}", ""]);
 
 // exports
 
@@ -3452,7 +3499,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);", ""]);
 
 // module
-exports.push([module.i, "/* form style */\ninput[data-v-44a63ae7]::-moz-placeholder, textarea[data-v-44a63ae7]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:focus::-moz-placeholder, textarea[data-v-44a63ae7]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]::-moz-placeholder, textarea[data-v-44a63ae7]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:-ms-input-placeholder, textarea[data-v-44a63ae7]:-ms-input-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]::placeholder, textarea[data-v-44a63ae7]::placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]:focus:-ms-input-placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]:focus::placeholder, textarea[data-v-44a63ae7]::focus:placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]::-ms-placeholder, textarea[data-v-44a63ae7]::-ms-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:focus::-ms-placeholder, textarea[data-v-44a63ae7]:focus::-ms-placeholder {\n  color: #004d40;\n}\n\n/* on hover placeholder */\ninput[data-v-44a63ae7]:hover::-moz-placeholder, textarea[data-v-44a63ae7]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:focus::-moz-placeholder, textarea[data-v-44a63ae7]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover::-moz-placeholder, textarea[data-v-44a63ae7]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:-ms-input-placeholder, textarea[data-v-44a63ae7]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover::placeholder, textarea[data-v-44a63ae7]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:focus::-moz-placeholder, textarea[data-v-44a63ae7]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover:focus:-ms-input-placeholder, textarea[data-v-44a63ae7]:hover:focus:-ms-input-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover:focus::placeholder, textarea[data-v-44a63ae7]:hover:focus::placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover::-moz-placeholder, textarea[data-v-44a63ae7]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:-ms-input-placeholder, textarea[data-v-44a63ae7]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover::placeholder, textarea[data-v-44a63ae7]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:focus::-ms-placeholder, textarea[data-v-44a63ae7]:hover::focus:-ms-placeholder {\n  color: #cbc6c1;\n}\nbody[data-v-44a63ae7] {\n  font-family: \"Lato\", sans-serif;\n  background: #e2dedb;\n  color: #b3aca7;\n}\nheader[data-v-44a63ae7] {\n  position: relative;\n  margin: 100px 0 25px 0;\n  font-size: 2.3em;\n  text-align: center;\n  letter-spacing: 7px;\n}\n#form[data-v-44a63ae7] {\n  position: relative;\n  width: 500px;\n  margin: 50px auto 100px auto;\n}\ninput[data-v-44a63ae7] {\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  width: 470px;\n  height: 50px;\n  padding: 0px 15px 0px 15px;\n  background: transparent;\n  outline: none;\n  color: #004d40;\n  border: solid 1px #80cbc4;\n  border-bottom: none;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ninput[data-v-44a63ae7]:hover {\n  background: #e0f2f1;\n  color: #004d40;\n}\ntextarea[data-v-44a63ae7] {\n  width: 470px;\n  max-width: 470px;\n  height: 110px;\n  max-height: 110px;\n  padding: 15px;\n  background: transparent;\n  outline: none;\n  color: #4db6ac;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  border: solid 1px #80cbc4;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ntextarea[data-v-44a63ae7]:hover {\n  background: #e0f2f1;\n  color: #212121;\n}\n#submit[data-v-44a63ae7] {\n  width: 502px;\n  padding: 0;\n  margin: -5px 0px 0px 0px;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  color: #b3aca7;\n  outline: none;\n  cursor: pointer;\n  border: solid 1px #b3aca7;\n  border-top: none;\n}\n#submit[data-v-44a63ae7]:hover {\n  color: #e2dedb;\n}", ""]);
+exports.push([module.i, ".btn-grad[data-v-44a63ae7] {\n  background-image: linear-gradient(to right, #00695C 0%, #80CBC4 51%, #00695C 100%);\n}\n.btn-grad[data-v-44a63ae7] {\n  margin: 10px;\n  padding: 15px 45px;\n  text-align: center;\n  transition: 0.5s;\n  background-size: 200% auto;\n  color: white;\n  box-shadow: 0 0 20px #eee;\n  border-radius: 10px;\n  display: block;\n}\n.btn-grad[data-v-44a63ae7]:hover {\n  background-position: right center;\n  /* change the direction of the change here */\n  color: #fff;\n  text-decoration: none;\n}\n\n/* form style */\ninput[data-v-44a63ae7]::-moz-placeholder, textarea[data-v-44a63ae7]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:focus::-moz-placeholder, textarea[data-v-44a63ae7]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]::-moz-placeholder, textarea[data-v-44a63ae7]::-moz-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:-ms-input-placeholder, textarea[data-v-44a63ae7]:-ms-input-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]::placeholder, textarea[data-v-44a63ae7]::placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:focus::-moz-placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]:focus:-ms-input-placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]:focus::placeholder, textarea[data-v-44a63ae7]::focus:placeholder {\n  color: #004d40;\n}\ninput[data-v-44a63ae7]::-ms-placeholder, textarea[data-v-44a63ae7]::-ms-placeholder {\n  color: #004d40;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:focus::-ms-placeholder, textarea[data-v-44a63ae7]:focus::-ms-placeholder {\n  color: #004d40;\n}\n\n/* on hover placeholder */\ninput[data-v-44a63ae7]:hover::-moz-placeholder, textarea[data-v-44a63ae7]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:focus::-moz-placeholder, textarea[data-v-44a63ae7]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover::-moz-placeholder, textarea[data-v-44a63ae7]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:-ms-input-placeholder, textarea[data-v-44a63ae7]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover::placeholder, textarea[data-v-44a63ae7]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:focus::-moz-placeholder, textarea[data-v-44a63ae7]:hover:focus::-moz-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover:focus:-ms-input-placeholder, textarea[data-v-44a63ae7]:hover:focus:-ms-input-placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover:focus::placeholder, textarea[data-v-44a63ae7]:hover:focus::placeholder {\n  color: #cbc6c1;\n}\ninput[data-v-44a63ae7]:hover::-moz-placeholder, textarea[data-v-44a63ae7]:hover::-moz-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:-ms-input-placeholder, textarea[data-v-44a63ae7]:hover:-ms-input-placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover::placeholder, textarea[data-v-44a63ae7]:hover::placeholder {\n  color: #e2dedb;\n  font-size: 0.875em;\n}\ninput[data-v-44a63ae7]:hover:focus::-ms-placeholder, textarea[data-v-44a63ae7]:hover::focus:-ms-placeholder {\n  color: #cbc6c1;\n}\nbody[data-v-44a63ae7] {\n  font-family: \"Lato\", sans-serif;\n  background: #e2dedb;\n  color: #b3aca7;\n}\nheader[data-v-44a63ae7] {\n  position: relative;\n  margin: 100px 0 25px 0;\n  font-size: 2.3em;\n  text-align: center;\n  letter-spacing: 7px;\n}\n#form[data-v-44a63ae7] {\n  position: relative;\n  width: 500px;\n  margin: 50px auto 100px auto;\n}\ninput[data-v-44a63ae7] {\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  width: 470px;\n  height: 50px;\n  padding: 0px 15px 0px 15px;\n  background: transparent;\n  outline: none;\n  color: #004d40;\n  border: solid 1px #80cbc4;\n  border-bottom: none;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ninput[data-v-44a63ae7]:hover {\n  background: #e0f2f1;\n  color: #004d40;\n}\ntextarea[data-v-44a63ae7] {\n  width: 470px;\n  max-width: 470px;\n  height: 110px;\n  max-height: 110px;\n  padding: 15px;\n  background: transparent;\n  outline: none;\n  color: #4db6ac;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  border: solid 1px #80cbc4;\n  transition: all 0.3s ease-in-out;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  -ms-transition: all 0.3s ease-in-out;\n}\ntextarea[data-v-44a63ae7]:hover {\n  background: #e0f2f1;\n  color: #212121;\n}\n#submit[data-v-44a63ae7] {\n  width: 502px;\n  padding: 0;\n  margin: -5px 0px 0px 0px;\n  font-family: \"Lato\", sans-serif;\n  font-size: 0.875em;\n  color: #b3aca7;\n  outline: none;\n  cursor: pointer;\n  border: solid 1px #b3aca7;\n  border-top: none;\n}\n#submit[data-v-44a63ae7]:hover {\n  color: #e2dedb;\n}", ""]);
 
 // exports
 
@@ -3528,7 +3575,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-row[data-v-333bf1bb] {\n  padding: 15px;\n}\n.inline-search[data-v-333bf1bb] {\n  padding: 15px;\n}\n.custom-bg[data-v-333bf1bb] {\n  background: #44A08D;\n  /* fallback for old browsers */\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #093637, #44A08D);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n.wrapper[data-v-333bf1bb] {\n  height: 150px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.page-link[data-v-333bf1bb] {\n  position: relative;\n  display: block;\n  color: #004d40 !important;\n  text-decoration: none;\n  background-color: #fff;\n  border: 1px solid #80cbc4 !important;\n}\n.page-link[data-v-333bf1bb]:hover {\n  z-index: 2;\n  color: #fff !important;\n  background-color: #80cbc4;\n  border-color: #b2dfdb;\n}\n.page-link[data-v-333bf1bb]:focus {\n  z-index: 3;\n  outline: 0;\n  box-shadow: none;\n}\n.page-item.active .page-link[data-v-333bf1bb] {\n  background-color: #80cbc4;\n}", ""]);
+exports.push([module.i, ".my-box[data-v-333bf1bb] {\n  padding: 70px;\n}\n.my-title[data-v-333bf1bb] {\n  color: #80CBC4;\n  font-style: oblique;\n  font-size: 34px;\n}\n.form-row[data-v-333bf1bb] {\n  padding: 15px;\n}\n.inline-search[data-v-333bf1bb] {\n  padding: 15px;\n}\n.custom-bg[data-v-333bf1bb] {\n  background: #44A08D;\n  /* fallback for old browsers */\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #093637, #44A08D);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n.wrapper[data-v-333bf1bb] {\n  height: 150px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.page-link[data-v-333bf1bb] {\n  position: relative;\n  display: block;\n  color: #004d40 !important;\n  text-decoration: none;\n  background-color: #fff;\n  border: 1px solid #80cbc4 !important;\n}\n.page-link[data-v-333bf1bb]:hover {\n  z-index: 2;\n  color: #fff !important;\n  background-color: #80cbc4;\n  border-color: #b2dfdb;\n}\n.page-link[data-v-333bf1bb]:focus {\n  z-index: 3;\n  outline: 0;\n  box-shadow: none;\n}\n.page-item.active .page-link[data-v-333bf1bb] {\n  background-color: #80cbc4;\n}", ""]);
 
 // exports
 
@@ -5884,7 +5931,7 @@ var render = function() {
                 {
                   staticStyle: { position: "absolute", color: "darkgoldenrod" }
                 },
-                _vm._l(parseInt(_vm.ratingAvg), function(star) {
+                _vm._l(parseInt(_vm.ratingAvg || "0"), function(star) {
                   return _c("i", {
                     key: star,
                     staticClass: "fas fa-star",
@@ -6749,7 +6796,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-success mt-3", attrs: { type: "submit" } },
+        { staticClass: "btn btn-grad mt-3", attrs: { type: "submit" } },
         [_vm._v(_vm._s(_vm.sending ? "Invio in corso..." : "Invia Messaggio"))]
       )
     ]
@@ -6834,9 +6881,37 @@ var render = function() {
       _vm._v(" "),
       _vm._m(2),
       _vm._v(" "),
+      _c("div", { staticClass: "form-group mt-2" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.added_on,
+              expression: "added_on"
+            }
+          ],
+          attrs: {
+            type: "hidden",
+            name: "added_on",
+            id: "added_on",
+            required: ""
+          },
+          domProps: { value: _vm.added_on },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.added_on = $event.target.value
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary mt-3", attrs: { type: "submit" } },
+        { staticClass: "btn btn-grad mt-3", attrs: { type: "submit" } },
         [_vm._v(_vm._s(_vm.sending ? "Invio in corso..." : "Invia Recensione"))]
       )
     ]
@@ -6875,7 +6950,8 @@ var staticRenderFns = [
           type: "text",
           name: "title",
           id: "title",
-          placeholder: "Dai un titolo alla tua recensione"
+          placeholder: "Dai un titolo alla tua recensione",
+          required: ""
         }
       })
     ])
@@ -6894,15 +6970,15 @@ var staticRenderFns = [
           attrs: { name: "rating", id: "rating" }
         },
         [
-          _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
+          _c("option", { attrs: { value: "1" } }, [_vm._v("★")]),
           _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("2")]),
+          _c("option", { attrs: { value: "2" } }, [_vm._v("★★")]),
           _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [_vm._v("3")]),
+          _c("option", { attrs: { value: "3" } }, [_vm._v("★★★")]),
           _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [_vm._v("4")]),
+          _c("option", { attrs: { value: "4" } }, [_vm._v("★★★★")]),
           _vm._v(" "),
-          _c("option", { attrs: { value: "5" } }, [_vm._v("5")])
+          _c("option", { attrs: { value: "5" } }, [_vm._v("★★★★★")])
         ]
       )
     ])
@@ -6929,47 +7005,81 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("body", [
+      _c(
+        "div",
+        { staticClass: "card" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("h1", [_vm._v("Recensione avvenuta con successo!")]),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c("p", { staticClass: "mb-3" }, [
+            _vm._v(
+              "Il dottore potrà vedere questa recensione, ricordati di scrivere in maniera educata e fatti veritieri."
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { attrs: { to: { name: "home" } } },
+            [
+              _c(
+                "vs-button",
+                {
+                  attrs: {
+                    color: _vm.colorx,
+                    "gradient-color-secondary": _vm.colorx2,
+                    type: "gradient"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                    Torna alla Home\n                "
+                  )
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("body", [
-        _c("div", { staticClass: "card" }, [
-          _c(
-            "div",
-            {
-              staticStyle: {
-                "border-radius": "200px",
-                height: "200px",
-                width: "200px",
-                background: "rgb(224, 242, 241)",
-                margin: "0 auto"
-              }
-            },
-            [_c("i", { staticClass: "checkmark" }, [_vm._v("✓")])]
-          ),
-          _vm._v(" "),
-          _c("h1", [_vm._v("Recensione avvenuta con successo!")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v("Abbiamo ricevuto la tua recensione,"),
-            _c("br"),
-            _vm._v(
-              " la tua recensione sarà visibile per aiutare gli altri a scegliere lo specialista."
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Il dottore potrà vedere questa recensione, ricordati di scrivere in maniera educata e fatti veritieri."
-            )
-          ])
-        ])
-      ])
+    return _c(
+      "div",
+      {
+        staticStyle: {
+          "border-radius": "200px",
+          height: "200px",
+          width: "200px",
+          background: "rgb(224, 242, 241)",
+          margin: "0 auto"
+        }
+      },
+      [_c("i", { staticClass: "checkmark" }, [_vm._v("✓")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Abbiamo ricevuto la tua recensione,"),
+      _c("br"),
+      _vm._v(
+        " la tua recensione sarà visibile per aiutare gli altri a scegliere lo specialista."
+      )
     ])
   }
 ]
@@ -6994,45 +7104,75 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("body", [
+      _c(
+        "div",
+        { staticClass: "card" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("h1", [_vm._v("Messaggio inviato con successo!")]),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c("p", { staticClass: "mb-3" }, [
+            _vm._v(
+              "Verrai ricontattato tramite il canale che hai scelto in fase di invio del messaggio."
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { attrs: { to: { name: "home" } } },
+            [
+              _c(
+                "vs-button",
+                {
+                  attrs: {
+                    color: _vm.colorx,
+                    "gradient-color-secondary": _vm.colorx2,
+                    type: "gradient"
+                  }
+                },
+                [_vm._v("\n                Torna alla Home\n            ")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("body", [
-        _c("div", { staticClass: "card" }, [
-          _c(
-            "div",
-            {
-              staticStyle: {
-                "border-radius": "200px",
-                height: "200px",
-                width: "200px",
-                background: "rgb(224, 242, 241)",
-                margin: "0 auto"
-              }
-            },
-            [_c("i", { staticClass: "checkmark" }, [_vm._v("✓")])]
-          ),
-          _vm._v(" "),
-          _c("h1", [_vm._v("Messaggio inviato con successo!")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v("Lo specialista ha ricevuto il tuo messaggio,"),
-            _c("br"),
-            _vm._v(" riceverai una risposta nel minor tempo possibile.")
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Verrai ricontattato tramite il canale che hai scelto in fase di invio del messaggio."
-            )
-          ])
-        ])
-      ])
+    return _c(
+      "div",
+      {
+        staticStyle: {
+          "border-radius": "200px",
+          height: "200px",
+          width: "200px",
+          background: "rgb(224, 242, 241)",
+          margin: "0 auto"
+        }
+      },
+      [_c("i", { staticClass: "checkmark" }, [_vm._v("✓")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Lo specialista ha ricevuto il tuo messaggio,"),
+      _c("br"),
+      _vm._v(" riceverai una risposta nel minor tempo possibile.")
     ])
   }
 ]
@@ -7178,6 +7318,12 @@ var render = function() {
       !_vm.loading
         ? _c("div", { staticClass: "custom-major" }, [
             _c("form", { staticClass: "form-row container" }, [
+              _c("h4", { staticClass: "my-title" }, [
+                _vm._v(
+                  "Seleziona: la specializzazione, la media dei voti e il numero delle recensioni"
+                )
+              ]),
+              _vm._v(" "),
               _c(
                 "div",
                 { staticClass: "d-flex justify-content-lg-around" },
@@ -7216,7 +7362,7 @@ var render = function() {
                       }
                     },
                     [
-                      _c("option", { attrs: { value: "", selected: "" } }, [
+                      _c("option", { attrs: { selected: "" } }, [
                         _vm._v("Seleziona tutti i dottori")
                       ]),
                       _vm._v(" "),
@@ -7246,7 +7392,7 @@ var render = function() {
                         }
                       ],
                       staticClass: "mb-1 col-3 col-xs-12",
-                      attrs: { name: "", id: "" },
+                      attrs: { name: "avgSelect" },
                       on: {
                         change: function($event) {
                           var $$selectedVal = Array.prototype.filter
@@ -7268,7 +7414,7 @@ var render = function() {
                       }
                     },
                     [
-                      _c("option", { attrs: { value: "0" } }, [
+                      _c("option", { attrs: { selected: "" } }, [
                         _vm._v("Seleziona un numero")
                       ]),
                       _vm._v(" "),
@@ -7276,15 +7422,15 @@ var render = function() {
                         _vm._v("Nessun filtro selezionato")
                       ]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
+                      _c("option", { attrs: { value: "1" } }, [_vm._v("★")]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "2" } }, [_vm._v("2")]),
+                      _c("option", { attrs: { value: "2" } }, [_vm._v("★★")]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "3" } }, [_vm._v("3")]),
+                      _c("option", { attrs: { value: "3" } }, [_vm._v("★★★")]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "4" } }, [_vm._v("4")]),
+                      _c("option", { attrs: { value: "4" } }, [_vm._v("★★★★")]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "5" } }, [_vm._v("5")])
+                      _c("option", { attrs: { value: "5" } }, [_vm._v("★★★★★")])
                     ]
                   ),
                   _vm._v(" "),
@@ -7327,10 +7473,12 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("option", { attrs: { value: "desc" } }, [
-                        _vm._v("desc")
+                        _vm._v("Più recensioni")
                       ]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "asc" } }, [_vm._v("asc")])
+                      _c("option", { attrs: { value: "asc" } }, [
+                        _vm._v("Meno recensioni")
+                      ])
                     ]
                   ),
                   _vm._v(" "),
@@ -7360,28 +7508,38 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c(
-              "div",
-              _vm._l(_vm.users, function(user) {
-                return _c("Card", {
-                  key: user.id,
-                  attrs: {
-                    name: user.name,
-                    surname: user.surname,
-                    bio: user.bio,
-                    specializations: user.specializations,
-                    propic: user.propic,
-                    address: user.address,
-                    id: user.id,
-                    ratingAvg: user.rating_avg,
-                    countRev: user.reviews_count
-                  }
-                })
-              }),
-              1
-            ),
-            _vm._v(" "),
-            _vm._v(">\n\n    "),
+            _c("div", [
+              _vm.users.length
+                ? _c(
+                    "div",
+                    _vm._l(_vm.users, function(user) {
+                      return _c("Card", {
+                        key: user.id,
+                        attrs: {
+                          name: user.name,
+                          surname: user.surname,
+                          bio: user.bio,
+                          specializations: user.specializations,
+                          propic: user.propic,
+                          address: user.address,
+                          id: user.id,
+                          ratingAvg: user.rating_avg,
+                          countRev: user.reviews_count
+                        }
+                      })
+                    }),
+                    1
+                  )
+                : _c("div", { staticClass: "container text-center  my-box" }, [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c("h6", { staticClass: "my-title" }, [
+                      _vm._v(
+                        "Effettua una nuova ricerca per trovare lo specialista adetto a te"
+                      )
+                    ])
+                  ])
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "wrapper" }, [
               _c(
@@ -7479,7 +7637,19 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "my-title" }, [
+      _vm._v("Nessun dottore con i parametri da te scelti "),
+      _c("i", { staticClass: "fas fa-sad-tear" }),
+      _c("i", { staticClass: "fas fa-sad-tear" }),
+      _c("i", { staticClass: "fas fa-sad-tear" })
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -7729,7 +7899,14 @@ var render = function() {
             _vm._v(_vm._s(_vm.user.name) + " " + _vm._s(_vm.user.surname))
           ]),
           _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.user.email))])
+          _c("p", [
+            _vm._v("Mail: "),
+            _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(_vm.user.email))])
+          ]),
+          _vm._v(" "),
+          _c("span", [
+            _vm._v("Indirizzo dello studio: " + _vm._s(_vm.user.address))
+          ])
         ])
       ]),
       _vm._v(" "),
