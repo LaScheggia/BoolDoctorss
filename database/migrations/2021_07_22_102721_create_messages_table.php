@@ -22,7 +22,7 @@ class CreateMessagesTable extends Migration
             $table->string('patient_mail', 50);
             $table->string('patient_phone', 50)->nullable();
             $table->boolean('read')->default(0);
-            $table->dateTime('added_on');
+            $table->date('added_on');
             $table->timestamps();
         });
     }

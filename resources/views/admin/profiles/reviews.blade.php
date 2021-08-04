@@ -23,7 +23,7 @@
                                 <p class="m-3" style="font-size: 1.1rem;"><i>{{ $review->text }}</i></p>
                                 <p><small>Inviato da: {{ $review->patient_name }}</small></p>
                                 <div class="d-flex justify-content-end">
-                                    <p><small>Data e orario del commento: {{ $review->added_on }}</small></p>
+                                    <p><small>Data della recensione: {{ $review->added_on }}</small></p>
                                 </div>
                             </div>
                         @endif
@@ -45,7 +45,7 @@
                                 <p class="m-3" style="font-size: 1.1rem;"><i>{{ $review->text }}</i></p>
                                 <p><small>Inviato da: {{ $review->patient_name }}</small></p>
                                 <div class="d-flex justify-content-end">
-                                    <p><small>Data e orario del commento: {{ $review->added_on }}</small></p>
+                                    <p><small>Data della recensione: {{ $review->added_on }}</small></p>
                                 </div>
                             </div>
                         @endif

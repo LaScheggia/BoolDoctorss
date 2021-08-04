@@ -27,7 +27,7 @@
                     </div>
                     <h3 class="mb-3"><i>{{$message->text_message}}</i></h3>
                     <div class="d-flex justify-content-end">
-                        <p><small>Data e orario dell'invio: {{$message->added_on}}</small></p>
+                        <p><small>Ricevuto il: {{$message->added_on}}</small></p>
                     </div>
                 </div>
 

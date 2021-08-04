@@ -20,7 +20,7 @@ class CreateReviewsTable extends Migration
             $table->text('text');
             $table->integer('rating');
             $table->string('patient_name', 50)->default('Anon')->nullable();
-            $table->dateTime('added_on');
+            $table->date('added_on');
             $table->timestamps();
         });
     }
