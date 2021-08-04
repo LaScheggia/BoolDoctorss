@@ -2851,7 +2851,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 
@@ -7361,23 +7360,17 @@ var render = function() {
                         }
                       }
                     },
-                    [
-                      _c("option", { attrs: { selected: "" } }, [
-                        _vm._v("Seleziona tutti i dottori")
-                      ]),
-                      _vm._v(" "),
-                      _vm._l(_vm.specializations, function(specialization) {
-                        return _c(
-                          "option",
-                          {
-                            key: "specialization" + specialization.id,
-                            domProps: { value: specialization.id }
-                          },
-                          [_vm._v(_vm._s(specialization.name))]
-                        )
-                      })
-                    ],
-                    2
+                    _vm._l(_vm.specializations, function(specialization) {
+                      return _c(
+                        "option",
+                        {
+                          key: "specialization" + specialization.id,
+                          domProps: { value: specialization.id }
+                        },
+                        [_vm._v(_vm._s(specialization.name))]
+                      )
+                    }),
+                    0
                   ),
                   _vm._v(" "),
                   _c(
@@ -7414,10 +7407,6 @@ var render = function() {
                       }
                     },
                     [
-                      _c("option", { attrs: { selected: "" } }, [
-                        _vm._v("Seleziona un numero")
-                      ]),
-                      _vm._v(" "),
                       _c("option", { attrs: { value: "" } }, [
                         _vm._v("Nessun filtro selezionato")
                       ]),

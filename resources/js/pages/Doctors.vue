@@ -12,7 +12,7 @@
                 <select class="mb-1 col-3 col-xs-12" name="" id=""
                     v-model="filters['spec']"
                 >
-                    <option selected>Seleziona tutti i dottori</option>
+
                     <option
                     :value="specialization.id"
                     v-for="specialization in specializations"
@@ -23,7 +23,6 @@
                 <select class="mb-1 col-3 col-xs-12"  name="avgSelect"
                     v-model="filters['avgRating']"
                 >
-                    <option selected>Seleziona un numero</option>
                     <option value="">Nessun filtro selezionato</option>
                     <option value="1">★</option>
                     <option value="2">★★</option>
