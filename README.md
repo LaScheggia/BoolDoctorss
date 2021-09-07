@@ -1,3 +1,17 @@
+# PROGETTO FINALE BOOLEAN CAREERS
+
+All'interno della piattaforma si può cercare un medico specialista usando la ricerca per campo medico e successivamente filtrare per media dei voti e numero di recensioni.
+Una volta scelto lo specialista adatto alle proprie esigenze, dalla sua pagina profilo, si può inviare un messaggio per fissare un consulto o lasciare una recensione.
+
+Ogni medico si può registrare inserendo inizialmente nome, cognome e mail per poi poter completare il profilo con tutti i dati: specializzazione, bio, immagine profilo, indirizzo dello studio e servizi offerti. Dalla dashboard principale ogni medico può tenere sotto controllo tutti i suoi messaggi e le recensioni ricevute e può visualizzare sotto forma di grafico le statistiche di tali messaggi e recensioni.
+Viene inoltre data la possibilità di cancellare il proprio profilo se si decidesse di non voler più offrire i propri servizi come medico iscritto ad iSpecialists.
+
+
+
+
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
